@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advertisers Directory — ChatGPT Ads Library</title>
+  <meta name="description" content="Browse all verified brands and companies actively sponsoring content and running ads across ChatGPT." />
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Advertisers Directory — ChatGPT Ads Library" />
+  <meta property="og:description" content="Discover companies and brands running commercial campaigns on ChatGPT." />
+  <meta property="og:image" content="/og-image.svg" />
+
+  <!-- Favicons & Manifest -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body class="bg-surface text-main antialiased min-h-screen flex flex-col">
+  <!-- Dynamic Header Root -->
+  <div id="header-root"></div>
+
+  <!-- Main Content -->
+  <main class="main-content flex-1">
+    <section class="page-hero-section">
+      <div class="container text-center">
+        <h1 class="page-title animate-fade-in">Advertisers Directory</h1>
+        <p class="page-subtitle animate-fade-in">
+          Explore all brands, organizations, and sponsors indexed in the ChatGPT Ads Library transparency archive.
+        </p>
+      </div>
+    </section>
+
+    <section class="browse-section">
+      <div class="container">
+        <div class="search-filter-bar">
+          <div class="search-box-wrapper">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input
+              type="search"
+              id="adv-search-input"
+              class="search-input"
+              placeholder="Search advertisers by name or domain..."
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="filter-controls-group">
+            <select id="adv-sort-select" class="form-select filter-select" aria-label="Sort advertisers">
+              <option value="ad_count_desc">Most Ads</option>
+              <option value="impressions_desc">Highest Impressions</option>
+              <option value="name_asc">Name (A-Z)</option>
+              <option value="name_desc">Name (Z-A)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="results-header">
+          <div class="results-count" id="adv-results-count">Loading advertisers...</div>
+        </div>
+
+        <!-- Advertisers Grid -->
+        <div class="advertisers-grid" id="advertisers-grid">
+          <!-- Dynamic cards injected here -->
+        </div>
+
+        <!-- Pagination -->
+        <div id="pagination-root" class="pagination-root"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Dynamic Footer Root -->
+  <div id="footer-root"></div>
+
+  <!-- Application Engine -->
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChatGPT Ads Library — Public Transparency Archive & Ad Tracker</title>
+  <meta name="description" content="Explore, search, and analyze sponsored ads, commercial copy, and advertiser campaigns running across ChatGPT." />
+  <meta name="keywords" content="ChatGPT Ads, ChatGPT Ad Library, AI Advertising, Sponsored ChatGPT, OpenAI Ads Tracker" />
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ChatGPT Ads Library — Public Transparency Archive" />
+  <meta property="og:description" content="Search and analyze sponsored ads and advertiser campaigns across ChatGPT." />
+  <meta property="og:image" content="/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ChatGPT Ads Library — Public Transparency Archive" />
+  <meta name="twitter:description" content="Search and analyze sponsored ads and advertiser campaigns across ChatGPT." />
+  <meta name="twitter:image" content="/og-image.svg" />
+
+  <!-- Favicons & Manifest -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body class="bg-surface text-main antialiased min-h-screen flex flex-col">
+  <!-- Dynamic Header Root -->
+  <div id="header-root"></div>
+
+  <!-- Main Content -->
+  <main class="main-content flex-1">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-badge animate-fade-in">
+          <span class="badge-dot"></span>
+          <span>Open AI Ad Transparency Archive</span>
+        </div>
+        <h1 class="hero-title animate-fade-in">
+          Track & Explore <span class="gradient-text">ChatGPT Ads</span>
+        </h1>
+        <p class="hero-subtitle animate-fade-in">
+          An independent public repository documenting sponsored placements, advertiser copy, and commercial messages appearing in ChatGPT conversational responses.
+        </p>
+
+        <!-- Live Archive Metrics -->
+        <div class="hero-stats-grid animate-fade-in">
+          <div class="hero-stat-card">
+            <span class="stat-number" id="hero-stat-ads">—</span>
+            <span class="stat-title">Indexed Ads</span>
+          </div>
+          <div class="hero-stat-card">
+            <span class="stat-number" id="hero-stat-adv">—</span>
+            <span class="stat-title">Active Advertisers</span>
+          </div>
+          <div class="hero-stat-card">
+            <span class="stat-number" id="hero-stat-imp">—</span>
+            <span class="stat-title">Estimated Impressions</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search & Filter Controls -->
+    <section class="browse-section">
+      <div class="container">
+        <div class="search-filter-bar">
+          <div class="search-box-wrapper">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input
+              type="search"
+              id="search-input"
+              class="search-input"
+              placeholder="Search by keyword, advertiser name, domain, or ad copy..."
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="filter-controls-group">
+            <select id="advertiser-select" class="form-select filter-select" aria-label="Filter by advertiser">
+              <option value="">All Advertisers</option>
+            </select>
+
+            <select id="sort-select" class="form-select filter-select" aria-label="Sort ads">
+              <option value="date_desc">Newest First</option>
+              <option value="date_asc">Oldest First</option>
+              <option value="impressions_desc">Highest Impressions</option>
+              <option value="impressions_asc">Lowest Impressions</option>
+            </select>
+
+            <button type="button" class="btn btn-secondary filter-toggle-btn" id="toggle-filters-btn">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+              </svg>
+              <span>More Filters</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Collapsible Filter Drawer -->
+        <div class="filter-drawer" id="filter-drawer">
+          <div class="drawer-inner">
+            <div class="drawer-field">
+              <label for="min-impressions-input" class="form-label">Minimum Impressions</label>
+              <input
+                type="number"
+                id="min-impressions-input"
+                class="form-input"
+                placeholder="e.g. 50000"
+                min="0"
+                step="1000"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Active Filter Badges -->
+        <div id="active-filters" class="active-filters-container"></div>
+
+        <!-- Results Header -->
+        <div class="results-header">
+          <div class="results-count" id="results-count">Loading ads...</div>
+        </div>
+
+        <!-- Ads Grid -->
+        <div class="ads-grid" id="ads-grid">
+          <!-- Dynamic ad cards injected here -->
+        </div>
+
+        <!-- Pagination -->
+        <div id="pagination-root" class="pagination-root"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Dynamic Footer Root -->
+  <div id="footer-root"></div>
+
+  <!-- Application Engine -->
+  <script src="/app.js"></script>
+</body>
+</html>

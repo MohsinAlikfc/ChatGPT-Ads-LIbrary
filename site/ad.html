@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ad Details — ChatGPT Ads Library</title>
+  <meta name="description" content="View detailed transparency records, ad copy, estimated impressions, and advertiser data for this ChatGPT ad." />
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Ad Details — ChatGPT Ads Library" />
+  <meta property="og:description" content="Explore ad copy, media assets, and metrics for this sponsored ChatGPT placement." />
+  <meta property="og:image" content="/og-image.svg" />
+
+  <!-- Favicons & Manifest -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body class="bg-surface text-main antialiased min-h-screen flex flex-col">
+  <!-- Dynamic Header Root -->
+  <div id="header-root"></div>
+
+  <!-- Main Content -->
+  <main class="main-content flex-1">
+    <div class="container py-8">
+      <div id="ad-detail-container" class="ad-detail-view">
+        <!-- Skeleton Loading for detail view -->
+        <div class="loading-state">
+          <div class="spinner"></div>
+          <p>Retrieving ad transparency record...</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Dynamic Footer Root -->
+  <div id="footer-root"></div>
+
+  <!-- Application Engine -->
+  <script src="/app.js"></script>
+</body>
+</html>

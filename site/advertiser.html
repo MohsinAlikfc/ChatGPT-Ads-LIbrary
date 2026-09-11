@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advertiser Profile — ChatGPT Ads Library</title>
+  <meta name="description" content="Explore sponsored campaigns, copy variations, and historical metrics for this advertiser on ChatGPT." />
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Advertiser Profile — ChatGPT Ads Library" />
+  <meta property="og:description" content="View ads and transparency data for this advertiser on ChatGPT." />
+  <meta property="og:image" content="/og-image.svg" />
+
+  <!-- Favicons & Manifest -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body class="bg-surface text-main antialiased min-h-screen flex flex-col">
+  <!-- Dynamic Header Root -->
+  <div id="header-root"></div>
+
+  <!-- Main Content -->
+  <main class="main-content flex-1">
+    <div class="container py-8">
+      <!-- Advertiser Profile Hero Banner -->
+      <div id="advertiser-profile-header">
+        <div class="loading-state">
+          <div class="spinner"></div>
+          <p>Loading advertiser profile...</p>
+        </div>
+      </div>
+
+      <!-- Advertiser's Ads Section -->
+      <section class="mt-8">
+        <div class="section-header-row">
+          <h2 class="section-title">Campaign Placements</h2>
+          <div class="sort-wrapper">
+            <select id="adv-ads-sort" class="form-select filter-select-sm" aria-label="Sort ads">
+              <option value="date_desc">Newest First</option>
+              <option value="date_asc">Oldest First</option>
+              <option value="impressions_desc">Highest Impressions</option>
+              <option value="impressions_asc">Lowest Impressions</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="ads-grid mt-4" id="advertiser-ads-grid">
+          <!-- Ads injected dynamically -->
+        </div>
+
+        <!-- Pagination -->
+        <div id="pagination-root" class="pagination-root"></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Dynamic Footer Root -->
+  <div id="footer-root"></div>
+
+  <!-- Application Engine -->
+  <script src="/app.js"></script>
+</body>
+</html>

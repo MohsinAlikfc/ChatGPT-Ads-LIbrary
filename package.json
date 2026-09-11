@@ -7,14 +7,16 @@
     "frontend"
   ],
   "scripts": {
-    "dev": "npm run dev -w frontend",
-    "build": "npm run build -w frontend",
-    "deploy": "npm run deploy -w frontend",
-    "preview": "npm run preview -w frontend",
-    "typecheck": "npm run typecheck -w frontend",
+    "dev": "concurrently \"npm run dev:worker\" \"npm run dev:site\"",
+    "dev:worker": "wrangler dev -c worker/wrangler.toml --port 8787",
+    "dev:site": "npx -y serve site -l 3000",
+    "dev:pages": "wrangler pages dev site --binding API_BASE_URL=http://127.0.0.1:8787",
+    "deploy": "npm run deploy:worker && npm run deploy:site",
+    "deploy:worker": "wrangler deploy -c worker/wrangler.toml",
+    "deploy:site": "wrangler pages deploy site --project-name=chatgpt-ads-library",
+    "seed:local": "wrangler d1 execute chatgpt-ads-library --local --file=./frontend/seed.sql --config=worker/wrangler.toml",
+    "seed:remote": "wrangler d1 execute chatgpt-ads-library --remote --file=./frontend/seed.sql --config=worker/wrangler.toml",
     "seed:generate": "node scripts/generate-seed.mjs",
-    "seed:local": "wrangler d1 execute chatgpt-ads-library --local --file=./frontend/seed.sql --config=frontend/wrangler.toml",
-    "seed:remote": "wrangler d1 execute chatgpt-ads-library --remote --file=./frontend/seed.sql --config=frontend/wrangler.toml",
     "sitemap:generate": "node scripts/generate-sitemap.mjs"
   },
   "devDependencies": {
