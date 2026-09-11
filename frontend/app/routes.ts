@@ -9,5 +9,6 @@ export default [
   route("api/ads", "routes/api.ads.ts"),
   route("api/advertisers", "routes/api.advertisers.ts"),
   route("api/stats", "routes/api.stats.ts"),
+  route("sitemap.xml", "routes/sitemap[.]xml.ts"),
   route("*", "routes/$.tsx"),
 ] satisfies RouteConfig;

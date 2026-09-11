@@ -39,6 +39,9 @@ type Pages = {
   "/api/stats": {
     params: {};
   };
+  "/sitemap.xml": {
+    params: {};
+  };
   "/*": {
     params: {
       "*": string;
@@ -49,7 +52,7 @@ type Pages = {
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/advertisers" | "/advertisers/:slug" | "/ads/:id" | "/about" | "/api/ads" | "/api/advertisers" | "/api/stats" | "/*";
+    page: "/" | "/advertisers" | "/advertisers/:slug" | "/ads/:id" | "/about" | "/api/ads" | "/api/advertisers" | "/api/stats" | "/sitemap.xml" | "/*";
   };
   "routes/_index.tsx": {
     id: "routes/_index";
@@ -83,6 +86,10 @@ type RouteFiles = {
     id: "routes/api.stats";
     page: "/api/stats";
   };
+  "routes/sitemap[.]xml.ts": {
+    id: "routes/sitemap[.]xml";
+    page: "/sitemap.xml";
+  };
   "routes/$.tsx": {
     id: "routes/$";
     page: "/*";
@@ -99,5 +106,6 @@ type RouteModules = {
   "routes/api.ads": typeof import("./app/routes/api.ads.ts");
   "routes/api.advertisers": typeof import("./app/routes/api.advertisers.ts");
   "routes/api.stats": typeof import("./app/routes/api.stats.ts");
+  "routes/sitemap[.]xml": typeof import("./app/routes/sitemap[.]xml.ts");
   "routes/$": typeof import("./app/routes/$.tsx");
 };

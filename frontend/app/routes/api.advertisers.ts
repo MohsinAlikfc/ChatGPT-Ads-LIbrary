@@ -12,13 +12,20 @@ export async function loader({ request, context }: LoaderFunctionArgs) {
   const db = (context?.cloudflare?.env?.DB ?? (context as any)?.env?.DB) as any;
   const result = await listAdvertisers(db, { q, sort, page, limit });
 
-  return Response.json({
-    advertisers: result.advertisers,
-    pagination: {
-      page: result.page,
-      limit: result.limit,
-      total: result.total,
-      totalPages: Math.ceil(result.total / result.limit),
+  return Response.json(
+    {
+      advertisers: result.advertisers,
+      pagination: {
+        page: result.page,
+        limit: result.limit,
+        total: result.total,
+        totalPages: Math.ceil(result.total / result.limit),
+      },
     },
-  });
+    {
+      headers: {
+        "Cache-Control": "public, max-age=60, s-maxage=3600, stale-while-revalidate=86400",
+      },
+    }
+  );
 }

@@ -30,7 +30,15 @@ export default async function handleRequest(
     await body.allReady;
   }
 
-  responseHeaders.set("Content-Type", "text/html");
+  responseHeaders.set("Content-Type", "text/html; charset=utf-8");
+
+  // Add Cloudflare Edge Cache-Control headers for successful responses
+  if (!responseHeaders.has("Cache-Control") && responseStatusCode === 200) {
+    responseHeaders.set(
+      "Cache-Control",
+      "public, max-age=60, s-maxage=3600, stale-while-revalidate=86400"
+    );
+  }
 
   return new Response(body, {
     headers: responseHeaders,

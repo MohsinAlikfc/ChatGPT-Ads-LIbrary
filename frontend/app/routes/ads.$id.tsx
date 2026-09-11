@@ -5,8 +5,9 @@ import {
   Link,
   type MetaFunction,
 } from "react-router";
+import AdGrid from "../components/AdGrid";
 import AdvertiserLogo from "../components/AdvertiserLogo";
-import { getAd } from "../lib/db";
+import { getAd, listAdsByAdvertiser } from "../lib/db";
 import { breadcrumbSchema, creativeWorkSchema, webPageSchema } from "../lib/schema";
 import { SITE_URL } from "../lib/site";
 import { formatDate, formatNumber } from "../lib/utils";
@@ -24,7 +25,15 @@ export async function loader({ params, context }: LoaderFunctionArgs) {
     throw new Response("Ad Not Found", { status: 404 });
   }
 
-  return data({ ad });
+  // Fetch related ads from the same advertiser for deep internal linking
+  const relatedResult = await listAdsByAdvertiser(db, ad.advertiserSlug, {
+    limit: 5,
+    sort: "impressions_desc",
+  }).catch(() => ({ ads: [], total: 0, page: 1, limit: 5 }));
+
+  const relatedAds = relatedResult.ads.filter((item) => item.id !== ad.id).slice(0, 4);
+
+  return data({ ad, relatedAds });
 }
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
@@ -96,31 +105,33 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 };
 
 export default function AdDetailPage() {
-  const { ad } = useLoaderData<typeof loader>();
+  const { ad, relatedAds } = useLoaderData<typeof loader>();
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      <Link
-        to="/"
-        className="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-500 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
-        aria-label="Back to all ads"
-      >
-        <svg
-          viewBox="0 0 24 24"
-          className="h-4 w-4"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          aria-hidden="true"
+      {/* Visual HTML Breadcrumbs for Crawlers & UX */}
+      <nav aria-label="Breadcrumb" className="mb-6 flex flex-wrap items-center gap-1.5 text-xs text-zinc-500 dark:text-zinc-400">
+        <Link to="/" className="transition hover:text-zinc-900 dark:hover:text-zinc-100">
+          Home
+        </Link>
+        <span aria-hidden="true">/</span>
+        <Link to="/advertisers" className="transition hover:text-zinc-900 dark:hover:text-zinc-100">
+          Advertisers
+        </Link>
+        <span aria-hidden="true">/</span>
+        <Link
+          to={`/advertisers/${ad.advertiserSlug}`}
+          className="transition hover:text-zinc-900 dark:hover:text-zinc-100"
         >
-          <path d="M19 12H5M12 19l-7-7 7-7" />
-        </svg>
-        Back to all ads
-      </Link>
+          {ad.advertiserName}
+        </Link>
+        <span aria-hidden="true">/</span>
+        <span className="max-w-[200px] truncate text-zinc-800 dark:text-zinc-200" aria-current="page">
+          {ad.copy}
+        </span>
+      </nav>
 
-      <div className="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
         <figure className="overflow-hidden rounded-2xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900">
           {ad.mediaUrl ? (
             <img
@@ -240,6 +251,41 @@ export default function AdDetailPage() {
           ) : null}
         </div>
       </div>
+
+      {/* Internal Linking: More ads from this advertiser */}
+      {relatedAds && relatedAds.length > 0 && (
+        <section className="mt-16 border-t border-zinc-200 pt-10 dark:border-zinc-800">
+          <div className="mb-6 flex items-center justify-between">
+            <div>
+              <h2 className="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
+                More ads by {ad.advertiserName}
+              </h2>
+              <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+                Explore other campaigns running on ChatGPT from {ad.advertiserName}.
+              </p>
+            </div>
+            <Link
+              to={`/advertisers/${ad.advertiserSlug}`}
+              className="inline-flex items-center gap-1 text-sm font-medium text-brand-500 hover:text-brand-600"
+            >
+              View all ({ad.advertiserName})
+              <svg
+                viewBox="0 0 24 24"
+                className="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+          <AdGrid ads={relatedAds} />
+        </section>
+      )}
     </div>
   );
 }

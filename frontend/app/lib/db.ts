@@ -277,3 +277,20 @@ export async function getStats(db: D1Database) {
   };
 }
 
+export async function getSitemapData(db: D1Database) {
+  if (!db) return { advertisers: [], ads: [] };
+  const [advertisers, ads] = await Promise.all([
+    db
+      .prepare("SELECT slug, last_seen, first_seen FROM advertisers ORDER BY total_impressions DESC")
+      .all<{ slug: string; last_seen: string | null; first_seen: string | null }>(),
+    db
+      .prepare("SELECT id, published_date FROM ads ORDER BY published_date DESC")
+      .all<{ id: string; published_date: string | null }>(),
+  ]);
+  return {
+    advertisers: advertisers?.results ?? [],
+    ads: ads?.results ?? [],
+  };
+}
+
+

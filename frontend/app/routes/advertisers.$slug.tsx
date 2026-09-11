@@ -173,25 +173,20 @@ export default function AdvertiserDetailPage() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      <Link
-        to="/advertisers"
-        className="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-500 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
-        aria-label="Back to all advertisers"
-      >
-        <svg
-          viewBox="0 0 24 24"
-          className="h-4 w-4"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          aria-hidden="true"
-        >
-          <path d="M19 12H5M12 19l-7-7 7-7" />
-        </svg>
-        Back to advertisers
-      </Link>
+      {/* Visual HTML Breadcrumbs for Crawlers & UX */}
+      <nav aria-label="Breadcrumb" className="mb-6 flex flex-wrap items-center gap-1.5 text-xs text-zinc-500 dark:text-zinc-400">
+        <Link to="/" className="transition hover:text-zinc-900 dark:hover:text-zinc-100">
+          Home
+        </Link>
+        <span aria-hidden="true">/</span>
+        <Link to="/advertisers" className="transition hover:text-zinc-900 dark:hover:text-zinc-100">
+          Advertisers
+        </Link>
+        <span aria-hidden="true">/</span>
+        <span className="text-zinc-800 dark:text-zinc-200" aria-current="page">
+          {advertiser.name}
+        </span>
+      </nav>
 
       <section
         className="mt-6 flex flex-col gap-5 rounded-2xl border border-zinc-200 bg-white p-6 sm:flex-row sm:items-center dark:border-zinc-800 dark:bg-zinc-900"
