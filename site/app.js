@@ -302,7 +302,7 @@
     `;
   }
 
-  function renderAdvertiserAvatar(name, logoUrl, size = 'md') {
+  function renderAdvertiserAvatar(name, logoUrl, size = 'sm') {
     if (logoUrl) {
       return `
         <div class="advertiser-avatar avatar-${size}">
@@ -318,8 +318,8 @@
   }
 
   function renderAdCard(ad) {
-    const detailUrl = `/ad.html?id=${encodeURIComponent(ad.id)}`;
-    const advertiserUrl = `/advertiser.html?slug=${encodeURIComponent(ad.advertiserSlug)}`;
+    const detailUrl = `/ads/${encodeURIComponent(ad.id)}`;
+    const advertiserUrl = `/advertisers/${encodeURIComponent(ad.advertiserSlug)}`;
 
     return `
       <article class="ad-card" data-ad-id="${escapeHtml(ad.id)}">
@@ -327,7 +327,7 @@
           <a href="${advertiserUrl}" class="ad-advertiser-link" title="View all ads by ${escapeHtml(ad.advertiserName)}">
             ${renderAdvertiserAvatar(ad.advertiserName, ad.advertiserLogo, 'sm')}
             <div class="ad-advertiser-info">
-              <h3 class="ad-advertiser-name">${escapeHtml(ad.advertiserName)}</h3>
+              <span class="ad-advertiser-name">${escapeHtml(ad.advertiserName)}</span>
               <span class="ad-domain">${escapeHtml(ad.websiteDomain || '')}</span>
             </div>
           </a>
@@ -336,14 +336,14 @@
 
         ${ad.mediaUrl ? `
           <div class="ad-media-wrapper">
-            <a href="${detailUrl}" class="ad-media-link" aria-label="View ad details">
-              <img src="${escapeHtml(ad.mediaUrl)}" alt="Sponsored ad by ${escapeHtml(ad.advertiserName)}" class="ad-media-img" loading="lazy" />
+            <a href="${detailUrl}" class="ad-media-link" aria-label="View ad details for ${escapeHtml(ad.copy || ad.advertiserName)}">
+              <img src="${escapeHtml(ad.mediaUrl)}" alt="${escapeHtml(ad.copy || ad.advertiserName)}" class="ad-media-img" loading="lazy" />
             </a>
           </div>
         ` : ''}
 
         <div class="ad-card-body">
-          <p class="ad-copy-text">${escapeHtml(ad.copy || '')}</p>
+          <h3 class="ad-copy-text"><a href="${detailUrl}">${escapeHtml(ad.copy || '')}</a></h3>
           ${ad.description ? `
             <p class="ad-description-text">${escapeHtml(ad.description)}</p>
           ` : ''}
@@ -359,7 +359,7 @@
           </div>
 
           <div class="ad-actions">
-            <button type="button" class="btn-icon copy-ad-btn" data-ad-id="${escapeHtml(ad.id)}" title="Copy link to this ad">
+            <button type="button" class="btn-icon copy-ad-btn" data-ad-id="${escapeHtml(ad.id)}" title="Copy link to this ad" aria-label="Copy link to ad">
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
@@ -595,6 +595,23 @@
       };
     }
 
+    // Helper to bind pagination clicks
+    function bindPaginationHandlers() {
+      if (paginationRoot) {
+        paginationRoot.querySelectorAll('[data-page]').forEach(btn => {
+          btn.onclick = (e) => {
+            e.preventDefault();
+            const targetPage = Number(btn.getAttribute('data-page'));
+            if (targetPage && targetPage !== state.page) {
+              state.page = targetPage;
+              fetchAndRenderAds();
+              adsGrid?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          };
+        });
+      }
+    }
+
     async function fetchAndRenderAds() {
       if (!adsGrid) return;
       adsGrid.innerHTML = renderLoadingSkeleton(6);
@@ -637,19 +654,9 @@
 
         adsGrid.innerHTML = ads.map(ad => renderAdCard(ad)).join('');
         setupCopyHandlers(adsGrid);
-
         if (paginationRoot) {
           paginationRoot.innerHTML = renderPagination(state.page, totalPages, total);
-          paginationRoot.querySelectorAll('[data-page]').forEach(btn => {
-            btn.onclick = () => {
-              const targetPage = Number(btn.getAttribute('data-page'));
-              if (targetPage && targetPage !== state.page) {
-                state.page = targetPage;
-                fetchAndRenderAds();
-                adsGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }
-            };
-          });
+          bindPaginationHandlers();
         }
       } catch (err) {
         adsGrid.innerHTML = `
@@ -763,8 +770,17 @@
       });
     }
 
-    // Initial fetch
-    fetchAndRenderAds();
+    // If pre-rendered ads exist and no search/filter params are present, keep them and bind handlers
+    const hasActiveFilters = Boolean(
+      state.q || state.advertiser || (state.sort && state.sort !== 'date_desc') || state.min_impressions || state.page > 1
+    );
+
+    if (!hasActiveFilters && adsGrid && adsGrid.children.length > 0) {
+      setupCopyHandlers(adsGrid);
+      bindPaginationHandlers();
+    } else {
+      fetchAndRenderAds();
+    }
   }
 
   // ── 2. Ad Detail Page ────────────────────────────────────────────────────
@@ -1055,16 +1071,7 @@
 
         if (paginationRoot) {
           paginationRoot.innerHTML = renderPagination(state.page, totalPages, total);
-          paginationRoot.querySelectorAll('[data-page]').forEach(btn => {
-            btn.onclick = () => {
-              const p = Number(btn.getAttribute('data-page'));
-              if (p && p !== state.page) {
-                state.page = p;
-                fetchAndRenderAdvertisers();
-                gridEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }
-            };
-          });
+          bindAdvPaginationHandlers();
         }
       } catch (err) {
         gridEl.innerHTML = `
@@ -1074,6 +1081,22 @@
             <button type="button" class="btn btn-secondary" onclick="location.reload()">Retry</button>
           </div>
         `;
+      }
+    }
+
+    function bindAdvPaginationHandlers() {
+      if (paginationRoot) {
+        paginationRoot.querySelectorAll('[data-page]').forEach(btn => {
+          btn.onclick = (e) => {
+            e.preventDefault();
+            const p = Number(btn.getAttribute('data-page'));
+            if (p && p !== state.page) {
+              state.page = p;
+              fetchAndRenderAdvertisers();
+              gridEl?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          };
+        });
       }
     }
 
@@ -1093,7 +1116,12 @@
       });
     }
 
-    fetchAndRenderAdvertisers();
+    const hasActiveFilters = Boolean(state.q || (state.sort && state.sort !== 'ad_count_desc') || state.page > 1);
+    if (!hasActiveFilters && gridEl && gridEl.children.length > 0) {
+      bindAdvPaginationHandlers();
+    } else {
+      fetchAndRenderAdvertisers();
+    }
   }
 
   // ── 4. Advertiser Detail Page ────────────────────────────────────────────

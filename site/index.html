@@ -3,62 +3,396 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ChatGPT Ads Library — Public Transparency Archive & Ad Tracker</title>
-  <meta name="description" content="Explore, search, and analyze sponsored ads, commercial copy, and advertiser campaigns running across ChatGPT." />
-  <meta name="keywords" content="ChatGPT Ads, ChatGPT Ad Library, AI Advertising, Sponsored ChatGPT, OpenAI Ads Tracker" />
+  <title>ChatGPT Ads Library — Browse &amp; Search Ads on ChatGPT</title>
+  <meta name="description" content="An independent, searchable archive of ads running across ChatGPT. Browse ad creative, explore advertisers, and filter by date and impressions." />
+  <meta name="keywords" content="ChatGPT ads, AI advertising, ad transparency, OpenAI ads, digital advertising" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://chatgpt-ads-library.com/" />
 
-  <!-- Open Graph / Social Meta -->
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="ChatGPT Ads Library" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="ChatGPT Ads Library — Public Transparency Archive" />
-  <meta property="og:description" content="Search and analyze sponsored ads and advertiser campaigns across ChatGPT." />
-  <meta property="og:image" content="/og-image.svg" />
+  <meta property="og:title" content="ChatGPT Ads Library — Browse &amp; Search Ads on ChatGPT" />
+  <meta property="og:description" content="An independent, searchable archive of ads running across ChatGPT. Browse ad creative, explore advertisers, and filter by date and impressions." />
+  <meta property="og:url" content="https://chatgpt-ads-library.com/" />
+  <meta property="og:image" content="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/b46aaaa3a6d4febd3a9c5721c02f2357d9afcb5e8c249c63aba19b3195eb0d74.webp" />
+  <meta property="og:image:alt" content="ChatGPT Ads Library — Browse &amp; Search Ads on ChatGPT" />
+
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ChatGPT Ads Library — Public Transparency Archive" />
-  <meta name="twitter:description" content="Search and analyze sponsored ads and advertiser campaigns across ChatGPT." />
-  <meta name="twitter:image" content="/og-image.svg" />
+  <meta name="twitter:title" content="ChatGPT Ads Library — Browse &amp; Search Ads on ChatGPT" />
+  <meta name="twitter:description" content="An independent, searchable archive of ads running across ChatGPT. Browse ad creative, explore advertisers, and filter by date and impressions." />
+  <meta name="twitter:image" content="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/b46aaaa3a6d4febd3a9c5721c02f2357d9afcb5e8c249c63aba19b3195eb0d74.webp" />
 
   <!-- Favicons & Manifest -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="manifest" href="/site.webmanifest" />
 
-  <!-- Fonts & Styles -->
+  <!-- Preconnect & Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://chatgpt-ads-library.com/#website",
+  "url": "https://chatgpt-ads-library.com",
+  "name": "ChatGPT Ads Library",
+  "description": "An independent, searchable archive of ads running across ChatGPT. Browse ad creative, explore advertisers, and filter by date and impressions.",
+  "author": {
+    "@type": "Organization",
+    "name": "ChatGPT Ads Library",
+    "url": "https://chatgpt-ads-library.com"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://chatgpt-ads-library.com/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ChatGPT Ads Library",
+  "url": "https://chatgpt-ads-library.com"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://chatgpt-ads-library.com/#webpage",
+  "url": "https://chatgpt-ads-library.com/",
+  "name": "ChatGPT Ads Library — Browse & Search Ads on ChatGPT",
+  "description": "An independent, searchable archive of ads running across ChatGPT. Browse ad creative, explore advertisers, and filter by date and impressions.",
+  "isPartOf": {
+    "@id": "https://chatgpt-ads-library.com/#website"
+  },
+  "dateModified": "2026-08-27",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".hero-description"
+    ]
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://chatgpt-ads-library.com/#dataset",
+  "name": "ChatGPT Ads Library — Ad Archive",
+  "description": "A searchable archive of advertisements running across ChatGPT, including ad creative, advertiser details, impression counts, and publication dates.",
+  "url": "https://chatgpt-ads-library.com",
+  "creator": {
+    "@type": "Organization",
+    "name": "ChatGPT Ads Library",
+    "url": "https://chatgpt-ads-library.com"
+  },
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "size": "3157 ads from 1359 advertisers",
+  "dateModified": "2026-08-27",
+  "keywords": [
+    "ChatGPT ads",
+    "AI advertising",
+    "ad transparency",
+    "OpenAI ads",
+    "digital advertising"
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Criteo GO",
+      "url": "https://chatgpt-ads-library.com/ads/c63d1eea430091ee683550c5",
+      "image": "https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/b46aaaa3a6d4febd3a9c5721c02f2357d9afcb5e8c249c63aba19b3195eb0d74.webp",
+      "description": "AI-powered self-serve platform for ad management"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Real Followers. No Bots, Ever.",
+      "url": "https://chatgpt-ads-library.com/ads/ebbda48a9ae2b51017e31ca6",
+      "image": "https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/d4baee91e32fba772940e6f30e8db30ed2d1aa7bab32b7b2ac68677a503fd948.webp",
+      "description": "Organic follower growth without bots. PathSocial helps brands and creators expand on IG."
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Free Games, Real Rewards",
+      "url": "https://chatgpt-ads-library.com/ads/95b9459201b38719f5bde728",
+      "image": "https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/e3e30a635122111327f5b77086e18753f4d1ba3c2478a2932aec31120b12f953.webp",
+      "description": "Play new mobile games for free and earn rewards as you go. No purchase required."
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "AI Advertising, One Platform",
+      "url": "https://chatgpt-ads-library.com/ads/9e3f8c31f9dc9c033c1d4229",
+      "image": "https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/d081a4bab6856689cf6baed0db5b99b509bfa9682274f60103b000ced07cdadd.webp",
+      "description": "Run ChatGPT ads alongside every programmatic channel."
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Join 10M+ Earning Rewards",
+      "url": "https://chatgpt-ads-library.com/ads/c557ea0b8fb5ed64d698e8a7",
+      "image": "https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/4d3cb0e78b309d2ea1ed8eaad4ad635876621d251e1d0bc0d855cca99211fca5.webp",
+      "description": "Trusted by 10,000,000+ users with a 4.7-star rating. Start earning rewards today."
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "80M+ People Already Earn Here",
+      "url": "https://chatgpt-ads-library.com/ads/db68bea1c88407580311c26b",
+      "image": "https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/e3e30a635122111327f5b77086e18753f4d1ba3c2478a2932aec31120b12f953.webp",
+      "description": "Join 60M+ members on a platform rated 4.8/5 on Trustpilot. Earn rewards at your pace."
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "Performance Marketing, Tracked",
+      "url": "https://chatgpt-ads-library.com/ads/4768fcb123c23a7b6ca2407e",
+      "image": "https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/d3ea3ceb96f2df0c521f54997a29aa93be432bd9df56608e9690e30cf0ed5d31.webp",
+      "description": "Track every click, conversion, call, coupon and partner in one platform."
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "name": "Yeti Rambler Travel Bottle, 16 oz. Navy, Stainless Steel",
+      "url": "https://chatgpt-ads-library.com/ads/a446256fbf3ace02eeb39da7",
+      "image": "https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/113abd312a7690388531b445aed555db97ebcb86c721731d4e281d919ac0f458.webp",
+      "description": "The perfect commuter mug. Made from durable stainless steel with double-wall vacuum insulation, it keeps drinks hot or cold all day. Innovative, leakproof Commuter Cap offers convenient 360° drinking. Dishwasher safe. Dishwasher safe. Made from super-durable 18/8 stainless steel. Made from super-durable 18/8 stainless steel. Cup holder compatible. 360° drinking cap lets you drink from any angle. Leakproof Commuter Cap prevents spills in your car or inside a pack. 360° drinking cap lets you drink from any angle. Cup holder compatible. Leakproof Commuter Cap prevents spills in your car or inside a pack. Imported. | Yeti Rambler Travel Bottle, 16 oz. Navy, Stainless Steel"
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "name": "Yeti Rambler Insulated Food Jar, 16 oz. Navy",
+      "url": "https://chatgpt-ads-library.com/ads/b3d09e653337fa964e0b1069",
+      "image": "https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/436bc3d2e56704b037a0d23d27049bb18999f4db1cb83f1b99c3fe7130410dcc.webp",
+      "description": "The Rambler Foor Jar will keep your lunch hot (or cold) until it's time to eat. The leakproof MagVent lid means you can throw it in your pack without worry. Dishwasher safe. Do not use with carbonated drinks, dairy or fermenting food/drink. Made from tough, BPA-free 18/8 kitchen grade stainless steel. Double-wall vacuum insulation reliably keeps your lunch hot. Two-piece lid comes apart for easy cleaning. Food safe and BPA free. 100% leakproof. Leakproof MagVent lid vents out hot air as it opens. Imported. | Yeti Rambler Insulated Food Jar, 16 oz. Navy"
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "name": "Run Paid on 7 Channels, Add 0 Headcount",
+      "url": "https://chatgpt-ads-library.com/ads/84624204265e1c5d8ee8e120",
+      "image": "https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/e8992a98f1f7a57e0b4054f08d607291a82a1c08331b6f1cef4b06ee95c2126d.webp",
+      "description": "AI agents manage bids, budget and testing across LinkedIn, Meta and Google."
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "name": "Yeti Rambler Ceramic Lined Stackable Mug, 14 oz. Navy 14 oz., Ceramic/Stainless Steel",
+      "url": "https://chatgpt-ads-library.com/ads/c95d19982fbcd344003c8ea1",
+      "image": "https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/f4144a97fa8cb61a53f3aeff6808479410c9b9143b9ac63fa0f03a22bf434469.webp",
+      "description": "This ultra-versatile, stackable mug keeps drinks hot or cold for hours and features Yeti's legendary durability. It also doubles as a camp bowl. Dishwasher safe. DuraSip™ ceramic lining is nonstick and resists staining from acidic drinks like coffee. Welded handle for a solid grip. Rugged double-wall, vacuum insulated stainless steel construction. Lining is fused to the stainless steel, allowing to withstand drops and tumbles. Splash resistant. Stackable for easy storage with other mugs. Rust and puncture resistant. Imported. | Yeti Rambler Ceramic Lined Stackable Mug, 14 oz. Navy 14 oz., Ceramic/Stainless Steel"
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "name": "Yeti Rambler Stackable Cup With MagSlide Lid, 16 oz. Navy",
+      "url": "https://chatgpt-ads-library.com/ads/9709aca9fc182344ed8ddd74",
+      "image": "https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/5a21e35e75f11ec6b0044254167a1f711fc05a0bc7cc30c7d908066c18040779.webp",
+      "description": "Great for camp or home, this Yeti stackable cup is perfect for everything from your morning coffee, mid-day hydration or post-adventure cocktails. Double-wall vacuum insulation keeps drinks cold or hot for hours. Dishwasher safe. Built from tough, BPA-free 18/8 kitchen grade stainless steel. Double-wall vacuum insulated keeps drinks cold or hot. Stacks with other Yeti stackable cups. Cup holder compatible. Splash-resistant Magslider™ lid. Imported. | Yeti Rambler Stackable Cup With MagSlide Lid, 16 oz. Navy"
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "name": "Yeti Flask Navy",
+      "url": "https://chatgpt-ads-library.com/ads/e3a71a700addbbc5b9e6570a",
+      "image": "https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/406a5a44730632090f348079f528d21788e8dde3f06591423ca03ccb99120627.webp",
+      "description": "Rugged and buiilt to last, the Yeti Flask is ideal for carrying your favorite beverage in a small package. Dishwasher safe. Single-wall 18/8 stainless steel. Not recommended for hot or carbonated beverages. Funnel included so you can fill it up with no mess. Leakproof design means you can carry it in your pocket or pack without worry. Imported. | Yeti Flask Navy"
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "name": "Censys Sees It All",
+      "url": "https://chatgpt-ads-library.com/ads/7c537d93ed36a80ebd49997a",
+      "image": "https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/5b719444b47cd2020412d56bd7f0ad9ebacfeea312267608ba0118ad8c12003c.webp",
+      "description": "Map every Internet-facing asset. See more."
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "name": "See Pricing & Plans",
+      "url": "https://chatgpt-ads-library.com/ads/fc521e69f4a85b253bda097a",
+      "image": "https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/b67fd9aed403f30dd9bdcf84fc7f984786bbe5590bbcc6362246296e3f269598.webp",
+      "description": "High-quality meats at budget-friendly prices"
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "name": "Ezoic — Ads for the Open Web",
+      "url": "https://chatgpt-ads-library.com/ads/de9495697fffe0dc2556f8d0",
+      "image": "https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/b3693d45c02b505ea283c2c60f5c2faa6b5de5cd8fc374119ee058036d7a8d7d.webp",
+      "description": "Ezoic is the premiere solution for open web monetization. Highest RPMs and Ratings."
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "name": "AI-ready data; #1 B2B Data",
+      "url": "https://chatgpt-ads-library.com/ads/1aa9d355c8f8c0c93eb244e9",
+      "image": "https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/c782dbb9e578c44bdbad87be23cca3ac10c70f006916bf70b8fc365c2c83655e.webp",
+      "description": "Use GTM data anywhere you work, pay for what you use"
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "name": "Account Based Marketing Agency",
+      "url": "https://chatgpt-ads-library.com/ads/4ac7901ce11aa40823238f08",
+      "image": "https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/45cf926821a0d4268a52b34a533af7e81d55652847f401b86cf897e74dc253ef.webp",
+      "description": "Launch and Scale 1:1 Experiences for your Strategic Accounts"
+    },
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "name": "Find the Best Online Casino Today",
+      "url": "https://chatgpt-ads-library.com/ads/fe4008ff3d0882717367ce73",
+      "image": "https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/50c1235b32d1702d083646ff9c117b160f3c680d6cdb609eaece8ac6a797ad0d.webp",
+      "description": "Compare Top-Rated Casinos and Slot Games."
+    },
+    {
+      "@type": "ListItem",
+      "position": 20,
+      "name": "Advertise in ChatGPT",
+      "url": "https://chatgpt-ads-library.com/ads/835f573f49911f9c7d2e57b8",
+      "image": "https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/e10768885e9be047e513590a5fc93a7bbc43b0f533b0d751be8fde76d0c12758.webp",
+      "description": "Launch your first campaign today."
+    },
+    {
+      "@type": "ListItem",
+      "position": 21,
+      "name": "Run a research agent for your team",
+      "url": "https://chatgpt-ads-library.com/ads/5efdbd7bff5b42cef19faf42",
+      "image": "https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/b387d0ea0ba566a054896db6f219626a0b429f15da46b61372078ce6e15468da.webp",
+      "description": "AI agents track competitors, surface insights, and deliver structured intel 24/7."
+    },
+    {
+      "@type": "ListItem",
+      "position": 22,
+      "name": "Compare the Best Customer Service Software of 2026",
+      "url": "https://chatgpt-ads-library.com/ads/950e4b4434d188f32f3063a9",
+      "image": "https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/0f3f2decc7f9f91079937f4a8c35686c0e56b41b27124792ef291687f9ded7ce.webp",
+      "description": "Chat, email & phone support. Compare top tools ranked by 2.5M+ verified reviews."
+    },
+    {
+      "@type": "ListItem",
+      "position": 23,
+      "name": "Profound | AI Answer Engine Optimization",
+      "url": "https://chatgpt-ads-library.com/ads/1fd80d4df57d9d9347ed13fb",
+      "image": "https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/3407a1cf7168a4fe814b70a20b9b70b700cee970555a46f9a9898fe91ee2fca3.webp",
+      "description": "See how LLMs talk about your brands. Simple as that sir"
+    },
+    {
+      "@type": "ListItem",
+      "position": 24,
+      "name": "Top 10 VPN Providers 2026",
+      "url": "https://chatgpt-ads-library.com/ads/893a61a545897f34d5338779",
+      "image": "https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/01768607099b3886a8859d23fbd839d283be112859d3a82fb240b59551c09960.webp",
+      "description": "See the 2026 Picks. Compare Features Side by Side."
+    }
+  ]
+}
+  </script>
 </head>
 <body class="bg-surface text-main antialiased min-h-screen flex flex-col">
   <!-- Dynamic Header Root -->
-  <div id="header-root"></div>
+  <div id="header-root">
+    
+    <header class="site-header">
+      <div class="header-container container">
+        <a href="/" class="brand-logo" aria-label="ChatGPT Ads Library Home">
+          <div class="logo-badge">
+            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+              <line x1="12" y1="22.08" x2="12" y2="12"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">ChatGPT Ads Library</span>
+            <span class="brand-tag">Transparency Archive</span>
+          </div>
+        </a>
+
+        <nav class="nav-links" aria-label="Main Navigation">
+          <a href="/" class="nav-link active">Ads</a>
+          <a href="/advertisers" class="nav-link ">Advertisers</a>
+          <a href="/about" class="nav-link ">About</a>
+        </nav>
+
+        <div class="header-actions">
+          <button type="button" class="theme-toggle-btn" aria-label="Toggle Theme">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </button>
+          <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-nav" id="mobile-nav">
+        <div class="container mobile-nav-inner">
+          <a href="/" class="mobile-nav-link active">Ads</a>
+          <a href="/advertisers" class="mobile-nav-link ">Advertisers</a>
+          <a href="/about" class="mobile-nav-link ">About</a>
+        </div>
+      </div>
+    </header>
+  
+  </div>
 
   <!-- Main Content -->
   <main class="main-content flex-1">
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section" aria-labelledby="hero-heading">
       <div class="container hero-container">
         <div class="hero-badge animate-fade-in">
           <span class="badge-dot"></span>
           <span>Open AI Ad Transparency Archive</span>
         </div>
-        <h1 class="hero-title animate-fade-in">
-          Track & Explore <span class="gradient-text">ChatGPT Ads</span>
+        <h1 id="hero-heading" class="hero-title animate-fade-in">
+          ChatGPT Ads Library
         </h1>
-        <p class="hero-subtitle animate-fade-in">
-          An independent public repository documenting sponsored placements, advertiser copy, and commercial messages appearing in ChatGPT conversational responses.
+        <p class="hero-subtitle hero-description animate-fade-in">
+          Browse and search ads running across ChatGPT. Filter by advertiser, date, and impressions to see what's live.
         </p>
 
         <!-- Live Archive Metrics -->
-        <div class="hero-stats-grid animate-fade-in">
+        <div class="hero-stats-grid animate-fade-in" aria-label="Library statistics">
           <div class="hero-stat-card">
-            <span class="stat-number" id="hero-stat-ads">—</span>
+            <span class="stat-number" id="hero-stat-ads">3.2K</span>
             <span class="stat-title">Indexed Ads</span>
           </div>
           <div class="hero-stat-card">
-            <span class="stat-number" id="hero-stat-adv">—</span>
+            <span class="stat-number" id="hero-stat-adv">1.4K</span>
             <span class="stat-title">Active Advertisers</span>
           </div>
           <div class="hero-stat-card">
-            <span class="stat-number" id="hero-stat-imp">—</span>
+            <span class="stat-number" id="hero-stat-imp">8K</span>
             <span class="stat-title">Estimated Impressions</span>
           </div>
         </div>
@@ -86,10 +420,11 @@
           <div class="filter-controls-group">
             <select id="advertiser-select" class="form-select filter-select" aria-label="Filter by advertiser">
               <option value="">All Advertisers</option>
+              <option value="l-l-bean">L.L.Bean (107)</option><option value="vistaprint-us">VistaPrint US (92)</option><option value="capterra">Capterra (82)</option><option value="vistaprint">VistaPrint (45)</option><option value="mercari">Mercari (34)</option><option value="jotform">Jotform (32)</option><option value="almedia-usa-inc">Almedia USA, Inc. (26)</option><option value="top5best-com">Top5Best.com (25)</option><option value="applovin">AppLovin (24)</option><option value="quince">Quince (23)</option><option value="design-com">Design.com (22)</option><option value="legalzoom">LegalZoom (20)</option><option value="scheels">SCHEELS (20)</option><option value="hungryroot">Hungryroot (19)</option><option value="accenture">Accenture (18)</option><option value="clickcease">ClickCease (18)</option><option value="envato">Envato (18)</option><option value="fiverr">Fiverr (17)</option><option value="add3">Add3 (16)</option><option value="capital-one">Capital One (15)</option><option value="monday-com">Monday.com (15)</option><option value="faire-wholesale-inc">Faire Wholesale, Inc. (14)</option><option value="nobull">NOBULL (14)</option><option value="sofi">SoFi (14)</option><option value="asana">Asana (13)</option><option value="intuit-mailchimp">Intuit Mailchimp (13)</option><option value="intuit-quickbooks">Intuit Quickbooks (13)</option><option value="mistplay">Mistplay (13)</option><option value="optimizely">Optimizely (13)</option><option value="brilliant-earth">Brilliant Earth (12)</option><option value="cat-us-criteo-com">cat.us.criteo.com (12)</option><option value="expedia">Expedia (12)</option><option value="shutterstock">Shutterstock (12)</option><option value="top10-com">Top10.com (12)</option><option value="adroll">AdRoll (11)</option><option value="bestmoney">BestMoney (11)</option><option value="clutch">Clutch (11)</option><option value="software-advice">Software Advice (11)</option><option value="home-depot">Home Depot (10)</option><option value="thistle">Thistle (10)</option><option value="cloaked">Cloaked (9)</option><option value="forbes">Forbes (9)</option><option value="sgrouples-inc">Sgrouples Inc (9)</option><option value="applovin-com">applovin.com (8)</option><option value="glassesusa-com">GlassesUSA.com (8)</option><option value="llbean">LLBean (8)</option><option value="onesignal-inc">OneSignal Inc (8)</option><option value="robinhood">Robinhood (8)</option><option value="shopify">Shopify (8)</option><option value="talkpal">Talkpal (8)</option>
             </select>
 
             <select id="sort-select" class="form-select filter-select" aria-label="Sort ads">
-              <option value="date_desc">Newest First</option>
+              <option value="date_desc" selected>Newest First</option>
               <option value="date_asc">Oldest First</option>
               <option value="impressions_desc">Highest Impressions</option>
               <option value="impressions_asc">Lowest Impressions</option>
@@ -126,22 +461,1355 @@
 
         <!-- Results Header -->
         <div class="results-header">
-          <div class="results-count" id="results-count">Loading ads...</div>
+          <div class="results-count" id="results-count">
+            Showing <strong>24</strong> of <strong>3.2K</strong> ads
+          </div>
         </div>
 
         <!-- Ads Grid -->
         <div class="ads-grid" id="ads-grid">
-          <!-- Dynamic ad cards injected here -->
+          
+    <article class="ad-card" data-ad-id="c63d1eea430091ee683550c5">
+      <div class="ad-card-header">
+        <a href="/advertisers/criteo" class="ad-advertiser-link" title="View all ads by Criteo">
+          
+      <div class="advertiser-avatar avatar-sm">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/20ec8763f15f55b4e1ff90fa47d0c7afff143687a0efcb537ec3e58b712b9d86.webp" alt="Criteo logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>CR</span>'"/>
+      </div>
+    
+          <div class="ad-advertiser-info">
+            <span class="ad-advertiser-name">Criteo</span>
+            <span class="ad-domain">criteo.com</span>
+          </div>
+        </a>
+        <span class="ad-date-badge" title="Published date">Aug 27, 2026</span>
+      </div>
+
+      
+        <div class="ad-media-wrapper">
+          <a href="/ads/c63d1eea430091ee683550c5" class="ad-media-link" aria-label="View ad details for Criteo GO">
+            <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/b46aaaa3a6d4febd3a9c5721c02f2357d9afcb5e8c249c63aba19b3195eb0d74.webp" alt="Criteo GO" class="ad-media-img" loading="lazy" />
+          </a>
+        </div>
+      
+
+      <div class="ad-card-body">
+        <h3 class="ad-copy-text"><a href="/ads/c63d1eea430091ee683550c5">Criteo GO</a></h3>
+        
+          <p class="ad-description-text">AI-powered self-serve platform for ad management</p>
+        
+      </div>
+
+      <div class="ad-card-footer">
+        <div class="ad-impressions-badge" title="Estimated ad impressions">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span>1 impressions</span>
+        </div>
+
+        <div class="ad-actions">
+          <button type="button" class="btn-icon copy-ad-btn" data-ad-id="c63d1eea430091ee683550c5" title="Copy link to this ad" aria-label="Copy link to ad">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
+          <a href="/ads/c63d1eea430091ee683550c5" class="btn btn-sm btn-primary">Details</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="ad-card" data-ad-id="ebbda48a9ae2b51017e31ca6">
+      <div class="ad-card-header">
+        <a href="/advertisers/path-social" class="ad-advertiser-link" title="View all ads by Path Social">
+          
+      <div class="advertiser-avatar avatar-sm">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/c9bb39160b6b438e99d6a19dcdd1e650aae5b6c90738ceb15f8f1676a1569196.webp" alt="Path Social logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>PS</span>'"/>
+      </div>
+    
+          <div class="ad-advertiser-info">
+            <span class="ad-advertiser-name">Path Social</span>
+            <span class="ad-domain">pathsocial.com</span>
+          </div>
+        </a>
+        <span class="ad-date-badge" title="Published date">Aug 27, 2026</span>
+      </div>
+
+      
+        <div class="ad-media-wrapper">
+          <a href="/ads/ebbda48a9ae2b51017e31ca6" class="ad-media-link" aria-label="View ad details for Real Followers. No Bots, Ever.">
+            <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/d4baee91e32fba772940e6f30e8db30ed2d1aa7bab32b7b2ac68677a503fd948.webp" alt="Real Followers. No Bots, Ever." class="ad-media-img" loading="lazy" />
+          </a>
+        </div>
+      
+
+      <div class="ad-card-body">
+        <h3 class="ad-copy-text"><a href="/ads/ebbda48a9ae2b51017e31ca6">Real Followers. No Bots, Ever.</a></h3>
+        
+          <p class="ad-description-text">Organic follower growth without bots. PathSocial helps brands and creators expand on IG.</p>
+        
+      </div>
+
+      <div class="ad-card-footer">
+        <div class="ad-impressions-badge" title="Estimated ad impressions">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span>1 impressions</span>
+        </div>
+
+        <div class="ad-actions">
+          <button type="button" class="btn-icon copy-ad-btn" data-ad-id="ebbda48a9ae2b51017e31ca6" title="Copy link to this ad" aria-label="Copy link to ad">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
+          <a href="/ads/ebbda48a9ae2b51017e31ca6" class="btn btn-sm btn-primary">Details</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="ad-card" data-ad-id="95b9459201b38719f5bde728">
+      <div class="ad-card-header">
+        <a href="/advertisers/almedia-usa-inc" class="ad-advertiser-link" title="View all ads by Almedia USA, Inc.">
+          
+      <div class="advertiser-avatar avatar-sm">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/3e1c6694231ff1060aa3f0f12a2958cbfea0c1788ab9879e135e8ac9190301f0.webp" alt="Almedia USA, Inc. logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>AI</span>'"/>
+      </div>
+    
+          <div class="ad-advertiser-info">
+            <span class="ad-advertiser-name">Almedia USA, Inc.</span>
+            <span class="ad-domain">almedia.co</span>
+          </div>
+        </a>
+        <span class="ad-date-badge" title="Published date">Aug 26, 2026</span>
+      </div>
+
+      
+        <div class="ad-media-wrapper">
+          <a href="/ads/95b9459201b38719f5bde728" class="ad-media-link" aria-label="View ad details for Free Games, Real Rewards">
+            <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/e3e30a635122111327f5b77086e18753f4d1ba3c2478a2932aec31120b12f953.webp" alt="Free Games, Real Rewards" class="ad-media-img" loading="lazy" />
+          </a>
+        </div>
+      
+
+      <div class="ad-card-body">
+        <h3 class="ad-copy-text"><a href="/ads/95b9459201b38719f5bde728">Free Games, Real Rewards</a></h3>
+        
+          <p class="ad-description-text">Play new mobile games for free and earn rewards as you go. No purchase required.</p>
+        
+      </div>
+
+      <div class="ad-card-footer">
+        <div class="ad-impressions-badge" title="Estimated ad impressions">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span>13 impressions</span>
+        </div>
+
+        <div class="ad-actions">
+          <button type="button" class="btn-icon copy-ad-btn" data-ad-id="95b9459201b38719f5bde728" title="Copy link to this ad" aria-label="Copy link to ad">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
+          <a href="/ads/95b9459201b38719f5bde728" class="btn btn-sm btn-primary">Details</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="ad-card" data-ad-id="9e3f8c31f9dc9c033c1d4229">
+      <div class="ad-card-header">
+        <a href="/advertisers/stackadapt" class="ad-advertiser-link" title="View all ads by StackAdapt">
+          
+      <div class="advertiser-avatar avatar-sm">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/62faaaf12b4c0ca46f5cf85244ecaaff4aa0db3721cc924b4ca33bfdd913fd18.webp" alt="StackAdapt logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>ST</span>'"/>
+      </div>
+    
+          <div class="ad-advertiser-info">
+            <span class="ad-advertiser-name">StackAdapt</span>
+            <span class="ad-domain">stackadapt.com</span>
+          </div>
+        </a>
+        <span class="ad-date-badge" title="Published date">Aug 26, 2026</span>
+      </div>
+
+      
+        <div class="ad-media-wrapper">
+          <a href="/ads/9e3f8c31f9dc9c033c1d4229" class="ad-media-link" aria-label="View ad details for AI Advertising, One Platform">
+            <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/d081a4bab6856689cf6baed0db5b99b509bfa9682274f60103b000ced07cdadd.webp" alt="AI Advertising, One Platform" class="ad-media-img" loading="lazy" />
+          </a>
+        </div>
+      
+
+      <div class="ad-card-body">
+        <h3 class="ad-copy-text"><a href="/ads/9e3f8c31f9dc9c033c1d4229">AI Advertising, One Platform</a></h3>
+        
+          <p class="ad-description-text">Run ChatGPT ads alongside every programmatic channel.</p>
+        
+      </div>
+
+      <div class="ad-card-footer">
+        <div class="ad-impressions-badge" title="Estimated ad impressions">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span>7 impressions</span>
+        </div>
+
+        <div class="ad-actions">
+          <button type="button" class="btn-icon copy-ad-btn" data-ad-id="9e3f8c31f9dc9c033c1d4229" title="Copy link to this ad" aria-label="Copy link to ad">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
+          <a href="/ads/9e3f8c31f9dc9c033c1d4229" class="btn btn-sm btn-primary">Details</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="ad-card" data-ad-id="c557ea0b8fb5ed64d698e8a7">
+      <div class="ad-card-header">
+        <a href="/advertisers/almedia-usa-inc" class="ad-advertiser-link" title="View all ads by Almedia USA, Inc.">
+          
+      <div class="advertiser-avatar avatar-sm">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/6b520004f17df40e674f205db1c3bbac2c5e8c32860e7e1d414a5c0ccaa3b64d.webp" alt="Almedia USA, Inc. logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>AI</span>'"/>
+      </div>
+    
+          <div class="ad-advertiser-info">
+            <span class="ad-advertiser-name">Almedia USA, Inc.</span>
+            <span class="ad-domain">almedia.co</span>
+          </div>
+        </a>
+        <span class="ad-date-badge" title="Published date">Aug 26, 2026</span>
+      </div>
+
+      
+        <div class="ad-media-wrapper">
+          <a href="/ads/c557ea0b8fb5ed64d698e8a7" class="ad-media-link" aria-label="View ad details for Join 10M+ Earning Rewards">
+            <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/4d3cb0e78b309d2ea1ed8eaad4ad635876621d251e1d0bc0d855cca99211fca5.webp" alt="Join 10M+ Earning Rewards" class="ad-media-img" loading="lazy" />
+          </a>
+        </div>
+      
+
+      <div class="ad-card-body">
+        <h3 class="ad-copy-text"><a href="/ads/c557ea0b8fb5ed64d698e8a7">Join 10M+ Earning Rewards</a></h3>
+        
+          <p class="ad-description-text">Trusted by 10,000,000+ users with a 4.7-star rating. Start earning rewards today.</p>
+        
+      </div>
+
+      <div class="ad-card-footer">
+        <div class="ad-impressions-badge" title="Estimated ad impressions">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span>4 impressions</span>
+        </div>
+
+        <div class="ad-actions">
+          <button type="button" class="btn-icon copy-ad-btn" data-ad-id="c557ea0b8fb5ed64d698e8a7" title="Copy link to this ad" aria-label="Copy link to ad">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
+          <a href="/ads/c557ea0b8fb5ed64d698e8a7" class="btn btn-sm btn-primary">Details</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="ad-card" data-ad-id="db68bea1c88407580311c26b">
+      <div class="ad-card-header">
+        <a href="/advertisers/almedia-usa-inc" class="ad-advertiser-link" title="View all ads by Almedia USA, Inc.">
+          
+      <div class="advertiser-avatar avatar-sm">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/3e1c6694231ff1060aa3f0f12a2958cbfea0c1788ab9879e135e8ac9190301f0.webp" alt="Almedia USA, Inc. logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>AI</span>'"/>
+      </div>
+    
+          <div class="ad-advertiser-info">
+            <span class="ad-advertiser-name">Almedia USA, Inc.</span>
+            <span class="ad-domain">almedia.co</span>
+          </div>
+        </a>
+        <span class="ad-date-badge" title="Published date">Aug 26, 2026</span>
+      </div>
+
+      
+        <div class="ad-media-wrapper">
+          <a href="/ads/db68bea1c88407580311c26b" class="ad-media-link" aria-label="View ad details for 80M+ People Already Earn Here">
+            <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/e3e30a635122111327f5b77086e18753f4d1ba3c2478a2932aec31120b12f953.webp" alt="80M+ People Already Earn Here" class="ad-media-img" loading="lazy" />
+          </a>
+        </div>
+      
+
+      <div class="ad-card-body">
+        <h3 class="ad-copy-text"><a href="/ads/db68bea1c88407580311c26b">80M+ People Already Earn Here</a></h3>
+        
+          <p class="ad-description-text">Join 60M+ members on a platform rated 4.8/5 on Trustpilot. Earn rewards at your pace.</p>
+        
+      </div>
+
+      <div class="ad-card-footer">
+        <div class="ad-impressions-badge" title="Estimated ad impressions">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span>3 impressions</span>
+        </div>
+
+        <div class="ad-actions">
+          <button type="button" class="btn-icon copy-ad-btn" data-ad-id="db68bea1c88407580311c26b" title="Copy link to this ad" aria-label="Copy link to ad">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
+          <a href="/ads/db68bea1c88407580311c26b" class="btn btn-sm btn-primary">Details</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="ad-card" data-ad-id="4768fcb123c23a7b6ca2407e">
+      <div class="ad-card-header">
+        <a href="/advertisers/hitpath" class="ad-advertiser-link" title="View all ads by HitPath">
+          
+      <div class="advertiser-avatar avatar-sm">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/ef11fed9bf54621d76b6e4147123b1bd9183820d1ee05f3da44ee13ef2fd78e2.webp" alt="HitPath logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>HI</span>'"/>
+      </div>
+    
+          <div class="ad-advertiser-info">
+            <span class="ad-advertiser-name">HitPath</span>
+            <span class="ad-domain">hitpath.com</span>
+          </div>
+        </a>
+        <span class="ad-date-badge" title="Published date">Aug 25, 2026</span>
+      </div>
+
+      
+        <div class="ad-media-wrapper">
+          <a href="/ads/4768fcb123c23a7b6ca2407e" class="ad-media-link" aria-label="View ad details for Performance Marketing, Tracked">
+            <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/d3ea3ceb96f2df0c521f54997a29aa93be432bd9df56608e9690e30cf0ed5d31.webp" alt="Performance Marketing, Tracked" class="ad-media-img" loading="lazy" />
+          </a>
+        </div>
+      
+
+      <div class="ad-card-body">
+        <h3 class="ad-copy-text"><a href="/ads/4768fcb123c23a7b6ca2407e">Performance Marketing, Tracked</a></h3>
+        
+          <p class="ad-description-text">Track every click, conversion, call, coupon and partner in one platform.</p>
+        
+      </div>
+
+      <div class="ad-card-footer">
+        <div class="ad-impressions-badge" title="Estimated ad impressions">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span>36 impressions</span>
+        </div>
+
+        <div class="ad-actions">
+          <button type="button" class="btn-icon copy-ad-btn" data-ad-id="4768fcb123c23a7b6ca2407e" title="Copy link to this ad" aria-label="Copy link to ad">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
+          <a href="/ads/4768fcb123c23a7b6ca2407e" class="btn btn-sm btn-primary">Details</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="ad-card" data-ad-id="a446256fbf3ace02eeb39da7">
+      <div class="ad-card-header">
+        <a href="/advertisers/l-l-bean" class="ad-advertiser-link" title="View all ads by L.L.Bean">
+          
+      <div class="advertiser-avatar avatar-sm">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/58f4640011088508b7019e0e8a94a983c5ac643e280073d3b8b2d05cfc353d0d.webp" alt="L.L.Bean logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>L.</span>'"/>
+      </div>
+    
+          <div class="ad-advertiser-info">
+            <span class="ad-advertiser-name">L.L.Bean</span>
+            <span class="ad-domain">llbean.com</span>
+          </div>
+        </a>
+        <span class="ad-date-badge" title="Published date">Aug 25, 2026</span>
+      </div>
+
+      
+        <div class="ad-media-wrapper">
+          <a href="/ads/a446256fbf3ace02eeb39da7" class="ad-media-link" aria-label="View ad details for Yeti Rambler Travel Bottle, 16 oz. Navy, Stainless Steel">
+            <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/113abd312a7690388531b445aed555db97ebcb86c721731d4e281d919ac0f458.webp" alt="Yeti Rambler Travel Bottle, 16 oz. Navy, Stainless Steel" class="ad-media-img" loading="lazy" />
+          </a>
+        </div>
+      
+
+      <div class="ad-card-body">
+        <h3 class="ad-copy-text"><a href="/ads/a446256fbf3ace02eeb39da7">Yeti Rambler Travel Bottle, 16 oz. Navy, Stainless Steel</a></h3>
+        
+          <p class="ad-description-text">The perfect commuter mug. Made from durable stainless steel with double-wall vacuum insulation, it keeps drinks hot or cold all day. Innovative, leakproof Commuter Cap offers convenient 360° drinking. Dishwasher safe. Dishwasher safe. Made from super-durable 18/8 stainless steel. Made from super-durable 18/8 stainless steel. Cup holder compatible. 360° drinking cap lets you drink from any angle. Leakproof Commuter Cap prevents spills in your car or inside a pack. 360° drinking cap lets you drink from any angle. Cup holder compatible. Leakproof Commuter Cap prevents spills in your car or inside a pack. Imported. | Yeti Rambler Travel Bottle, 16 oz. Navy, Stainless Steel</p>
+        
+      </div>
+
+      <div class="ad-card-footer">
+        <div class="ad-impressions-badge" title="Estimated ad impressions">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span>7 impressions</span>
+        </div>
+
+        <div class="ad-actions">
+          <button type="button" class="btn-icon copy-ad-btn" data-ad-id="a446256fbf3ace02eeb39da7" title="Copy link to this ad" aria-label="Copy link to ad">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
+          <a href="/ads/a446256fbf3ace02eeb39da7" class="btn btn-sm btn-primary">Details</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="ad-card" data-ad-id="b3d09e653337fa964e0b1069">
+      <div class="ad-card-header">
+        <a href="/advertisers/l-l-bean" class="ad-advertiser-link" title="View all ads by L.L.Bean">
+          
+      <div class="advertiser-avatar avatar-sm">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/58f4640011088508b7019e0e8a94a983c5ac643e280073d3b8b2d05cfc353d0d.webp" alt="L.L.Bean logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>L.</span>'"/>
+      </div>
+    
+          <div class="ad-advertiser-info">
+            <span class="ad-advertiser-name">L.L.Bean</span>
+            <span class="ad-domain">llbean.com</span>
+          </div>
+        </a>
+        <span class="ad-date-badge" title="Published date">Aug 25, 2026</span>
+      </div>
+
+      
+        <div class="ad-media-wrapper">
+          <a href="/ads/b3d09e653337fa964e0b1069" class="ad-media-link" aria-label="View ad details for Yeti Rambler Insulated Food Jar, 16 oz. Navy">
+            <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/436bc3d2e56704b037a0d23d27049bb18999f4db1cb83f1b99c3fe7130410dcc.webp" alt="Yeti Rambler Insulated Food Jar, 16 oz. Navy" class="ad-media-img" loading="lazy" />
+          </a>
+        </div>
+      
+
+      <div class="ad-card-body">
+        <h3 class="ad-copy-text"><a href="/ads/b3d09e653337fa964e0b1069">Yeti Rambler Insulated Food Jar, 16 oz. Navy</a></h3>
+        
+          <p class="ad-description-text">The Rambler Foor Jar will keep your lunch hot (or cold) until it&#039;s time to eat. The leakproof MagVent lid means you can throw it in your pack without worry. Dishwasher safe. Do not use with carbonated drinks, dairy or fermenting food/drink. Made from tough, BPA-free 18/8 kitchen grade stainless steel. Double-wall vacuum insulation reliably keeps your lunch hot. Two-piece lid comes apart for easy cleaning. Food safe and BPA free. 100% leakproof. Leakproof MagVent lid vents out hot air as it opens. Imported. | Yeti Rambler Insulated Food Jar, 16 oz. Navy</p>
+        
+      </div>
+
+      <div class="ad-card-footer">
+        <div class="ad-impressions-badge" title="Estimated ad impressions">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span>5 impressions</span>
+        </div>
+
+        <div class="ad-actions">
+          <button type="button" class="btn-icon copy-ad-btn" data-ad-id="b3d09e653337fa964e0b1069" title="Copy link to this ad" aria-label="Copy link to ad">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
+          <a href="/ads/b3d09e653337fa964e0b1069" class="btn btn-sm btn-primary">Details</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="ad-card" data-ad-id="84624204265e1c5d8ee8e120">
+      <div class="ad-card-header">
+        <a href="/advertisers/metadata-inc" class="ad-advertiser-link" title="View all ads by Metadata Inc">
+          
+      <div class="advertiser-avatar avatar-sm">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/621f7053e7af9c6b48b90bfb29ba65c124c0ce162480f005dc5659f5f8a10f62.webp" alt="Metadata Inc logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>MI</span>'"/>
+      </div>
+    
+          <div class="ad-advertiser-info">
+            <span class="ad-advertiser-name">Metadata Inc</span>
+            <span class="ad-domain">metadata.io</span>
+          </div>
+        </a>
+        <span class="ad-date-badge" title="Published date">Aug 25, 2026</span>
+      </div>
+
+      
+        <div class="ad-media-wrapper">
+          <a href="/ads/84624204265e1c5d8ee8e120" class="ad-media-link" aria-label="View ad details for Run Paid on 7 Channels, Add 0 Headcount">
+            <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/e8992a98f1f7a57e0b4054f08d607291a82a1c08331b6f1cef4b06ee95c2126d.webp" alt="Run Paid on 7 Channels, Add 0 Headcount" class="ad-media-img" loading="lazy" />
+          </a>
+        </div>
+      
+
+      <div class="ad-card-body">
+        <h3 class="ad-copy-text"><a href="/ads/84624204265e1c5d8ee8e120">Run Paid on 7 Channels, Add 0 Headcount</a></h3>
+        
+          <p class="ad-description-text">AI agents manage bids, budget and testing across LinkedIn, Meta and Google.</p>
+        
+      </div>
+
+      <div class="ad-card-footer">
+        <div class="ad-impressions-badge" title="Estimated ad impressions">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span>5 impressions</span>
+        </div>
+
+        <div class="ad-actions">
+          <button type="button" class="btn-icon copy-ad-btn" data-ad-id="84624204265e1c5d8ee8e120" title="Copy link to this ad" aria-label="Copy link to ad">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
+          <a href="/ads/84624204265e1c5d8ee8e120" class="btn btn-sm btn-primary">Details</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="ad-card" data-ad-id="c95d19982fbcd344003c8ea1">
+      <div class="ad-card-header">
+        <a href="/advertisers/l-l-bean" class="ad-advertiser-link" title="View all ads by L.L.Bean">
+          
+      <div class="advertiser-avatar avatar-sm">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/58f4640011088508b7019e0e8a94a983c5ac643e280073d3b8b2d05cfc353d0d.webp" alt="L.L.Bean logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>L.</span>'"/>
+      </div>
+    
+          <div class="ad-advertiser-info">
+            <span class="ad-advertiser-name">L.L.Bean</span>
+            <span class="ad-domain">llbean.com</span>
+          </div>
+        </a>
+        <span class="ad-date-badge" title="Published date">Aug 25, 2026</span>
+      </div>
+
+      
+        <div class="ad-media-wrapper">
+          <a href="/ads/c95d19982fbcd344003c8ea1" class="ad-media-link" aria-label="View ad details for Yeti Rambler Ceramic Lined Stackable Mug, 14 oz. Navy 14 oz., Ceramic/Stainless Steel">
+            <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/f4144a97fa8cb61a53f3aeff6808479410c9b9143b9ac63fa0f03a22bf434469.webp" alt="Yeti Rambler Ceramic Lined Stackable Mug, 14 oz. Navy 14 oz., Ceramic/Stainless Steel" class="ad-media-img" loading="lazy" />
+          </a>
+        </div>
+      
+
+      <div class="ad-card-body">
+        <h3 class="ad-copy-text"><a href="/ads/c95d19982fbcd344003c8ea1">Yeti Rambler Ceramic Lined Stackable Mug, 14 oz. Navy 14 oz., Ceramic/Stainless Steel</a></h3>
+        
+          <p class="ad-description-text">This ultra-versatile, stackable mug keeps drinks hot or cold for hours and features Yeti&#039;s legendary durability. It also doubles as a camp bowl. Dishwasher safe. DuraSip™ ceramic lining is nonstick and resists staining from acidic drinks like coffee. Welded handle for a solid grip. Rugged double-wall, vacuum insulated stainless steel construction. Lining is fused to the stainless steel, allowing to withstand drops and tumbles. Splash resistant. Stackable for easy storage with other mugs. Rust and puncture resistant. Imported. | Yeti Rambler Ceramic Lined Stackable Mug, 14 oz. Navy 14 oz., Ceramic/Stainless Steel</p>
+        
+      </div>
+
+      <div class="ad-card-footer">
+        <div class="ad-impressions-badge" title="Estimated ad impressions">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span>5 impressions</span>
+        </div>
+
+        <div class="ad-actions">
+          <button type="button" class="btn-icon copy-ad-btn" data-ad-id="c95d19982fbcd344003c8ea1" title="Copy link to this ad" aria-label="Copy link to ad">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
+          <a href="/ads/c95d19982fbcd344003c8ea1" class="btn btn-sm btn-primary">Details</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="ad-card" data-ad-id="9709aca9fc182344ed8ddd74">
+      <div class="ad-card-header">
+        <a href="/advertisers/l-l-bean" class="ad-advertiser-link" title="View all ads by L.L.Bean">
+          
+      <div class="advertiser-avatar avatar-sm">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/58f4640011088508b7019e0e8a94a983c5ac643e280073d3b8b2d05cfc353d0d.webp" alt="L.L.Bean logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>L.</span>'"/>
+      </div>
+    
+          <div class="ad-advertiser-info">
+            <span class="ad-advertiser-name">L.L.Bean</span>
+            <span class="ad-domain">llbean.com</span>
+          </div>
+        </a>
+        <span class="ad-date-badge" title="Published date">Aug 25, 2026</span>
+      </div>
+
+      
+        <div class="ad-media-wrapper">
+          <a href="/ads/9709aca9fc182344ed8ddd74" class="ad-media-link" aria-label="View ad details for Yeti Rambler Stackable Cup With MagSlide Lid, 16 oz. Navy">
+            <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/5a21e35e75f11ec6b0044254167a1f711fc05a0bc7cc30c7d908066c18040779.webp" alt="Yeti Rambler Stackable Cup With MagSlide Lid, 16 oz. Navy" class="ad-media-img" loading="lazy" />
+          </a>
+        </div>
+      
+
+      <div class="ad-card-body">
+        <h3 class="ad-copy-text"><a href="/ads/9709aca9fc182344ed8ddd74">Yeti Rambler Stackable Cup With MagSlide Lid, 16 oz. Navy</a></h3>
+        
+          <p class="ad-description-text">Great for camp or home, this Yeti stackable cup is perfect for everything from your morning coffee, mid-day hydration or post-adventure cocktails. Double-wall vacuum insulation keeps drinks cold or hot for hours. Dishwasher safe. Built from tough, BPA-free 18/8 kitchen grade stainless steel. Double-wall vacuum insulated keeps drinks cold or hot. Stacks with other Yeti stackable cups. Cup holder compatible. Splash-resistant Magslider™ lid. Imported. | Yeti Rambler Stackable Cup With MagSlide Lid, 16 oz. Navy</p>
+        
+      </div>
+
+      <div class="ad-card-footer">
+        <div class="ad-impressions-badge" title="Estimated ad impressions">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span>4 impressions</span>
+        </div>
+
+        <div class="ad-actions">
+          <button type="button" class="btn-icon copy-ad-btn" data-ad-id="9709aca9fc182344ed8ddd74" title="Copy link to this ad" aria-label="Copy link to ad">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
+          <a href="/ads/9709aca9fc182344ed8ddd74" class="btn btn-sm btn-primary">Details</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="ad-card" data-ad-id="e3a71a700addbbc5b9e6570a">
+      <div class="ad-card-header">
+        <a href="/advertisers/l-l-bean" class="ad-advertiser-link" title="View all ads by L.L.Bean">
+          
+      <div class="advertiser-avatar avatar-sm">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/58f4640011088508b7019e0e8a94a983c5ac643e280073d3b8b2d05cfc353d0d.webp" alt="L.L.Bean logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>L.</span>'"/>
+      </div>
+    
+          <div class="ad-advertiser-info">
+            <span class="ad-advertiser-name">L.L.Bean</span>
+            <span class="ad-domain">llbean.com</span>
+          </div>
+        </a>
+        <span class="ad-date-badge" title="Published date">Aug 25, 2026</span>
+      </div>
+
+      
+        <div class="ad-media-wrapper">
+          <a href="/ads/e3a71a700addbbc5b9e6570a" class="ad-media-link" aria-label="View ad details for Yeti Flask Navy">
+            <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/406a5a44730632090f348079f528d21788e8dde3f06591423ca03ccb99120627.webp" alt="Yeti Flask Navy" class="ad-media-img" loading="lazy" />
+          </a>
+        </div>
+      
+
+      <div class="ad-card-body">
+        <h3 class="ad-copy-text"><a href="/ads/e3a71a700addbbc5b9e6570a">Yeti Flask Navy</a></h3>
+        
+          <p class="ad-description-text">Rugged and buiilt to last, the Yeti Flask is ideal for carrying your favorite beverage in a small package. Dishwasher safe. Single-wall 18/8 stainless steel. Not recommended for hot or carbonated beverages. Funnel included so you can fill it up with no mess. Leakproof design means you can carry it in your pocket or pack without worry. Imported. | Yeti Flask Navy</p>
+        
+      </div>
+
+      <div class="ad-card-footer">
+        <div class="ad-impressions-badge" title="Estimated ad impressions">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span>3 impressions</span>
+        </div>
+
+        <div class="ad-actions">
+          <button type="button" class="btn-icon copy-ad-btn" data-ad-id="e3a71a700addbbc5b9e6570a" title="Copy link to this ad" aria-label="Copy link to ad">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
+          <a href="/ads/e3a71a700addbbc5b9e6570a" class="btn btn-sm btn-primary">Details</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="ad-card" data-ad-id="7c537d93ed36a80ebd49997a">
+      <div class="ad-card-header">
+        <a href="/advertisers/censys-inc" class="ad-advertiser-link" title="View all ads by Censys, Inc.">
+          
+      <div class="advertiser-avatar avatar-sm">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/7efb4a6bfffdb46a78c43ac09e16fd33eb7855d5ed9336af224e5749f0905af6.webp" alt="Censys, Inc. logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>CI</span>'"/>
+      </div>
+    
+          <div class="ad-advertiser-info">
+            <span class="ad-advertiser-name">Censys, Inc.</span>
+            <span class="ad-domain">censys.com</span>
+          </div>
+        </a>
+        <span class="ad-date-badge" title="Published date">Aug 25, 2026</span>
+      </div>
+
+      
+        <div class="ad-media-wrapper">
+          <a href="/ads/7c537d93ed36a80ebd49997a" class="ad-media-link" aria-label="View ad details for Censys Sees It All">
+            <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/5b719444b47cd2020412d56bd7f0ad9ebacfeea312267608ba0118ad8c12003c.webp" alt="Censys Sees It All" class="ad-media-img" loading="lazy" />
+          </a>
+        </div>
+      
+
+      <div class="ad-card-body">
+        <h3 class="ad-copy-text"><a href="/ads/7c537d93ed36a80ebd49997a">Censys Sees It All</a></h3>
+        
+          <p class="ad-description-text">Map every Internet-facing asset. See more.</p>
+        
+      </div>
+
+      <div class="ad-card-footer">
+        <div class="ad-impressions-badge" title="Estimated ad impressions">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span>2 impressions</span>
+        </div>
+
+        <div class="ad-actions">
+          <button type="button" class="btn-icon copy-ad-btn" data-ad-id="7c537d93ed36a80ebd49997a" title="Copy link to this ad" aria-label="Copy link to ad">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
+          <a href="/ads/7c537d93ed36a80ebd49997a" class="btn btn-sm btn-primary">Details</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="ad-card" data-ad-id="fc521e69f4a85b253bda097a">
+      <div class="ad-card-header">
+        <a href="/advertisers/butcherbox" class="ad-advertiser-link" title="View all ads by ButcherBox">
+          
+      <div class="advertiser-avatar avatar-sm">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/5a1d74ce77ab45844e5042e2844874155698ae691c173f4c3c2d43e8d8e643e7.webp" alt="ButcherBox logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>BU</span>'"/>
+      </div>
+    
+          <div class="ad-advertiser-info">
+            <span class="ad-advertiser-name">ButcherBox</span>
+            <span class="ad-domain">butcherbox.com</span>
+          </div>
+        </a>
+        <span class="ad-date-badge" title="Published date">Aug 25, 2026</span>
+      </div>
+
+      
+        <div class="ad-media-wrapper">
+          <a href="/ads/fc521e69f4a85b253bda097a" class="ad-media-link" aria-label="View ad details for See Pricing &amp; Plans">
+            <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/b67fd9aed403f30dd9bdcf84fc7f984786bbe5590bbcc6362246296e3f269598.webp" alt="See Pricing &amp; Plans" class="ad-media-img" loading="lazy" />
+          </a>
+        </div>
+      
+
+      <div class="ad-card-body">
+        <h3 class="ad-copy-text"><a href="/ads/fc521e69f4a85b253bda097a">See Pricing &amp; Plans</a></h3>
+        
+          <p class="ad-description-text">High-quality meats at budget-friendly prices</p>
+        
+      </div>
+
+      <div class="ad-card-footer">
+        <div class="ad-impressions-badge" title="Estimated ad impressions">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span>1 impressions</span>
+        </div>
+
+        <div class="ad-actions">
+          <button type="button" class="btn-icon copy-ad-btn" data-ad-id="fc521e69f4a85b253bda097a" title="Copy link to this ad" aria-label="Copy link to ad">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
+          <a href="/ads/fc521e69f4a85b253bda097a" class="btn btn-sm btn-primary">Details</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="ad-card" data-ad-id="de9495697fffe0dc2556f8d0">
+      <div class="ad-card-header">
+        <a href="/advertisers/ezoic-inc" class="ad-advertiser-link" title="View all ads by Ezoic Inc">
+          
+      <div class="advertiser-avatar avatar-sm">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/b314f90de933b554a352b39119eaa87bc59ea5d935a4f8aa4ea12a71189736e5.webp" alt="Ezoic Inc logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>EI</span>'"/>
+      </div>
+    
+          <div class="ad-advertiser-info">
+            <span class="ad-advertiser-name">Ezoic Inc</span>
+            <span class="ad-domain">ezoic.com</span>
+          </div>
+        </a>
+        <span class="ad-date-badge" title="Published date">Aug 24, 2026</span>
+      </div>
+
+      
+        <div class="ad-media-wrapper">
+          <a href="/ads/de9495697fffe0dc2556f8d0" class="ad-media-link" aria-label="View ad details for Ezoic — Ads for the Open Web">
+            <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/b3693d45c02b505ea283c2c60f5c2faa6b5de5cd8fc374119ee058036d7a8d7d.webp" alt="Ezoic — Ads for the Open Web" class="ad-media-img" loading="lazy" />
+          </a>
+        </div>
+      
+
+      <div class="ad-card-body">
+        <h3 class="ad-copy-text"><a href="/ads/de9495697fffe0dc2556f8d0">Ezoic — Ads for the Open Web</a></h3>
+        
+          <p class="ad-description-text">Ezoic is the premiere solution for open web monetization. Highest RPMs and Ratings.</p>
+        
+      </div>
+
+      <div class="ad-card-footer">
+        <div class="ad-impressions-badge" title="Estimated ad impressions">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span>242 impressions</span>
+        </div>
+
+        <div class="ad-actions">
+          <button type="button" class="btn-icon copy-ad-btn" data-ad-id="de9495697fffe0dc2556f8d0" title="Copy link to this ad" aria-label="Copy link to ad">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
+          <a href="/ads/de9495697fffe0dc2556f8d0" class="btn btn-sm btn-primary">Details</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="ad-card" data-ad-id="1aa9d355c8f8c0c93eb244e9">
+      <div class="ad-card-header">
+        <a href="/advertisers/zoominfo-technologies-inc" class="ad-advertiser-link" title="View all ads by ZoomInfo Technologies Inc">
+          
+      <div class="advertiser-avatar avatar-sm">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/d12891a8d776525ed6b7c7e46d5f9f2ed60bfaa345cf0204ab50a9a454bd395d.webp" alt="ZoomInfo Technologies Inc logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>ZI</span>'"/>
+      </div>
+    
+          <div class="ad-advertiser-info">
+            <span class="ad-advertiser-name">ZoomInfo Technologies Inc</span>
+            <span class="ad-domain">zoominfo.com</span>
+          </div>
+        </a>
+        <span class="ad-date-badge" title="Published date">Aug 24, 2026</span>
+      </div>
+
+      
+        <div class="ad-media-wrapper">
+          <a href="/ads/1aa9d355c8f8c0c93eb244e9" class="ad-media-link" aria-label="View ad details for AI-ready data; #1 B2B Data">
+            <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/c782dbb9e578c44bdbad87be23cca3ac10c70f006916bf70b8fc365c2c83655e.webp" alt="AI-ready data; #1 B2B Data" class="ad-media-img" loading="lazy" />
+          </a>
+        </div>
+      
+
+      <div class="ad-card-body">
+        <h3 class="ad-copy-text"><a href="/ads/1aa9d355c8f8c0c93eb244e9">AI-ready data; #1 B2B Data</a></h3>
+        
+          <p class="ad-description-text">Use GTM data anywhere you work, pay for what you use</p>
+        
+      </div>
+
+      <div class="ad-card-footer">
+        <div class="ad-impressions-badge" title="Estimated ad impressions">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span>52 impressions</span>
+        </div>
+
+        <div class="ad-actions">
+          <button type="button" class="btn-icon copy-ad-btn" data-ad-id="1aa9d355c8f8c0c93eb244e9" title="Copy link to this ad" aria-label="Copy link to ad">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
+          <a href="/ads/1aa9d355c8f8c0c93eb244e9" class="btn btn-sm btn-primary">Details</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="ad-card" data-ad-id="4ac7901ce11aa40823238f08">
+      <div class="ad-card-header">
+        <a href="/advertisers/ignitium-abx-orchestration" class="ad-advertiser-link" title="View all ads by Ignitium: ABX Orchestration">
+          
+      <div class="advertiser-avatar avatar-sm">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/24cd0d4f7d2230976fba4f8ac3bdb769b774d79f6e8a3aca252ac1ecd9613c56.webp" alt="Ignitium: ABX Orchestration logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>IO</span>'"/>
+      </div>
+    
+          <div class="ad-advertiser-info">
+            <span class="ad-advertiser-name">Ignitium: ABX Orchestration</span>
+            <span class="ad-domain">ignitium.com</span>
+          </div>
+        </a>
+        <span class="ad-date-badge" title="Published date">Aug 24, 2026</span>
+      </div>
+
+      
+        <div class="ad-media-wrapper">
+          <a href="/ads/4ac7901ce11aa40823238f08" class="ad-media-link" aria-label="View ad details for Account Based Marketing Agency">
+            <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/45cf926821a0d4268a52b34a533af7e81d55652847f401b86cf897e74dc253ef.webp" alt="Account Based Marketing Agency" class="ad-media-img" loading="lazy" />
+          </a>
+        </div>
+      
+
+      <div class="ad-card-body">
+        <h3 class="ad-copy-text"><a href="/ads/4ac7901ce11aa40823238f08">Account Based Marketing Agency</a></h3>
+        
+          <p class="ad-description-text">Launch and Scale 1:1 Experiences for your Strategic Accounts</p>
+        
+      </div>
+
+      <div class="ad-card-footer">
+        <div class="ad-impressions-badge" title="Estimated ad impressions">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span>35 impressions</span>
+        </div>
+
+        <div class="ad-actions">
+          <button type="button" class="btn-icon copy-ad-btn" data-ad-id="4ac7901ce11aa40823238f08" title="Copy link to this ad" aria-label="Copy link to ad">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
+          <a href="/ads/4ac7901ce11aa40823238f08" class="btn btn-sm btn-primary">Details</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="ad-card" data-ad-id="fe4008ff3d0882717367ce73">
+      <div class="ad-card-header">
+        <a href="/advertisers/top10-com" class="ad-advertiser-link" title="View all ads by Top10.com">
+          
+      <div class="advertiser-avatar avatar-sm">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/6032c01662e80204f41fefc676503599773e942494b908f847ab38a001522033.webp" alt="Top10.com logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>TO</span>'"/>
+      </div>
+    
+          <div class="ad-advertiser-info">
+            <span class="ad-advertiser-name">Top10.com</span>
+            <span class="ad-domain">top10.com</span>
+          </div>
+        </a>
+        <span class="ad-date-badge" title="Published date">Aug 24, 2026</span>
+      </div>
+
+      
+        <div class="ad-media-wrapper">
+          <a href="/ads/fe4008ff3d0882717367ce73" class="ad-media-link" aria-label="View ad details for Find the Best Online Casino Today">
+            <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/50c1235b32d1702d083646ff9c117b160f3c680d6cdb609eaece8ac6a797ad0d.webp" alt="Find the Best Online Casino Today" class="ad-media-img" loading="lazy" />
+          </a>
+        </div>
+      
+
+      <div class="ad-card-body">
+        <h3 class="ad-copy-text"><a href="/ads/fe4008ff3d0882717367ce73">Find the Best Online Casino Today</a></h3>
+        
+          <p class="ad-description-text">Compare Top-Rated Casinos and Slot Games.</p>
+        
+      </div>
+
+      <div class="ad-card-footer">
+        <div class="ad-impressions-badge" title="Estimated ad impressions">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span>34 impressions</span>
+        </div>
+
+        <div class="ad-actions">
+          <button type="button" class="btn-icon copy-ad-btn" data-ad-id="fe4008ff3d0882717367ce73" title="Copy link to this ad" aria-label="Copy link to ad">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
+          <a href="/ads/fe4008ff3d0882717367ce73" class="btn btn-sm btn-primary">Details</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="ad-card" data-ad-id="835f573f49911f9c7d2e57b8">
+      <div class="ad-card-header">
+        <a href="/advertisers/openai" class="ad-advertiser-link" title="View all ads by OpenAI">
+          
+      <div class="advertiser-avatar avatar-sm">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/396f629371bdcee5b43665c6c833e1798d99e489136581c10d02cad65a1de88a.webp" alt="OpenAI logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>OP</span>'"/>
+      </div>
+    
+          <div class="ad-advertiser-info">
+            <span class="ad-advertiser-name">OpenAI</span>
+            <span class="ad-domain">ads.openai.com</span>
+          </div>
+        </a>
+        <span class="ad-date-badge" title="Published date">Aug 24, 2026</span>
+      </div>
+
+      
+        <div class="ad-media-wrapper">
+          <a href="/ads/835f573f49911f9c7d2e57b8" class="ad-media-link" aria-label="View ad details for Advertise in ChatGPT">
+            <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/e10768885e9be047e513590a5fc93a7bbc43b0f533b0d751be8fde76d0c12758.webp" alt="Advertise in ChatGPT" class="ad-media-img" loading="lazy" />
+          </a>
+        </div>
+      
+
+      <div class="ad-card-body">
+        <h3 class="ad-copy-text"><a href="/ads/835f573f49911f9c7d2e57b8">Advertise in ChatGPT</a></h3>
+        
+          <p class="ad-description-text">Launch your first campaign today.</p>
+        
+      </div>
+
+      <div class="ad-card-footer">
+        <div class="ad-impressions-badge" title="Estimated ad impressions">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span>32 impressions</span>
+        </div>
+
+        <div class="ad-actions">
+          <button type="button" class="btn-icon copy-ad-btn" data-ad-id="835f573f49911f9c7d2e57b8" title="Copy link to this ad" aria-label="Copy link to ad">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
+          <a href="/ads/835f573f49911f9c7d2e57b8" class="btn btn-sm btn-primary">Details</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="ad-card" data-ad-id="5efdbd7bff5b42cef19faf42">
+      <div class="ad-card-header">
+        <a href="/advertisers/monday-com" class="ad-advertiser-link" title="View all ads by Monday.com">
+          
+      <div class="advertiser-avatar avatar-sm">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/82aad6d806618be581e480598723923c557d8fe058b88d39bd503cdb844f59b7.webp" alt="Monday.com logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>MO</span>'"/>
+      </div>
+    
+          <div class="ad-advertiser-info">
+            <span class="ad-advertiser-name">Monday.com</span>
+            <span class="ad-domain">monday.com</span>
+          </div>
+        </a>
+        <span class="ad-date-badge" title="Published date">Aug 24, 2026</span>
+      </div>
+
+      
+        <div class="ad-media-wrapper">
+          <a href="/ads/5efdbd7bff5b42cef19faf42" class="ad-media-link" aria-label="View ad details for Run a research agent for your team">
+            <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/b387d0ea0ba566a054896db6f219626a0b429f15da46b61372078ce6e15468da.webp" alt="Run a research agent for your team" class="ad-media-img" loading="lazy" />
+          </a>
+        </div>
+      
+
+      <div class="ad-card-body">
+        <h3 class="ad-copy-text"><a href="/ads/5efdbd7bff5b42cef19faf42">Run a research agent for your team</a></h3>
+        
+          <p class="ad-description-text">AI agents track competitors, surface insights, and deliver structured intel 24/7.</p>
+        
+      </div>
+
+      <div class="ad-card-footer">
+        <div class="ad-impressions-badge" title="Estimated ad impressions">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span>22 impressions</span>
+        </div>
+
+        <div class="ad-actions">
+          <button type="button" class="btn-icon copy-ad-btn" data-ad-id="5efdbd7bff5b42cef19faf42" title="Copy link to this ad" aria-label="Copy link to ad">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
+          <a href="/ads/5efdbd7bff5b42cef19faf42" class="btn btn-sm btn-primary">Details</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="ad-card" data-ad-id="950e4b4434d188f32f3063a9">
+      <div class="ad-card-header">
+        <a href="/advertisers/capterra" class="ad-advertiser-link" title="View all ads by Capterra">
+          
+      <div class="advertiser-avatar avatar-sm">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/366f0da2e4396c3673dcf69f2bef35c88499b3a76c73e1bf43b33be0aa96594e.webp" alt="Capterra logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>CA</span>'"/>
+      </div>
+    
+          <div class="ad-advertiser-info">
+            <span class="ad-advertiser-name">Capterra</span>
+            <span class="ad-domain">capterra.com</span>
+          </div>
+        </a>
+        <span class="ad-date-badge" title="Published date">Aug 24, 2026</span>
+      </div>
+
+      
+        <div class="ad-media-wrapper">
+          <a href="/ads/950e4b4434d188f32f3063a9" class="ad-media-link" aria-label="View ad details for Compare the Best Customer Service Software of 2026">
+            <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/0f3f2decc7f9f91079937f4a8c35686c0e56b41b27124792ef291687f9ded7ce.webp" alt="Compare the Best Customer Service Software of 2026" class="ad-media-img" loading="lazy" />
+          </a>
+        </div>
+      
+
+      <div class="ad-card-body">
+        <h3 class="ad-copy-text"><a href="/ads/950e4b4434d188f32f3063a9">Compare the Best Customer Service Software of 2026</a></h3>
+        
+          <p class="ad-description-text">Chat, email &amp; phone support. Compare top tools ranked by 2.5M+ verified reviews.</p>
+        
+      </div>
+
+      <div class="ad-card-footer">
+        <div class="ad-impressions-badge" title="Estimated ad impressions">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span>16 impressions</span>
+        </div>
+
+        <div class="ad-actions">
+          <button type="button" class="btn-icon copy-ad-btn" data-ad-id="950e4b4434d188f32f3063a9" title="Copy link to this ad" aria-label="Copy link to ad">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
+          <a href="/ads/950e4b4434d188f32f3063a9" class="btn btn-sm btn-primary">Details</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="ad-card" data-ad-id="1fd80d4df57d9d9347ed13fb">
+      <div class="ad-card-header">
+        <a href="/advertisers/profound" class="ad-advertiser-link" title="View all ads by Profound">
+          
+      <div class="advertiser-avatar avatar-sm">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/f81f08e5689f838bad4a30fefeeee621a64e39e14b84d553e978f53fc9f5920e.webp" alt="Profound logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>PR</span>'"/>
+      </div>
+    
+          <div class="ad-advertiser-info">
+            <span class="ad-advertiser-name">Profound</span>
+            <span class="ad-domain">tryprofound.com</span>
+          </div>
+        </a>
+        <span class="ad-date-badge" title="Published date">Aug 24, 2026</span>
+      </div>
+
+      
+        <div class="ad-media-wrapper">
+          <a href="/ads/1fd80d4df57d9d9347ed13fb" class="ad-media-link" aria-label="View ad details for Profound | AI Answer Engine Optimization">
+            <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/3407a1cf7168a4fe814b70a20b9b70b700cee970555a46f9a9898fe91ee2fca3.webp" alt="Profound | AI Answer Engine Optimization" class="ad-media-img" loading="lazy" />
+          </a>
+        </div>
+      
+
+      <div class="ad-card-body">
+        <h3 class="ad-copy-text"><a href="/ads/1fd80d4df57d9d9347ed13fb">Profound | AI Answer Engine Optimization</a></h3>
+        
+          <p class="ad-description-text">See how LLMs talk about your brands. Simple as that sir</p>
+        
+      </div>
+
+      <div class="ad-card-footer">
+        <div class="ad-impressions-badge" title="Estimated ad impressions">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span>16 impressions</span>
+        </div>
+
+        <div class="ad-actions">
+          <button type="button" class="btn-icon copy-ad-btn" data-ad-id="1fd80d4df57d9d9347ed13fb" title="Copy link to this ad" aria-label="Copy link to ad">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
+          <a href="/ads/1fd80d4df57d9d9347ed13fb" class="btn btn-sm btn-primary">Details</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="ad-card" data-ad-id="893a61a545897f34d5338779">
+      <div class="ad-card-header">
+        <a href="/advertisers/top10-com" class="ad-advertiser-link" title="View all ads by Top10.com">
+          
+      <div class="advertiser-avatar avatar-sm">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/6032c01662e80204f41fefc676503599773e942494b908f847ab38a001522033.webp" alt="Top10.com logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>TO</span>'"/>
+      </div>
+    
+          <div class="ad-advertiser-info">
+            <span class="ad-advertiser-name">Top10.com</span>
+            <span class="ad-domain">top10.com</span>
+          </div>
+        </a>
+        <span class="ad-date-badge" title="Published date">Aug 24, 2026</span>
+      </div>
+
+      
+        <div class="ad-media-wrapper">
+          <a href="/ads/893a61a545897f34d5338779" class="ad-media-link" aria-label="View ad details for Top 10 VPN Providers 2026">
+            <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/01768607099b3886a8859d23fbd839d283be112859d3a82fb240b59551c09960.webp" alt="Top 10 VPN Providers 2026" class="ad-media-img" loading="lazy" />
+          </a>
+        </div>
+      
+
+      <div class="ad-card-body">
+        <h3 class="ad-copy-text"><a href="/ads/893a61a545897f34d5338779">Top 10 VPN Providers 2026</a></h3>
+        
+          <p class="ad-description-text">See the 2026 Picks. Compare Features Side by Side.</p>
+        
+      </div>
+
+      <div class="ad-card-footer">
+        <div class="ad-impressions-badge" title="Estimated ad impressions">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span>15 impressions</span>
+        </div>
+
+        <div class="ad-actions">
+          <button type="button" class="btn-icon copy-ad-btn" data-ad-id="893a61a545897f34d5338779" title="Copy link to this ad" aria-label="Copy link to ad">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
+          <a href="/ads/893a61a545897f34d5338779" class="btn btn-sm btn-primary">Details</a>
+        </div>
+      </div>
+    </article>
+  
         </div>
 
         <!-- Pagination -->
-        <div id="pagination-root" class="pagination-root"></div>
+        <div id="pagination-root" class="pagination-root">
+          <div class="pagination-container" role="navigation" aria-label="Pagination">
+            <button type="button" class="pagination-btn pagination-prev" disabled data-page="0" aria-label="Previous page">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"/>
+              </svg>
+              <span>Prev</span>
+            </button>
+
+            <div class="pagination-pages">
+              <a href="/" class="pagination-page-btn active" data-page="1" aria-label="Page 1" aria-current="page">1</a>
+              <a href="/?page=2" class="pagination-page-btn" data-page="2" aria-label="Page 2">2</a>
+              <span class="pagination-dots">&hellip;</span>
+              <a href="/?page=132" class="pagination-page-btn" data-page="132" aria-label="Page 132">132</a>
+            </div>
+
+            <a href="/?page=2" class="pagination-btn pagination-next" data-page="2" aria-label="Next page">
+              <span>Next</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <!-- Dynamic Footer Root -->
-  <div id="footer-root"></div>
+  <div id="footer-root">
+    
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="brand-logo footer-logo">
+              <div class="logo-badge">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                </svg>
+              </div>
+              <div class="brand-text">
+                <span class="brand-title">ChatGPT Ads Library</span>
+              </div>
+            </div>
+            <p class="footer-desc">
+              An independent, searchable archive of ads running across ChatGPT. Browse ad creative, explore advertisers, and filter by date and impressions.
+            </p>
+          </div>
+
+          <div class="footer-links-group">
+            <h4 class="footer-heading">Navigation</h4>
+            <ul class="footer-links-list">
+              <li><a href="/">Ads</a></li>
+              <li><a href="/advertisers">Advertisers</a></li>
+              <li><a href="/about">About</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-group">
+            <h4 class="footer-heading">Archive Metrics</h4>
+            <div class="footer-stats-box" id="footer-stats-box">
+              <div class="stat-mini-row">
+                <span class="stat-mini-label">Indexed Ads</span>
+                <span class="stat-mini-val" id="footer-stat-ads">3.2K</span>
+              </div>
+              <div class="stat-mini-row">
+                <span class="stat-mini-label">Active Advertisers</span>
+                <span class="stat-mini-val" id="footer-stat-adv">1.4K</span>
+              </div>
+              <div class="stat-mini-row">
+                <span class="stat-mini-label">Total Impressions</span>
+                <span class="stat-mini-val" id="footer-stat-imp">8K</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-disclaimer">
+            <strong>Disclaimer:</strong> This is an independent research archive. ChatGPT Ads Library is not affiliated with, endorsed by, or associated with OpenAI Inc. or any indexed advertisers.
+          </p>
+          <p class="footer-copyright">
+            &copy; 2026 ChatGPT Ads Library. Open Transparency Archive.
+          </p>
+        </div>
+      </div>
+    </footer>
+  
+  </div>
 
   <!-- Application Engine -->
   <script src="/app.js"></script>

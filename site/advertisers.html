@@ -4,19 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Advertisers Directory — ChatGPT Ads Library</title>
-  <meta name="description" content="Browse all verified brands and companies actively sponsoring content and running ads across ChatGPT." />
+  <meta name="description" content="Explore verified brands, organizations, and sponsors indexed in the ChatGPT Ads Library transparency archive." />
+  <meta name="keywords" content="ChatGPT advertisers, AI ad sponsors, commercial brands ChatGPT" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://chatgpt-ads-library.com/advertisers" />
 
-  <!-- Open Graph / Social Meta -->
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="ChatGPT Ads Library" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Advertisers Directory — ChatGPT Ads Library" />
-  <meta property="og:description" content="Discover companies and brands running commercial campaigns on ChatGPT." />
-  <meta property="og:image" content="/og-image.svg" />
+  <meta property="og:description" content="Explore verified brands, organizations, and sponsors indexed in the ChatGPT Ads Library transparency archive." />
+  <meta property="og:url" content="https://chatgpt-ads-library.com/advertisers" />
+  <meta property="og:image" content="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/b46aaaa3a6d4febd3a9c5721c02f2357d9afcb5e8c249c63aba19b3195eb0d74.webp" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Advertisers Directory — ChatGPT Ads Library" />
+  <meta name="twitter:description" content="Explore verified brands, organizations, and sponsors indexed in the ChatGPT Ads Library transparency archive." />
+  <meta name="twitter:image" content="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/b46aaaa3a6d4febd3a9c5721c02f2357d9afcb5e8c249c63aba19b3195eb0d74.webp" />
 
   <!-- Favicons & Manifest -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="manifest" href="/site.webmanifest" />
 
-  <!-- Fonts & Styles -->
+  <!-- Preconnect & Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -24,7 +35,54 @@
 </head>
 <body class="bg-surface text-main antialiased min-h-screen flex flex-col">
   <!-- Dynamic Header Root -->
-  <div id="header-root"></div>
+  <div id="header-root">
+    
+    <header class="site-header">
+      <div class="header-container container">
+        <a href="/" class="brand-logo" aria-label="ChatGPT Ads Library Home">
+          <div class="logo-badge">
+            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+              <line x1="12" y1="22.08" x2="12" y2="12"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">ChatGPT Ads Library</span>
+            <span class="brand-tag">Transparency Archive</span>
+          </div>
+        </a>
+
+        <nav class="nav-links" aria-label="Main Navigation">
+          <a href="/" class="nav-link ">Ads</a>
+          <a href="/advertisers" class="nav-link active">Advertisers</a>
+          <a href="/about" class="nav-link ">About</a>
+        </nav>
+
+        <div class="header-actions">
+          <button type="button" class="theme-toggle-btn" aria-label="Toggle Theme">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </button>
+          <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-nav" id="mobile-nav">
+        <div class="container mobile-nav-inner">
+          <a href="/" class="mobile-nav-link ">Ads</a>
+          <a href="/advertisers" class="mobile-nav-link active">Advertisers</a>
+          <a href="/about" class="mobile-nav-link ">About</a>
+        </div>
+      </div>
+    </header>
+  
+  </div>
 
   <!-- Main Content -->
   <main class="main-content flex-1">
@@ -56,7 +114,7 @@
 
           <div class="filter-controls-group">
             <select id="adv-sort-select" class="form-select filter-select" aria-label="Sort advertisers">
-              <option value="ad_count_desc">Most Ads</option>
+              <option value="ad_count_desc" selected>Most Ads</option>
               <option value="impressions_desc">Highest Impressions</option>
               <option value="name_asc">Name (A-Z)</option>
               <option value="name_desc">Name (Z-A)</option>
@@ -65,22 +123,827 @@
         </div>
 
         <div class="results-header">
-          <div class="results-count" id="adv-results-count">Loading advertisers...</div>
+          <div class="results-count" id="adv-results-count">
+            Showing <strong>24</strong> of <strong>1.4K</strong> advertisers
+          </div>
         </div>
 
         <!-- Advertisers Grid -->
         <div class="advertisers-grid" id="advertisers-grid">
-          <!-- Dynamic cards injected here -->
+          
+            <a href="/advertisers/l-l-bean" class="advertiser-card">
+              <div class="adv-card-header">
+                
+      <div class="advertiser-avatar avatar-lg">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/58f4640011088508b7019e0e8a94a983c5ac643e280073d3b8b2d05cfc353d0d.webp" alt="L.L.Bean logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>L.</span>'"/>
+      </div>
+    
+                <div class="adv-card-title-group">
+                  <h3 class="adv-card-name">L.L.Bean</h3>
+                  <span class="adv-card-domain">llbean.com</span>
+                </div>
+              </div>
+
+              <div class="adv-stats-row">
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">107</span>
+                  <span class="adv-stat-label">Total Ads</span>
+                </div>
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">276</span>
+                  <span class="adv-stat-label">Impressions</span>
+                </div>
+              </div>
+
+              <div class="adv-card-footer">
+                <span class="adv-activity">Active since Jul 13, 2026</span>
+                <span class="adv-link-label">View Ads &rarr;</span>
+              </div>
+            </a>
+          
+            <a href="/advertisers/vistaprint-us" class="advertiser-card">
+              <div class="adv-card-header">
+                
+      <div class="advertiser-avatar avatar-lg">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/85b2e9d16aa21ad8298d7702a89e05f88939d2c57bfcfa3f738d8fc6389b0eed.webp" alt="VistaPrint US logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>VU</span>'"/>
+      </div>
+    
+                <div class="adv-card-title-group">
+                  <h3 class="adv-card-name">VistaPrint US</h3>
+                  <span class="adv-card-domain">vistaprint.com</span>
+                </div>
+              </div>
+
+              <div class="adv-stats-row">
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">92</span>
+                  <span class="adv-stat-label">Total Ads</span>
+                </div>
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">140</span>
+                  <span class="adv-stat-label">Impressions</span>
+                </div>
+              </div>
+
+              <div class="adv-card-footer">
+                <span class="adv-activity">Active since Aug 12, 2026</span>
+                <span class="adv-link-label">View Ads &rarr;</span>
+              </div>
+            </a>
+          
+            <a href="/advertisers/capterra" class="advertiser-card">
+              <div class="adv-card-header">
+                
+      <div class="advertiser-avatar avatar-lg">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/366f0da2e4396c3673dcf69f2bef35c88499b3a76c73e1bf43b33be0aa96594e.webp" alt="Capterra logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>CA</span>'"/>
+      </div>
+    
+                <div class="adv-card-title-group">
+                  <h3 class="adv-card-name">Capterra</h3>
+                  <span class="adv-card-domain">capterra.com</span>
+                </div>
+              </div>
+
+              <div class="adv-stats-row">
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">82</span>
+                  <span class="adv-stat-label">Total Ads</span>
+                </div>
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">213</span>
+                  <span class="adv-stat-label">Impressions</span>
+                </div>
+              </div>
+
+              <div class="adv-card-footer">
+                <span class="adv-activity">Active since Jul 12, 2026</span>
+                <span class="adv-link-label">View Ads &rarr;</span>
+              </div>
+            </a>
+          
+            <a href="/advertisers/vistaprint" class="advertiser-card">
+              <div class="adv-card-header">
+                
+      <div class="advertiser-avatar avatar-lg">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/85b2e9d16aa21ad8298d7702a89e05f88939d2c57bfcfa3f738d8fc6389b0eed.webp" alt="VistaPrint logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>VI</span>'"/>
+      </div>
+    
+                <div class="adv-card-title-group">
+                  <h3 class="adv-card-name">VistaPrint</h3>
+                  <span class="adv-card-domain">vistaprint.com</span>
+                </div>
+              </div>
+
+              <div class="adv-stats-row">
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">45</span>
+                  <span class="adv-stat-label">Total Ads</span>
+                </div>
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">83</span>
+                  <span class="adv-stat-label">Impressions</span>
+                </div>
+              </div>
+
+              <div class="adv-card-footer">
+                <span class="adv-activity">Active since Jul 12, 2026</span>
+                <span class="adv-link-label">View Ads &rarr;</span>
+              </div>
+            </a>
+          
+            <a href="/advertisers/mercari" class="advertiser-card">
+              <div class="adv-card-header">
+                
+      <div class="advertiser-avatar avatar-lg">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/5ec14ee03d5c26985f7d82b8e397c86c9d3af78b773494157eab612c4d0b8e78.webp" alt="Mercari logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>ME</span>'"/>
+      </div>
+    
+                <div class="adv-card-title-group">
+                  <h3 class="adv-card-name">Mercari</h3>
+                  <span class="adv-card-domain">mercari.com</span>
+                </div>
+              </div>
+
+              <div class="adv-stats-row">
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">34</span>
+                  <span class="adv-stat-label">Total Ads</span>
+                </div>
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">97</span>
+                  <span class="adv-stat-label">Impressions</span>
+                </div>
+              </div>
+
+              <div class="adv-card-footer">
+                <span class="adv-activity">Active since Jul 30, 2026</span>
+                <span class="adv-link-label">View Ads &rarr;</span>
+              </div>
+            </a>
+          
+            <a href="/advertisers/jotform" class="advertiser-card">
+              <div class="adv-card-header">
+                
+      <div class="advertiser-avatar avatar-lg">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/c1c3d07e729947c095782a01faaf9885c4ce54e789bd24b208bf1c75d55273a5.webp" alt="Jotform logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>JO</span>'"/>
+      </div>
+    
+                <div class="adv-card-title-group">
+                  <h3 class="adv-card-name">Jotform</h3>
+                  <span class="adv-card-domain">jotform.com</span>
+                </div>
+              </div>
+
+              <div class="adv-stats-row">
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">32</span>
+                  <span class="adv-stat-label">Total Ads</span>
+                </div>
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">56</span>
+                  <span class="adv-stat-label">Impressions</span>
+                </div>
+              </div>
+
+              <div class="adv-card-footer">
+                <span class="adv-activity">Active since Jul 26, 2026</span>
+                <span class="adv-link-label">View Ads &rarr;</span>
+              </div>
+            </a>
+          
+            <a href="/advertisers/almedia-usa-inc" class="advertiser-card">
+              <div class="adv-card-header">
+                
+      <div class="advertiser-avatar avatar-lg">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/3e1c6694231ff1060aa3f0f12a2958cbfea0c1788ab9879e135e8ac9190301f0.webp" alt="Almedia USA, Inc. logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>AI</span>'"/>
+      </div>
+    
+                <div class="adv-card-title-group">
+                  <h3 class="adv-card-name">Almedia USA, Inc.</h3>
+                  <span class="adv-card-domain">almedia.co</span>
+                </div>
+              </div>
+
+              <div class="adv-stats-row">
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">26</span>
+                  <span class="adv-stat-label">Total Ads</span>
+                </div>
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">76</span>
+                  <span class="adv-stat-label">Impressions</span>
+                </div>
+              </div>
+
+              <div class="adv-card-footer">
+                <span class="adv-activity">Active since Jul 14, 2026</span>
+                <span class="adv-link-label">View Ads &rarr;</span>
+              </div>
+            </a>
+          
+            <a href="/advertisers/top5best-com" class="advertiser-card">
+              <div class="adv-card-header">
+                
+      <div class="advertiser-avatar avatar-lg">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/2c79f1245b3c1a3eae4f9a2fa273ed4973ef3f9229ffb1b12d58ca40a3c0ce30.webp" alt="Top5Best.com logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>TO</span>'"/>
+      </div>
+    
+                <div class="adv-card-title-group">
+                  <h3 class="adv-card-name">Top5Best.com</h3>
+                  <span class="adv-card-domain">yidio.com</span>
+                </div>
+              </div>
+
+              <div class="adv-stats-row">
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">25</span>
+                  <span class="adv-stat-label">Total Ads</span>
+                </div>
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">25</span>
+                  <span class="adv-stat-label">Impressions</span>
+                </div>
+              </div>
+
+              <div class="adv-card-footer">
+                <span class="adv-activity">Active since Aug 22, 2026</span>
+                <span class="adv-link-label">View Ads &rarr;</span>
+              </div>
+            </a>
+          
+            <a href="/advertisers/applovin" class="advertiser-card">
+              <div class="adv-card-header">
+                
+      <div class="advertiser-avatar avatar-lg">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/71f5a2e9d0b9f9fa87fa3fb3c4e720e5d779d8edbe0d4654923c246857be0557.webp" alt="AppLovin logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>AP</span>'"/>
+      </div>
+    
+                <div class="adv-card-title-group">
+                  <h3 class="adv-card-name">AppLovin</h3>
+                  <span class="adv-card-domain">axon.ai</span>
+                </div>
+              </div>
+
+              <div class="adv-stats-row">
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">24</span>
+                  <span class="adv-stat-label">Total Ads</span>
+                </div>
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">118</span>
+                  <span class="adv-stat-label">Impressions</span>
+                </div>
+              </div>
+
+              <div class="adv-card-footer">
+                <span class="adv-activity">Active since Aug 7, 2026</span>
+                <span class="adv-link-label">View Ads &rarr;</span>
+              </div>
+            </a>
+          
+            <a href="/advertisers/quince" class="advertiser-card">
+              <div class="adv-card-header">
+                
+      <div class="advertiser-avatar avatar-lg">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/2eea8ee5c43cdec1f27dcccfd25e70ba23600ae616e2fa9db91c6321da0dcc3f.webp" alt="Quince logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>QU</span>'"/>
+      </div>
+    
+                <div class="adv-card-title-group">
+                  <h3 class="adv-card-name">Quince</h3>
+                  <span class="adv-card-domain">quince.com</span>
+                </div>
+              </div>
+
+              <div class="adv-stats-row">
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">23</span>
+                  <span class="adv-stat-label">Total Ads</span>
+                </div>
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">71</span>
+                  <span class="adv-stat-label">Impressions</span>
+                </div>
+              </div>
+
+              <div class="adv-card-footer">
+                <span class="adv-activity">Active since Jul 31, 2026</span>
+                <span class="adv-link-label">View Ads &rarr;</span>
+              </div>
+            </a>
+          
+            <a href="/advertisers/design-com" class="advertiser-card">
+              <div class="adv-card-header">
+                
+      <div class="advertiser-avatar avatar-lg">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/8ca6dfe74b3d7cbd5bd523bce4be867b215b89787460afb69cb1612fda3a2be2.webp" alt="Design.com logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>DE</span>'"/>
+      </div>
+    
+                <div class="adv-card-title-group">
+                  <h3 class="adv-card-name">Design.com</h3>
+                  <span class="adv-card-domain">design.com</span>
+                </div>
+              </div>
+
+              <div class="adv-stats-row">
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">22</span>
+                  <span class="adv-stat-label">Total Ads</span>
+                </div>
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">60</span>
+                  <span class="adv-stat-label">Impressions</span>
+                </div>
+              </div>
+
+              <div class="adv-card-footer">
+                <span class="adv-activity">Active since Aug 2, 2026</span>
+                <span class="adv-link-label">View Ads &rarr;</span>
+              </div>
+            </a>
+          
+            <a href="/advertisers/legalzoom" class="advertiser-card">
+              <div class="adv-card-header">
+                
+      <div class="advertiser-avatar avatar-lg">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/dc4e1767174d2e3b46ab8d6f3ca5167a3534d0de4dd9c91444995588f1b21e12.webp" alt="LegalZoom logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>LE</span>'"/>
+      </div>
+    
+                <div class="adv-card-title-group">
+                  <h3 class="adv-card-name">LegalZoom</h3>
+                  <span class="adv-card-domain">legalzoom.com</span>
+                </div>
+              </div>
+
+              <div class="adv-stats-row">
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">20</span>
+                  <span class="adv-stat-label">Total Ads</span>
+                </div>
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">36</span>
+                  <span class="adv-stat-label">Impressions</span>
+                </div>
+              </div>
+
+              <div class="adv-card-footer">
+                <span class="adv-activity">Active since Jul 12, 2026</span>
+                <span class="adv-link-label">View Ads &rarr;</span>
+              </div>
+            </a>
+          
+            <a href="/advertisers/scheels" class="advertiser-card">
+              <div class="adv-card-header">
+                
+      <div class="advertiser-avatar avatar-lg">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/fbce8d63bea406d14fbc5a54ba05ef1ba73a5142ddda34fac8f73dcc70b0ac41.webp" alt="SCHEELS logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>SC</span>'"/>
+      </div>
+    
+                <div class="adv-card-title-group">
+                  <h3 class="adv-card-name">SCHEELS</h3>
+                  <span class="adv-card-domain">scheels.com</span>
+                </div>
+              </div>
+
+              <div class="adv-stats-row">
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">20</span>
+                  <span class="adv-stat-label">Total Ads</span>
+                </div>
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">21</span>
+                  <span class="adv-stat-label">Impressions</span>
+                </div>
+              </div>
+
+              <div class="adv-card-footer">
+                <span class="adv-activity">Active since Jul 12, 2026</span>
+                <span class="adv-link-label">View Ads &rarr;</span>
+              </div>
+            </a>
+          
+            <a href="/advertisers/hungryroot" class="advertiser-card">
+              <div class="adv-card-header">
+                
+      <div class="advertiser-avatar avatar-lg">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/c8f9d5aa5ab9b9b4c00fbe6554375d2a19814af05cc6a906c138dc8a8641cfa2.webp" alt="Hungryroot logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>HU</span>'"/>
+      </div>
+    
+                <div class="adv-card-title-group">
+                  <h3 class="adv-card-name">Hungryroot</h3>
+                  <span class="adv-card-domain">hungryroot.com</span>
+                </div>
+              </div>
+
+              <div class="adv-stats-row">
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">19</span>
+                  <span class="adv-stat-label">Total Ads</span>
+                </div>
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">39</span>
+                  <span class="adv-stat-label">Impressions</span>
+                </div>
+              </div>
+
+              <div class="adv-card-footer">
+                <span class="adv-activity">Active since Jul 26, 2026</span>
+                <span class="adv-link-label">View Ads &rarr;</span>
+              </div>
+            </a>
+          
+            <a href="/advertisers/accenture" class="advertiser-card">
+              <div class="adv-card-header">
+                
+      <div class="advertiser-avatar avatar-lg">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/1dff4d6676264dfc795880f1f8a3f110e2f7de52f86efadc9c93a981b02df680.webp" alt="Accenture logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>AC</span>'"/>
+      </div>
+    
+                <div class="adv-card-title-group">
+                  <h3 class="adv-card-name">Accenture</h3>
+                  <span class="adv-card-domain">accenture.com</span>
+                </div>
+              </div>
+
+              <div class="adv-stats-row">
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">18</span>
+                  <span class="adv-stat-label">Total Ads</span>
+                </div>
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">25</span>
+                  <span class="adv-stat-label">Impressions</span>
+                </div>
+              </div>
+
+              <div class="adv-card-footer">
+                <span class="adv-activity">Active since Aug 2, 2026</span>
+                <span class="adv-link-label">View Ads &rarr;</span>
+              </div>
+            </a>
+          
+            <a href="/advertisers/clickcease" class="advertiser-card">
+              <div class="adv-card-header">
+                
+      <div class="advertiser-avatar avatar-lg">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/41e77c889e5361c7a946e2ab1e6bb5fd3aee29850439a08db160f5c9119d9c89.webp" alt="ClickCease logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>CL</span>'"/>
+      </div>
+    
+                <div class="adv-card-title-group">
+                  <h3 class="adv-card-name">ClickCease</h3>
+                  <span class="adv-card-domain">clickcease.com</span>
+                </div>
+              </div>
+
+              <div class="adv-stats-row">
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">18</span>
+                  <span class="adv-stat-label">Total Ads</span>
+                </div>
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">75</span>
+                  <span class="adv-stat-label">Impressions</span>
+                </div>
+              </div>
+
+              <div class="adv-card-footer">
+                <span class="adv-activity">Active since Jul 14, 2026</span>
+                <span class="adv-link-label">View Ads &rarr;</span>
+              </div>
+            </a>
+          
+            <a href="/advertisers/envato" class="advertiser-card">
+              <div class="adv-card-header">
+                
+      <div class="advertiser-avatar avatar-lg">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/797418e6256b59284c5aa39aa193b00cb1ee8adef654c2330ba8756970134577.webp" alt="Envato logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>EN</span>'"/>
+      </div>
+    
+                <div class="adv-card-title-group">
+                  <h3 class="adv-card-name">Envato</h3>
+                  <span class="adv-card-domain">elements.envato.com</span>
+                </div>
+              </div>
+
+              <div class="adv-stats-row">
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">18</span>
+                  <span class="adv-stat-label">Total Ads</span>
+                </div>
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">26</span>
+                  <span class="adv-stat-label">Impressions</span>
+                </div>
+              </div>
+
+              <div class="adv-card-footer">
+                <span class="adv-activity">Active since Aug 9, 2026</span>
+                <span class="adv-link-label">View Ads &rarr;</span>
+              </div>
+            </a>
+          
+            <a href="/advertisers/fiverr" class="advertiser-card">
+              <div class="adv-card-header">
+                
+      <div class="advertiser-avatar avatar-lg">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/a17a1264e56f10b9eeb3dfae77135ae12ba61f0ed57013c31f135c347e138172.webp" alt="Fiverr logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>FI</span>'"/>
+      </div>
+    
+                <div class="adv-card-title-group">
+                  <h3 class="adv-card-name">Fiverr</h3>
+                  <span class="adv-card-domain">fiverr.com</span>
+                </div>
+              </div>
+
+              <div class="adv-stats-row">
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">17</span>
+                  <span class="adv-stat-label">Total Ads</span>
+                </div>
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">35</span>
+                  <span class="adv-stat-label">Impressions</span>
+                </div>
+              </div>
+
+              <div class="adv-card-footer">
+                <span class="adv-activity">Active since Jul 13, 2026</span>
+                <span class="adv-link-label">View Ads &rarr;</span>
+              </div>
+            </a>
+          
+            <a href="/advertisers/add3" class="advertiser-card">
+              <div class="adv-card-header">
+                
+      <div class="advertiser-avatar avatar-lg">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/aafdff4cb00341ed23e6bb63c7791ed05805c078dd4fe4c2942cf66374b08209.webp" alt="Add3 logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>AD</span>'"/>
+      </div>
+    
+                <div class="adv-card-title-group">
+                  <h3 class="adv-card-name">Add3</h3>
+                  <span class="adv-card-domain">add3.com</span>
+                </div>
+              </div>
+
+              <div class="adv-stats-row">
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">16</span>
+                  <span class="adv-stat-label">Total Ads</span>
+                </div>
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">38</span>
+                  <span class="adv-stat-label">Impressions</span>
+                </div>
+              </div>
+
+              <div class="adv-card-footer">
+                <span class="adv-activity">Active since Jul 15, 2026</span>
+                <span class="adv-link-label">View Ads &rarr;</span>
+              </div>
+            </a>
+          
+            <a href="/advertisers/capital-one" class="advertiser-card">
+              <div class="adv-card-header">
+                
+      <div class="advertiser-avatar avatar-lg">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/0d2f6e9a92e03fd7ba79042769aff93476a08ec255e36cf9d7e595256008b73c.webp" alt="Capital One logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>CO</span>'"/>
+      </div>
+    
+                <div class="adv-card-title-group">
+                  <h3 class="adv-card-name">Capital One</h3>
+                  <span class="adv-card-domain">capitalone.com</span>
+                </div>
+              </div>
+
+              <div class="adv-stats-row">
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">15</span>
+                  <span class="adv-stat-label">Total Ads</span>
+                </div>
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">46</span>
+                  <span class="adv-stat-label">Impressions</span>
+                </div>
+              </div>
+
+              <div class="adv-card-footer">
+                <span class="adv-activity">Active since Jul 25, 2026</span>
+                <span class="adv-link-label">View Ads &rarr;</span>
+              </div>
+            </a>
+          
+            <a href="/advertisers/monday-com" class="advertiser-card">
+              <div class="adv-card-header">
+                
+      <div class="advertiser-avatar avatar-lg">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/82aad6d806618be581e480598723923c557d8fe058b88d39bd503cdb844f59b7.webp" alt="Monday.com logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>MO</span>'"/>
+      </div>
+    
+                <div class="adv-card-title-group">
+                  <h3 class="adv-card-name">Monday.com</h3>
+                  <span class="adv-card-domain">monday.com</span>
+                </div>
+              </div>
+
+              <div class="adv-stats-row">
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">15</span>
+                  <span class="adv-stat-label">Total Ads</span>
+                </div>
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">50</span>
+                  <span class="adv-stat-label">Impressions</span>
+                </div>
+              </div>
+
+              <div class="adv-card-footer">
+                <span class="adv-activity">Active since Jul 13, 2026</span>
+                <span class="adv-link-label">View Ads &rarr;</span>
+              </div>
+            </a>
+          
+            <a href="/advertisers/faire-wholesale-inc" class="advertiser-card">
+              <div class="adv-card-header">
+                
+      <div class="advertiser-avatar avatar-lg">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/4f9df830b2b3c063e6a8ab24719595d581ed92cd601595fef007d7f76ac8bcb7.webp" alt="Faire Wholesale, Inc. logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>FI</span>'"/>
+      </div>
+    
+                <div class="adv-card-title-group">
+                  <h3 class="adv-card-name">Faire Wholesale, Inc.</h3>
+                  <span class="adv-card-domain">faire.com</span>
+                </div>
+              </div>
+
+              <div class="adv-stats-row">
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">14</span>
+                  <span class="adv-stat-label">Total Ads</span>
+                </div>
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">16</span>
+                  <span class="adv-stat-label">Impressions</span>
+                </div>
+              </div>
+
+              <div class="adv-card-footer">
+                <span class="adv-activity">Active since Aug 9, 2026</span>
+                <span class="adv-link-label">View Ads &rarr;</span>
+              </div>
+            </a>
+          
+            <a href="/advertisers/nobull" class="advertiser-card">
+              <div class="adv-card-header">
+                
+      <div class="advertiser-avatar avatar-lg">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/0818a63e8bb38b98197a98429703c244297a90cab1e45b752692bcbdac8e0729.webp" alt="NOBULL logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>NO</span>'"/>
+      </div>
+    
+                <div class="adv-card-title-group">
+                  <h3 class="adv-card-name">NOBULL</h3>
+                  <span class="adv-card-domain">nobullproject.com</span>
+                </div>
+              </div>
+
+              <div class="adv-stats-row">
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">14</span>
+                  <span class="adv-stat-label">Total Ads</span>
+                </div>
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">39</span>
+                  <span class="adv-stat-label">Impressions</span>
+                </div>
+              </div>
+
+              <div class="adv-card-footer">
+                <span class="adv-activity">Active since Aug 10, 2026</span>
+                <span class="adv-link-label">View Ads &rarr;</span>
+              </div>
+            </a>
+          
+            <a href="/advertisers/sofi" class="advertiser-card">
+              <div class="adv-card-header">
+                
+      <div class="advertiser-avatar avatar-lg">
+        <img src="https://mycisixpwfbujadhezrz.supabase.co/storage/v1/object/public/ai-runs-public-ads/assets/9e686f0b3b6f060677ffe44a632c88ecc1a6b40775f63072dc8a25f939904270.webp" alt="SoFi logo" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\'avatar-initials\'>SO</span>'"/>
+      </div>
+    
+                <div class="adv-card-title-group">
+                  <h3 class="adv-card-name">SoFi</h3>
+                  <span class="adv-card-domain">sofi.com</span>
+                </div>
+              </div>
+
+              <div class="adv-stats-row">
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">14</span>
+                  <span class="adv-stat-label">Total Ads</span>
+                </div>
+                <div class="adv-stat-pill">
+                  <span class="adv-stat-val">28</span>
+                  <span class="adv-stat-label">Impressions</span>
+                </div>
+              </div>
+
+              <div class="adv-card-footer">
+                <span class="adv-activity">Active since Aug 2, 2026</span>
+                <span class="adv-link-label">View Ads &rarr;</span>
+              </div>
+            </a>
+          
         </div>
 
         <!-- Pagination -->
-        <div id="pagination-root" class="pagination-root"></div>
+        <div id="pagination-root" class="pagination-root">
+          <div class="pagination-container" role="navigation" aria-label="Pagination">
+            <button type="button" class="pagination-btn pagination-prev" disabled data-page="0" aria-label="Previous page">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"/>
+              </svg>
+              <span>Prev</span>
+            </button>
+
+            <div class="pagination-pages">
+              <a href="/advertisers" class="pagination-page-btn active" data-page="1" aria-label="Page 1" aria-current="page">1</a>
+              <a href="/advertisers?page=2" class="pagination-page-btn" data-page="2" aria-label="Page 2">2</a>
+              <span class="pagination-dots">&hellip;</span>
+              <a href="/advertisers?page=57" class="pagination-page-btn" data-page="57" aria-label="Page 57">57</a>
+            </div>
+
+            <a href="/advertisers?page=2" class="pagination-btn pagination-next" data-page="2" aria-label="Next page">
+              <span>Next</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <!-- Dynamic Footer Root -->
-  <div id="footer-root"></div>
+  <div id="footer-root">
+    
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="brand-logo footer-logo">
+              <div class="logo-badge">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                </svg>
+              </div>
+              <div class="brand-text">
+                <span class="brand-title">ChatGPT Ads Library</span>
+              </div>
+            </div>
+            <p class="footer-desc">
+              An independent, searchable archive of ads running across ChatGPT. Browse ad creative, explore advertisers, and filter by date and impressions.
+            </p>
+          </div>
+
+          <div class="footer-links-group">
+            <h4 class="footer-heading">Navigation</h4>
+            <ul class="footer-links-list">
+              <li><a href="/">Ads</a></li>
+              <li><a href="/advertisers">Advertisers</a></li>
+              <li><a href="/about">About</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-group">
+            <h4 class="footer-heading">Archive Metrics</h4>
+            <div class="footer-stats-box" id="footer-stats-box">
+              <div class="stat-mini-row">
+                <span class="stat-mini-label">Indexed Ads</span>
+                <span class="stat-mini-val" id="footer-stat-ads">3.2K</span>
+              </div>
+              <div class="stat-mini-row">
+                <span class="stat-mini-label">Active Advertisers</span>
+                <span class="stat-mini-val" id="footer-stat-adv">1.4K</span>
+              </div>
+              <div class="stat-mini-row">
+                <span class="stat-mini-label">Total Impressions</span>
+                <span class="stat-mini-val" id="footer-stat-imp">8K</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-disclaimer">
+            <strong>Disclaimer:</strong> This is an independent research archive. ChatGPT Ads Library is not affiliated with, endorsed by, or associated with OpenAI Inc. or any indexed advertisers.
+          </p>
+          <p class="footer-copyright">
+            &copy; 2026 ChatGPT Ads Library. Open Transparency Archive.
+          </p>
+        </div>
+      </div>
+    </footer>
+  
+  </div>
 
   <!-- Application Engine -->
   <script src="/app.js"></script>
