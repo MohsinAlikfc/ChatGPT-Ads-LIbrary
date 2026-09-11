@@ -127,6 +127,8 @@ export function profilePageSchema(advertiser: Advertiser) {
     url,
     name: `${advertiser.name} — Advertiser Profile`,
     description: `${advertiser.name} has run ${advertiser.adCount} ad(s) on ChatGPT with ${advertiser.totalImpressions.toLocaleString()} total impressions.`,
+    ...(advertiser.firstSeen ? { dateCreated: advertiser.firstSeen } : {}),
+    ...(advertiser.lastSeen ? { dateModified: advertiser.lastSeen } : {}),
     mainEntity: {
       "@type": "Organization",
       "@id": `${url}#organization`,
@@ -141,7 +143,7 @@ export function profilePageSchema(advertiser: Advertiser) {
 
 // ─── Dataset ────────────────────────────────────────────────────────────────
 
-export function datasetSchema(stats?: { totalAds: number; totalAdvertisers: number }) {
+export function datasetSchema(stats?: { totalAds: number; totalAdvertisers: number; dateModified?: string }) {
   return {
     "@context": "https://schema.org",
     "@type": "Dataset",
@@ -160,6 +162,7 @@ export function datasetSchema(stats?: { totalAds: number; totalAdvertisers: numb
     ...(stats
       ? {
           size: `${stats.totalAds} ads from ${stats.totalAdvertisers} advertisers`,
+          ...(stats.dateModified ? { dateModified: stats.dateModified } : {}),
         }
       : {}),
     keywords: [

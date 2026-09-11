@@ -111,7 +111,8 @@ export default function HomePage() {
   const hasFilters = Boolean(
     advertiser || minImpressions || maxImpressions || dateFrom || dateTo
   );
-  const isFiltered = hasFilters || Boolean(q);
+  const isNonDefaultSort = sort !== "date_desc";
+  const isFiltered = hasFilters || Boolean(q) || isNonDefaultSort;
 
   const seoTitle = q
     ? `Search results for "${q}" — ChatGPT Ads Library`
@@ -146,9 +147,10 @@ export default function HomePage() {
       url: canonicalUrl,
       name: seoTitle,
       description: seoDescription,
+      dateModified: stats?.maxDate ?? undefined,
       speakableSelectors: ["h1", ".hero-description"],
     }),
-    datasetSchema(stats ?? undefined),
+    datasetSchema(stats ? { totalAds: stats.totalAds, totalAdvertisers: stats.totalAdvertisers, dateModified: stats.maxDate ?? undefined } : undefined),
     itemListSchema(
       ads.map((ad) => ({
         url: `${SITE_URL}/ads/${ad.id}`,
@@ -171,6 +173,7 @@ export default function HomePage() {
         next={nextPath}
         jsonLd={seoJsonLd}
         keywords={seoKeywords}
+        dateModified={stats?.maxDate ?? undefined}
       />
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
       <section className="mb-8" aria-labelledby="hero-heading">
@@ -193,9 +196,9 @@ export default function HomePage() {
             <span className="rounded-full bg-zinc-100 px-3 py-1.5 font-medium text-zinc-700 dark:bg-zinc-900 dark:text-zinc-300">
               {formatNumber(stats.totalAdvertisers)} advertisers
             </span>
-            {stats.minDate && stats.maxDate ? (
+            {stats.maxDate ? (
               <span className="rounded-full bg-zinc-100 px-3 py-1.5 font-medium text-zinc-700 dark:bg-zinc-900 dark:text-zinc-300">
-                {formatDate(stats.minDate)} – {formatDate(stats.maxDate)}
+                Last updated: <time dateTime={stats.maxDate}>{formatDate(stats.maxDate)}</time>
               </span>
             ) : null}
           </div>

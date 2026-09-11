@@ -11,10 +11,6 @@
       name="description"
       content="ChatGPT Ads Library — browse and search ads running across ChatGPT. Independent, searchable archive of ad creative, advertisers, copy, dates, and impression counts."
     />
-    <meta
-      name="keywords"
-      content="ChatGPT ads, ChatGPT advertising, OpenAI ads, AI ads library, ads on ChatGPT, ChatGPT ad creative, ChatGPT advertisers, ad transparency, AI advertising"
-    />
     <meta name="author" content="ChatGPT Ads Library" />
     <meta name="application-name" content="ChatGPT Ads Library" />
     <meta name="theme-color" content="#09090b" />
@@ -33,11 +29,14 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="ChatGPT Ads" />
 
-    <!-- ── Canonical ─────────────────────────────────────────────────────── -->
+    <!-- ── Canonical & Sitemap ───────────────────────────────────────────── -->
     <link rel="canonical" href="https://chatgpt-ads-library.com/" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" title="Sitemap" />
 
-    <!-- ── Icons ─────────────────────────────────────────────────────────── -->
+    <!-- ── Icons & PWA ───────────────────────────────────────────────────── -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
     <meta property="og:site_name" content="ChatGPT Ads Library" />
@@ -49,9 +48,11 @@
     />
     <meta property="og:url" content="https://chatgpt-ads-library.com/" />
     <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://chatgpt-ads-library.com/og-image.jpg" />
+    <meta property="og:image:alt" content="ChatGPT Ads Library" />
 
     <!-- ── Twitter / X ───────────────────────────────────────────────────── -->
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@chatgptadslibrary" />
     <meta name="twitter:creator" content="@chatgptadslibrary" />
     <meta name="twitter:title" content="ChatGPT Ads Library — Browse &amp; Search Ads on ChatGPT" />
@@ -59,6 +60,7 @@
       name="twitter:description"
       content="An independent, searchable archive of ads running across ChatGPT."
     />
+    <meta name="twitter:image" content="https://chatgpt-ads-library.com/og-image.jpg" />
 
     <!-- ── Fonts (preconnect + preload for performance) ───────────────────── -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -116,6 +118,13 @@
     </script>
   </head>
   <body>
+    <noscript>
+      <div style="padding: 2rem; font-family: sans-serif; text-align: center;">
+        <h1>ChatGPT Ads Library</h1>
+        <p>This site requires JavaScript to search and browse the ads archive.</p>
+        <p>Please enable JavaScript or use a modern browser.</p>
+      </div>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

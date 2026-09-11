@@ -87,6 +87,9 @@ export default function AdvertisersPage() {
     return `/advertisers${params.toString() ? `?${params.toString()}` : ""}`;
   }
 
+  const isNonDefaultSort = sort !== "ad_count_desc";
+  const isFiltered = Boolean(q) || isNonDefaultSort;
+
   const seoTitle = q
     ? `Search results for "${q}" — Advertisers | ChatGPT Ads Library`
     : page > 1
@@ -97,9 +100,10 @@ export default function AdvertisersPage() {
     : page > 1
       ? `Page ${page} of advertisers running ads on ChatGPT. Browse ad counts and total impressions.`
       : "Browse every advertiser running ads on ChatGPT, with ad counts and total impressions.";
-  const canonicalPath = q ? "/advertisers" : page > 1 ? `/advertisers?page=${page}` : "/advertisers";
-  const prevPath = !q && page > 1 ? (page - 1 === 1 ? "/advertisers" : `/advertisers?page=${page - 1}`) : undefined;
-  const nextPath = !q && page < totalPages ? `/advertisers?page=${page + 1}` : undefined;
+  
+  const canonicalPath = isFiltered ? "/advertisers" : page > 1 ? `/advertisers?page=${page}` : "/advertisers";
+  const prevPath = !isFiltered && page > 1 ? (page - 1 === 1 ? "/advertisers" : `/advertisers?page=${page - 1}`) : undefined;
+  const nextPath = !isFiltered && page < totalPages ? `/advertisers?page=${page + 1}` : undefined;
 
   const seoKeywords = q
     ? `${q} ChatGPT advertiser, ads on ChatGPT, ChatGPT advertising`
@@ -139,7 +143,7 @@ export default function AdvertisersPage() {
         title={seoTitle}
         description={seoDescription}
         path={canonicalPath}
-        noindex={Boolean(q)}
+        noindex={isFiltered}
         prev={prevPath}
         next={nextPath}
         jsonLd={seoJsonLd}

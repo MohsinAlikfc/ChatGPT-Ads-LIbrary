@@ -60,17 +60,8 @@ const sitemap = [
   "",
 ].join("\n");
 
-const robots = [
-  "User-agent: *",
-  "Allow: /",
-  "",
-  `Sitemap: ${SITE_URL}/sitemap.xml`,
-  "",
-].join("\n");
-
 mkdirSync(PUBLIC_DIR, { recursive: true });
 writeFileSync(join(PUBLIC_DIR, "sitemap.xml"), sitemap);
-writeFileSync(join(PUBLIC_DIR, "robots.txt"), robots);
 
-console.log(`Wrote sitemap.xml (${urls.length} URLs) and robots.txt`);
+console.log(`Wrote sitemap.xml (${urls.length} URLs)`);
 console.log(`Site URL: ${SITE_URL}`);

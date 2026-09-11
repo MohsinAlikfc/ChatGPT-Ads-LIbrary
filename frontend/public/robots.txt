@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Allow: /assets/
 
 # Block filtered/search query URLs from crawlers to preserve crawl budget
 Disallow: /*?q=

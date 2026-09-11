@@ -97,6 +97,9 @@ export default function AdvertiserDetailPage() {
     return `/advertisers/${advertiser!.slug}${params.toString() ? `?${params.toString()}` : ""}`;
   }
 
+  const isNonDefaultSort = sort !== "date_desc";
+  const isFiltered = isNonDefaultSort;
+
   const seoTitle =
     page > 1
       ? `${advertiser.name} — Ads on ChatGPT (Page ${page}) | ChatGPT Ads Library`
@@ -104,15 +107,21 @@ export default function AdvertiserDetailPage() {
   const seoDescription =
     `${advertiser.name} has run ${advertiser.adCount} ad(s) on ChatGPT with ${formatNumber(advertiser.totalImpressions)} total impressions.` +
     (page > 1 ? ` Viewing page ${page}.` : "");
-  const canonicalPath =
-    page > 1 ? `/advertisers/${advertiser.slug}?page=${page}` : `/advertisers/${advertiser.slug}`;
+
+  const canonicalPath = isFiltered
+    ? `/advertisers/${advertiser.slug}`
+    : page > 1
+      ? `/advertisers/${advertiser.slug}?page=${page}`
+      : `/advertisers/${advertiser.slug}`;
+  
   const prevPath =
-    page > 1
+    !isFiltered && page > 1
       ? page - 1 === 1
         ? `/advertisers/${advertiser.slug}`
         : `/advertisers/${advertiser.slug}?page=${page - 1}`
       : undefined;
-  const nextPath = page < totalPages ? `/advertisers/${advertiser.slug}?page=${page + 1}` : undefined;
+  
+  const nextPath = !isFiltered && page < totalPages ? `/advertisers/${advertiser.slug}?page=${page + 1}` : undefined;
 
   const seoKeywords = `${advertiser.name} ads, ${advertiser.name} ChatGPT advertising, ${advertiser.websiteDomain ?? ""} ads, ChatGPT advertiser profile`;
 
@@ -140,6 +149,7 @@ export default function AdvertiserDetailPage() {
         title={seoTitle}
         description={seoDescription}
         path={canonicalPath}
+        noindex={isFiltered}
         image={advertiser.logo ?? undefined}
         prev={prevPath}
         next={nextPath}
