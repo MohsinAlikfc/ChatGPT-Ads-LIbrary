@@ -2,22 +2,23 @@
   "name": "chatgpt-ads-library",
   "version": "1.0.0",
   "private": true,
-  "description": "A searchable library of ads running on ChatGPT, built on Cloudflare Workers, D1, and R2.",
+  "description": "A searchable library of ads running on ChatGPT, built on Cloudflare Pages, D1, and R2 with React Router v7 SSR.",
   "workspaces": [
-    "api",
     "frontend"
   ],
   "scripts": {
-    "dev": "concurrently -n api,web -c blue,magenta \"npm run dev -w api\" \"npm run dev -w frontend\"",
-    "build": "npm run build -w api && npm run build -w frontend",
-    "typecheck": "npm run typecheck -w api && npm run typecheck -w frontend",
+    "dev": "npm run dev -w frontend",
+    "build": "npm run build -w frontend",
+    "preview": "npm run preview -w frontend",
+    "typecheck": "npm run typecheck -w frontend",
     "seed:generate": "node scripts/generate-seed.mjs",
-    "seed:local": "npm run seed:local -w api",
-    "seed:remote": "npm run seed:remote -w api",
+    "seed:local": "wrangler d1 execute chatgpt-ads-library --local --file=./frontend/seed.sql --config=frontend/wrangler.toml",
+    "seed:remote": "wrangler d1 execute chatgpt-ads-library --remote --file=./frontend/seed.sql --config=frontend/wrangler.toml",
     "sitemap:generate": "node scripts/generate-sitemap.mjs"
   },
   "devDependencies": {
-    "concurrently": "^9.1.0"
+    "concurrently": "^9.1.0",
+    "wrangler": "^3.91.0"
   },
   "engines": {
     "node": ">=18.0.0"

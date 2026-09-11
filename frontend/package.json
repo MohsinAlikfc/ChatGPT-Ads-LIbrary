@@ -4,24 +4,29 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc --noEmit && vite build",
-    "preview": "vite preview",
-    "typecheck": "tsc --noEmit"
+    "dev": "react-router dev",
+    "build": "react-router build",
+    "preview": "wrangler pages dev ./build/client",
+    "typecheck": "react-router typegen && tsc --noEmit"
   },
   "dependencies": {
+    "@react-router/cloudflare": "^7.18.3",
+    "@react-router/node": "^7.18.3",
+    "isbot": "^5.2.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.28.0"
+    "react-router": "^7.18.3"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260911.1",
+    "@react-router/dev": "^7.18.3",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15",
     "typescript": "^5.6.3",
-    "vite": "^5.4.11"
+    "vite": "^5.4.11",
+    "wrangler": "^3.91.0"
   }
 }
