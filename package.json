@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "npm run dev -w frontend",
     "build": "npm run build -w frontend",
+    "deploy": "npm run deploy -w frontend",
     "preview": "npm run preview -w frontend",
     "typecheck": "npm run typecheck -w frontend",
     "seed:generate": "node scripts/generate-seed.mjs",

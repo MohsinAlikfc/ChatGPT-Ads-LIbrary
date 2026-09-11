@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "react-router dev",
     "build": "react-router build",
+    "deploy": "react-router build && wrangler pages deploy ./build/client",
     "preview": "wrangler pages dev ./build/client",
     "typecheck": "react-router typegen && tsc --noEmit"
   },
