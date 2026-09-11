@@ -7,8 +7,8 @@ import Pagination from "../components/Pagination";
 import Seo from "../components/Seo";
 import Spinner from "../components/Spinner";
 import { getAds, getStats } from "../lib/api";
-import { itemListSchema, websiteSchema } from "../lib/schema";
-import { SITE_DESCRIPTION, SITE_URL } from "../lib/site";
+import { datasetSchema, itemListSchema, websiteSchema, webPageSchema } from "../lib/schema";
+import { SITE_DESCRIPTION, SITE_KEYWORDS, SITE_URL } from "../lib/site";
 import { formatDate, formatNumber } from "../lib/utils";
 import type { Ad, AdSort, Stats } from "../types";
 
@@ -101,6 +101,13 @@ export default function HomePage() {
     setSearchParams(next);
   }
 
+  /** Builds a crawlable URL for each page number in the pagination */
+  function buildPageUrl(p: number): string {
+    const params = new URLSearchParams();
+    if (p > 1) params.set("page", String(p));
+    return `/${params.toString() ? `?${params.toString()}` : ""}`;
+  }
+
   const hasFilters = Boolean(
     advertiser || minImpressions || maxImpressions || dateFrom || dateTo
   );
@@ -108,10 +115,14 @@ export default function HomePage() {
 
   const seoTitle = q
     ? `Search results for "${q}" — ChatGPT Ads Library`
-    : "ChatGPT Ads Library — Browse & Search Ads on ChatGPT";
+    : page > 1
+      ? `ChatGPT Ads Library — Browse & Search Ads on ChatGPT (Page ${page})`
+      : "ChatGPT Ads Library — Browse & Search Ads on ChatGPT";
   const seoDescription = q
     ? `Browse ChatGPT ads matching "${q}". Filter by advertiser, date, and impressions.`
-    : SITE_DESCRIPTION;
+    : page > 1
+      ? `Page ${page} of ads running across ChatGPT. Browse ad creative, explore advertisers, and filter by date and impressions.`
+      : SITE_DESCRIPTION;
 
   const canonicalPath = isFiltered
     ? "/"
@@ -123,8 +134,21 @@ export default function HomePage() {
   const nextPath =
     !isFiltered && page < totalPages ? `/?page=${page + 1}` : undefined;
 
+  const canonicalUrl = `${SITE_URL}${canonicalPath}`;
+
+  const seoKeywords = q
+    ? `${q}, ChatGPT ads, AI advertising, ad library`
+    : SITE_KEYWORDS;
+
   const seoJsonLd = [
     websiteSchema(),
+    webPageSchema({
+      url: canonicalUrl,
+      name: seoTitle,
+      description: seoDescription,
+      speakableSelectors: ["h1", ".hero-description"],
+    }),
+    datasetSchema(stats ?? undefined),
     itemListSchema(
       ads.map((ad) => ({
         url: `${SITE_URL}/ads/${ad.id}`,
@@ -146,19 +170,23 @@ export default function HomePage() {
         prev={prevPath}
         next={nextPath}
         jsonLd={seoJsonLd}
+        keywords={seoKeywords}
       />
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      <section className="mb-8">
-        <h1 className="text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl">
+      <section className="mb-8" aria-labelledby="hero-heading">
+        <h1
+          id="hero-heading"
+          className="text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl"
+        >
           ChatGPT Ads Library
         </h1>
-        <p className="mt-2 max-w-2xl text-zinc-500 dark:text-zinc-400">
+        <p className="hero-description mt-2 max-w-2xl text-zinc-500 dark:text-zinc-400">
           Browse and search ads running across ChatGPT. Filter by advertiser, date, and
           impressions to see what's live.
         </p>
 
         {stats ? (
-          <div className="mt-5 flex flex-wrap gap-3 text-sm">
+          <div className="mt-5 flex flex-wrap gap-3 text-sm" aria-label="Library statistics">
             <span className="rounded-full bg-zinc-100 px-3 py-1.5 font-medium text-zinc-700 dark:bg-zinc-900 dark:text-zinc-300">
               {formatNumber(stats.totalAds)} ads
             </span>
@@ -192,10 +220,10 @@ export default function HomePage() {
       />
 
       <div className="mt-6 flex items-center justify-between">
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+        <p className="text-sm text-zinc-500 dark:text-zinc-400" aria-live="polite">
           {q ? (
             <>
-              Results for <span className="font-medium text-zinc-900 dark:text-zinc-100">“{q}”</span>
+              Results for <span className="font-medium text-zinc-900 dark:text-zinc-100">"{q}"</span>
               {" · "}
             </>
           ) : null}
@@ -225,6 +253,7 @@ export default function HomePage() {
               <Pagination
                 pagination={{ page, limit, total, totalPages }}
                 onPageChange={changePage}
+                buildPageUrl={buildPageUrl}
               />
             </div>
           </div>

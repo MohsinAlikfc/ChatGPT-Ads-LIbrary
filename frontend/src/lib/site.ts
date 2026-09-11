@@ -7,3 +7,7 @@ export const SITE_URL = (import.meta.env.VITE_SITE_URL || "https://chatgpt-ads-l
   ""
 );
 export const SITE_TWITTER_HANDLE = "@chatgptadslibrary";
+export const SITE_AUTHOR = "ChatGPT Ads Library";
+export const SITE_GEO_REGION = "US";
+export const SITE_KEYWORDS =
+  "ChatGPT ads, ChatGPT advertising, OpenAI ads, AI ads library, ads on ChatGPT, ChatGPT ad creative, ChatGPT advertisers, ad transparency, AI advertising";

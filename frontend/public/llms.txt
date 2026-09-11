@@ -1,16 +1,43 @@
 # ChatGPT Ads Library
 
-> ChatGPT Ads Library is an independent, searchable archive of ads running across ChatGPT. It indexes ad creative, advertisers, websites, copy, descriptions, publish dates, and impression counts.
+> ChatGPT Ads Library is an independent, searchable archive of advertisements running across ChatGPT (by OpenAI). It indexes ad creative images, advertiser profiles, website domains, headline copy, descriptions, publication dates, and impression counts — giving researchers, marketers, and journalists transparent access to ChatGPT's advertising ecosystem.
 
-## Explore
+## Pages
 
-- [Browse ads](https://chatgpt-ads-library.com/): Browse and search the full ad archive.
-- [Advertisers](https://chatgpt-ads-library.com/advertisers): Every advertiser running ads, with ad counts and impressions.
-- [About](https://chatgpt-ads-library.com/about): How the library works and frequently asked questions.
+- [Browse ads](https://chatgpt-ads-library.com/): Full paginated archive of all ads running on ChatGPT. Filterable by keyword, advertiser, date range, and impression count.
+- [Advertisers](https://chatgpt-ads-library.com/advertisers): Every advertiser running ads on ChatGPT, sorted by ad count, impressions, or name. Includes total ad counts and total impression data.
+- [About & FAQ](https://chatgpt-ads-library.com/about): How the library works, step-by-step usage guide, and frequently asked questions about ChatGPT advertising.
 
-## Data
+## Data Structure
 
-Each ad record includes the advertiser name and logo, the advertised website, ad copy,
-a longer description, the ad screenshot, the publish date, and an impression count.
-Ads can be filtered by advertiser, date range, and impressions, and searched across
-advertiser names, websites, and ad text.
+Each ad record in the library contains:
+
+- **Advertiser name** — The brand or company running the ad
+- **Advertiser logo** — Brand logo image
+- **Website domain** — The advertised website (e.g. example.com)
+- **Ad headline (copy)** — The primary text of the ad
+- **Ad description** — Longer body text of the ad (when available)
+- **Ad creative image** — Screenshot of the ad as it appears in ChatGPT
+- **Publish date** — When the ad was first detected
+- **Impression count** — Estimated number of times the ad was shown
+
+## Search & Filtering
+
+Ads can be searched by keyword across advertiser name, website, and ad copy. Available filters:
+
+- **Advertiser** — Filter to a specific brand
+- **Date range** — `date_from` and `date_to` (YYYY-MM-DD format)
+- **Impression range** — `min_impressions` and `max_impressions`
+- **Sort order** — Newest, oldest, most impressions, fewest impressions
+
+## Update Policy
+
+Data is updated regularly. This is a live archive and new ads are added as they are detected running on ChatGPT.
+
+## Attribution
+
+If you use data from this library, please attribute: **ChatGPT Ads Library (chatgpt-ads-library.com)**.
+
+## Disclaimer
+
+This is an independent project and is not affiliated with or endorsed by OpenAI. Ad data may be incomplete or change over time.

@@ -2,37 +2,111 @@
 <html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ── Viewport (mobile + notch devices) ─────────────────────────────── -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <!-- ── Primary Meta ──────────────────────────────────────────────────── -->
     <meta
       name="description"
-      content="ChatGPT Ads Library — browse and search ads running across ChatGPT."
+      content="ChatGPT Ads Library — browse and search ads running across ChatGPT. Independent, searchable archive of ad creative, advertisers, copy, dates, and impression counts."
     />
+    <meta
+      name="keywords"
+      content="ChatGPT ads, ChatGPT advertising, OpenAI ads, AI ads library, ads on ChatGPT, ChatGPT ad creative, ChatGPT advertisers, ad transparency, AI advertising"
+    />
+    <meta name="author" content="ChatGPT Ads Library" />
+    <meta name="application-name" content="ChatGPT Ads Library" />
     <meta name="theme-color" content="#09090b" />
-    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- ── Geo signals (GEO) ─────────────────────────────────────────────── -->
+    <meta name="geo.region" content="US" />
+    <meta name="geo.placename" content="United States" />
+
+    <!-- ── Mobile / PWA ───────────────────────────────────────────────────── -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="ChatGPT Ads" />
+
+    <!-- ── Canonical ─────────────────────────────────────────────────────── -->
     <link rel="canonical" href="https://chatgpt-ads-library.com/" />
+
+    <!-- ── Icons ─────────────────────────────────────────────────────────── -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
+    <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
     <meta property="og:site_name" content="ChatGPT Ads Library" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="ChatGPT Ads Library — Browse & Search Ads on ChatGPT" />
+    <meta property="og:title" content="ChatGPT Ads Library — Browse &amp; Search Ads on ChatGPT" />
     <meta
       property="og:description"
       content="An independent, searchable archive of ads running across ChatGPT."
     />
     <meta property="og:url" content="https://chatgpt-ads-library.com/" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- ── Twitter / X ───────────────────────────────────────────────────── -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="ChatGPT Ads Library — Browse & Search Ads on ChatGPT" />
+    <meta name="twitter:site" content="@chatgptadslibrary" />
+    <meta name="twitter:creator" content="@chatgptadslibrary" />
+    <meta name="twitter:title" content="ChatGPT Ads Library — Browse &amp; Search Ads on ChatGPT" />
     <meta
       name="twitter:description"
       content="An independent, searchable archive of ads running across ChatGPT."
     />
+
+    <!-- ── Fonts (preconnect + preload for performance) ───────────────────── -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <title>ChatGPT Ads Library</title>
+
+    <title>ChatGPT Ads Library — Browse &amp; Search Ads on ChatGPT</title>
+
+    <!-- ── Static JSON-LD fallback (for pre-JS crawlers) ─────────────────── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://chatgpt-ads-library.com/#website",
+          "name": "ChatGPT Ads Library",
+          "url": "https://chatgpt-ads-library.com",
+          "description": "An independent, searchable archive of ads running across ChatGPT.",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://chatgpt-ads-library.com/?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://chatgpt-ads-library.com/#organization",
+          "name": "ChatGPT Ads Library",
+          "url": "https://chatgpt-ads-library.com",
+          "description": "An independent, searchable archive of ads running across ChatGPT. Built for researchers, marketers, and the curious."
+        }
+      ]
+    }
+    </script>
+
+    <!-- ── Theme initialisation (prevents flash) ─────────────────────────── -->
     <script>
       try {
         const stored = localStorage.getItem("theme");

@@ -1,4 +1,39 @@
 User-agent: *
 Allow: /
 
+# Block filtered/search query URLs from crawlers to preserve crawl budget
+Disallow: /*?q=
+Disallow: /*?advertiser=
+Disallow: /*?min_impressions=
+Disallow: /*?max_impressions=
+Disallow: /*?date_from=
+Disallow: /*?date_to=
+Disallow: /*?sort=
+
+# Allow paginated pages (these are crawlable)
+Allow: /*?page=
+
+# AI / Generative Engine crawlers — allowed for GEO indexing
+# GPTBot (OpenAI)
+User-agent: GPTBot
+Allow: /
+Disallow: /*?q=
+Disallow: /*?advertiser=
+
+# Google-Extended (Gemini training)
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic Claude
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Common-Crawl
+User-agent: CCBot
+Allow: /
+
 Sitemap: https://chatgpt-ads-library.com/sitemap.xml
