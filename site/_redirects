@@ -1,11 +1,12 @@
 # Cloudflare Pages Redirects & Rewrites
 
-# Clean URLs for Ad & Advertiser detail pages
-/ads/:id         /ad.html?id=:id         200
-/advertiser/:slug /advertiser.html?slug=:slug 200
+# Exact static paths first (most performant)
+/advertisers    /advertisers.html 200
+/about          /about.html       200
+/ads            /index.html       301
+/explore        /index.html       301
 
-# Canonical friendly routes
-/advertisers     /advertisers.html       200
-/about           /about.html             200
-/ads             /index.html             301
-/explore         /index.html             301
+# Dynamic clean URL rewrites (splats)
+/ads/*          /ad.html          200
+/advertisers/*  /advertiser.html  200
+/advertiser/*   /advertiser.html  200

@@ -86,6 +86,26 @@
     return params.get(key) || '';
   }
 
+  function getAdIdFromUrl() {
+    const queryId = getQueryParam('id');
+    if (queryId) return queryId;
+    const path = window.location.pathname;
+    const match = path.match(/\/ads\/([^/?#]+)/);
+    if (match) return decodeURIComponent(match[1]);
+    return '';
+  }
+
+  function getAdvertiserSlugFromUrl() {
+    const querySlug = getQueryParam('slug') || getQueryParam('id');
+    if (querySlug) return querySlug;
+    const path = window.location.pathname;
+    const match = path.match(/\/(?:advertiser|advertisers)\/([^/?#]+)/);
+    if (match && !match[1].endsWith('.html') && match[1] !== 'advertisers') {
+      return decodeURIComponent(match[1]);
+    }
+    return '';
+  }
+
   function setQueryParams(newParams, replace = false) {
     const url = new URL(window.location.href);
     Object.entries(newParams).forEach(([k, v]) => {
@@ -795,7 +815,7 @@
     document.querySelector('.theme-toggle-btn')?.addEventListener('click', toggleTheme);
     loadGlobalStats();
 
-    const adId = getQueryParam('id');
+    const adId = getAdIdFromUrl();
     const container = document.getElementById('ad-detail-container');
 
     if (!adId) {
@@ -1136,7 +1156,7 @@
     document.querySelector('.theme-toggle-btn')?.addEventListener('click', toggleTheme);
     loadGlobalStats();
 
-    const slug = getQueryParam('slug') || getQueryParam('id');
+    const slug = getAdvertiserSlugFromUrl();
     const profileContainer = document.getElementById('advertiser-profile-header');
     const adsGrid = document.getElementById('advertiser-ads-grid');
     const paginationRoot = document.getElementById('pagination-root');
@@ -1147,7 +1167,7 @@
         profileContainer.innerHTML = `
           <div class="error-banner">
             <h2>No Advertiser Selected</h2>
-            <a href="/advertisers.html" class="btn btn-primary">Browse Advertisers</a>
+            <a href="/advertisers" class="btn btn-primary">Browse Advertisers</a>
           </div>
         `;
       }
@@ -1186,9 +1206,9 @@
         if (profileContainer) {
           profileContainer.innerHTML = `
             <div class="breadcrumb-bar">
-              <a href="/index.html">Explore Ads</a>
+              <a href="/">Explore Ads</a>
               <span class="breadcrumb-sep">/</span>
-              <a href="/advertisers.html">Advertisers</a>
+              <a href="/advertisers">Advertisers</a>
               <span class="breadcrumb-sep">/</span>
               <span class="breadcrumb-current">${escapeHtml(adv.name)}</span>
             </div>
@@ -1263,7 +1283,7 @@
             <div class="error-banner">
               <h2>Advertiser Not Found</h2>
               <p>${escapeHtml(err.message)}</p>
-              <a href="/advertisers.html" class="btn btn-primary">Back to Advertisers Directory</a>
+              <a href="/advertisers" class="btn btn-primary">Back to Advertisers Directory</a>
             </div>
           `;
         }
@@ -1322,13 +1342,13 @@
   document.addEventListener('DOMContentLoaded', () => {
     const path = window.location.pathname;
 
-    if (path.endsWith('ad.html') || path.startsWith('/ads/')) {
+    if (path.endsWith('ad.html') || path.startsWith('/ads/') || path === '/ad') {
       initAdDetailPage();
-    } else if (path.endsWith('advertiser.html')) {
+    } else if (path.endsWith('advertiser.html') || /^\/(?:advertiser|advertisers)\/[^/]+$/.test(path)) {
       initAdvertiserDetailPage();
-    } else if (path.endsWith('advertisers.html')) {
+    } else if (path.endsWith('advertisers.html') || path === '/advertisers' || path === '/advertisers/') {
       initAdvertisersPage();
-    } else if (path.endsWith('about.html')) {
+    } else if (path.endsWith('about.html') || path === '/about' || path === '/about/') {
       initAboutPage();
     } else if (path.endsWith('404.html')) {
       init404Page();
