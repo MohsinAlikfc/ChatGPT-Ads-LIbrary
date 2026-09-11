@@ -1,0 +1,18 @@
+name = "chatgpt-ads-library-api"
+main = "src/index.ts"
+compatibility_date = "2024-12-18"
+
+# Create the database once and paste its id below:
+#   npx wrangler d1 create chatgpt-ads-library
+[[d1_databases]]
+binding = "DB"
+database_name = "chatgpt-ads-library"
+database_id = "00000000-0000-0000-0000-000000000000"
+
+# Create the bucket once and paste its name below:
+#   npx wrangler r2 bucket create chatgpt-ads-library-images
+# R2 is wired up and available via the ADS_IMAGES binding. The current seed
+# data references existing remote image URLs, so R2 is optional at first.
+[[r2_buckets]]
+binding = "ADS_IMAGES"
+bucket_name = "chatgpt-ads-library-images"

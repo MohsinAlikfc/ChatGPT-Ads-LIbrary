@@ -1,0 +1,44 @@
+export interface Ad {
+  id: string;
+  advertiserSlug: string;
+  advertiserName: string;
+  advertiserLogo: string | null;
+  advertiserPageUrl: string | null;
+  websiteUrl: string | null;
+  websiteDomain: string | null;
+  copy: string;
+  description: string | null;
+  mediaUrl: string | null;
+  publishedDate: string | null;
+  impressions: number;
+}
+
+export interface Advertiser {
+  slug: string;
+  name: string;
+  logo: string | null;
+  websiteUrl: string | null;
+  websiteDomain: string | null;
+  adCount: number;
+  totalImpressions: number;
+  firstSeen: string | null;
+  lastSeen: string | null;
+}
+
+export interface Pagination {
+  page: number;
+  limit: number;
+  total: number;
+  totalPages: number;
+}
+
+export interface Stats {
+  totalAds: number;
+  totalAdvertisers: number;
+  minDate: string | null;
+  maxDate: string | null;
+  topAdvertisers: Advertiser[];
+}
+
+export type AdSort = "date_desc" | "date_asc" | "impressions_desc" | "impressions_asc";
+export type AdvertiserSort = "name_asc" | "name_desc" | "ad_count_desc" | "impressions_desc";

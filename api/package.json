@@ -1,0 +1,23 @@
+{
+  "name": "@chatgpt-ads-library/api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "build": "wrangler deploy --dry-run --outdir=dist",
+    "typecheck": "tsc --noEmit",
+    "seed:generate": "node ../scripts/generate-seed.mjs",
+    "seed:local": "wrangler d1 execute chatgpt-ads-library --local --file=./seed.sql",
+    "seed:remote": "wrangler d1 execute chatgpt-ads-library --remote --file=./seed.sql"
+  },
+  "dependencies": {
+    "hono": "^4.6.14"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.0.0",
+    "typescript": "^5.6.3",
+    "wrangler": "^3.95.0"
+  }
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ChatGPT Ads Library — browse and search ads running across ChatGPT."
+    />
+    <meta name="theme-color" content="#09090b" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://chatgpt-ads-library.com/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <meta property="og:site_name" content="ChatGPT Ads Library" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ChatGPT Ads Library — Browse & Search Ads on ChatGPT" />
+    <meta
+      property="og:description"
+      content="An independent, searchable archive of ads running across ChatGPT."
+    />
+    <meta property="og:url" content="https://chatgpt-ads-library.com/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="ChatGPT Ads Library — Browse & Search Ads on ChatGPT" />
+    <meta
+      name="twitter:description"
+      content="An independent, searchable archive of ads running across ChatGPT."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>ChatGPT Ads Library</title>
+    <script>
+      try {
+        const stored = localStorage.getItem("theme");
+        const theme = stored || "dark";
+        document.documentElement.classList.toggle("dark", theme === "dark");
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

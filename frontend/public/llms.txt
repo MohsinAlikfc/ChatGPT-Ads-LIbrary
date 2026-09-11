@@ -1,0 +1,16 @@
+# ChatGPT Ads Library
+
+> ChatGPT Ads Library is an independent, searchable archive of ads running across ChatGPT. It indexes ad creative, advertisers, websites, copy, descriptions, publish dates, and impression counts.
+
+## Explore
+
+- [Browse ads](https://chatgpt-ads-library.com/): Browse and search the full ad archive.
+- [Advertisers](https://chatgpt-ads-library.com/advertisers): Every advertiser running ads, with ad counts and impressions.
+- [About](https://chatgpt-ads-library.com/about): How the library works and frequently asked questions.
+
+## Data
+
+Each ad record includes the advertiser name and logo, the advertised website, ad copy,
+a longer description, the ad screenshot, the publish date, and an impression count.
+Ads can be filtered by advertiser, date range, and impressions, and searched across
+advertiser names, websites, and ad text.
