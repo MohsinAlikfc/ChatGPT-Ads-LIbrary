@@ -50,17 +50,7 @@ urls.push(urlEntry(`${SITE_URL}/`, null, "daily", "1.0"));
 urls.push(urlEntry(`${SITE_URL}/advertisers`, null, "daily", "0.9"));
 urls.push(urlEntry(`${SITE_URL}/about`, null, "monthly", "0.7"));
 
-// 2. Indexable Homepage Pagination
-const totalHomePages = Math.ceil(ADS.length / 24);
-for (let p = 2; p <= Math.min(totalHomePages, 50); p++) {
-  urls.push(urlEntry(`${SITE_URL}/?page=${p}`, null, "daily", "0.8"));
-}
-
-// 3. Indexable Advertisers Pagination
-const totalAdvPages = Math.ceil(ADVERTISERS.length / 24);
-for (let p = 2; p <= Math.min(totalAdvPages, 50); p++) {
-  urls.push(urlEntry(`${SITE_URL}/advertisers?page=${p}`, null, "daily", "0.7"));
-}
+// Pagination pages are not included in sitemap as they are noindex
 
 // 4. All Advertiser Profiles (All have index, follow)
 for (const advertiser of ADVERTISERS) {

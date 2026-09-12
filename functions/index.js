@@ -128,6 +128,7 @@ export async function onRequest(context) {
     canonicalUrlObj.pathname = '/';
     canonicalUrlObj.searchParams.set('page', page);
     canonicalUrl = canonicalUrlObj.toString();
+    robots = 'noindex, follow';
   }
 
   const getPageUrl = (p) => {

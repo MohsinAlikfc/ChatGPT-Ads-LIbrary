@@ -96,6 +96,7 @@ export async function onRequest(context) {
     const canonicalUrlObj = new URL(`${url.origin}/advertisers`);
     canonicalUrlObj.searchParams.set('page', page);
     canonicalUrl = canonicalUrlObj.toString();
+    robots = 'noindex, follow';
   }
 
   const getPageUrl = (p) => {
