@@ -1,0 +1,14 @@
+name = "chatgpt-ads-library"
+compatibility_date = "2024-12-18"
+pages_build_output_dir = "public"
+
+# Cloudflare D1 Database Binding
+[[d1_databases]]
+binding = "DB"
+database_name = "chatgpt-ads-library"
+database_id = "af82e074-3db7-45fc-b2ab-d3e446f47f33"
+
+# Cloudflare R2 Bucket Binding
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "chatgpt-ads-library-images"
