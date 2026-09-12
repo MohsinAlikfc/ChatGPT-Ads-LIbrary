@@ -86,6 +86,12 @@ export async function onRequest(context) {
       ? `Advertisers Directory — ChatGPT Ads Library (Page ${page})`
       : 'Advertisers Directory — ChatGPT Ads Library';
 
+  const pageDescription = q
+    ? `Browse ChatGPT advertisers matching "${q}". View ad counts, impressions, and ad creatives.`
+    : page > 1
+      ? `Page ${page} of the advertisers directory. Explore all brands and sponsors indexed in the ChatGPT Ads Library.`
+      : 'Explore all brands, organizations, and sponsors indexed in the ChatGPT Ads Library transparency archive. View ad counts, impressions, and ad creatives.';
+
   let canonicalUrl = `${url.origin}/advertisers`;
   let robots = 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1';
 

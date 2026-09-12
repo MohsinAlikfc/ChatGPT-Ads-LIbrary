@@ -3,9 +3,9 @@
    Route: GET /sitemap.xml
    Rule: ONLY indexable pages (robots: index, follow) are included.
    - Root pages: /, /advertisers, /about
-   - Pagination pages: /?page=2.., /advertisers?page=2..
    - All Advertiser profile pages: /advertisers/[slug]
    - Top-performing Ad page per advertiser ONLY: /ads/[id] (All others are noindex)
+   - Pagination pages are noindex and excluded from sitemap
    ═══════════════════════════════════════════════════════════════════════════ */
 
 function escapeXml(value) {
@@ -44,23 +44,15 @@ export async function onRequest(context) {
   const url = new URL(request.url);
   const siteUrl = 'https://chatgpt-ads-library.com';
 
-  const limitPerPage = 24;
-
-  let totalAdsCount = 0;
-  let totalAdvCount = 0;
   let advertisers = [];
   let topAds = [];
 
   try {
     if (env.DB) {
       const [
-        adsCountRes,
-        advCountRes,
         advListRes,
         topAdsRes,
       ] = await Promise.all([
-        env.DB.prepare('SELECT COUNT(*) as count FROM ads').first(),
-        env.DB.prepare('SELECT COUNT(*) as count FROM advertisers').first(),
         env.DB.prepare('SELECT slug, last_seen FROM advertisers ORDER BY total_impressions DESC').all(),
         env.DB.prepare(`
           WITH RankedAds AS (
@@ -78,8 +70,6 @@ export async function onRequest(context) {
         `).all(),
       ]);
 
-      totalAdsCount = adsCountRes?.count || 0;
-      totalAdvCount = advCountRes?.count || 0;
       advertisers = advListRes?.results || [];
       topAds = topAdsRes?.results || [];
     }
@@ -94,17 +84,7 @@ export async function onRequest(context) {
   urls.push(urlEntry(`${siteUrl}/advertisers`, null, 'daily', '0.9'));
   urls.push(urlEntry(`${siteUrl}/about`, null, 'monthly', '0.7'));
 
-  // 2. Indexable Homepage Pagination
-  const totalHomePages = Math.ceil(totalAdsCount / limitPerPage);
-  for (let p = 2; p <= Math.min(totalHomePages, 50); p++) {
-    urls.push(urlEntry(`${siteUrl}/?page=${p}`, null, 'daily', '0.8'));
-  }
-
-  // 3. Indexable Advertisers Pagination
-  const totalAdvPages = Math.ceil(totalAdvCount / limitPerPage);
-  for (let p = 2; p <= Math.min(totalAdvPages, 50); p++) {
-    urls.push(urlEntry(`${siteUrl}/advertisers?page=${p}`, null, 'daily', '0.7'));
-  }
+  // Pagination pages are noindex — not included in sitemap
 
   // 4. All Advertiser Profiles (All have index, follow)
   for (const adv of advertisers) {
