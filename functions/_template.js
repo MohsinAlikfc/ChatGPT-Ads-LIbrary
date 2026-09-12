@@ -101,10 +101,7 @@ export function renderAdCard(ad) {
 
       <div class="ad-card-footer">
         <div class="ad-impressions-badge" title="Estimated ad impressions">
-          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-            <circle cx="12" cy="12" r="3"/>
-          </svg>
+          <svg class="badge-icon" viewBox="0 0 24 24"><use href="#icon-eye"></use></svg>
           <span>${formatNumber(impressions)} impressions</span>
         </div>
 
@@ -250,16 +247,12 @@ export function renderPagination(page, totalPages, baseUrl, queryParams = {}) {
     <div class="pagination-container" role="navigation" aria-label="Pagination">
       ${page > 1 ? `
         <a href="${buildUrl(page - 1)}" class="pagination-btn pagination-prev" aria-label="Previous page">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="15 18 9 12 15 6"/>
-          </svg>
+          <svg class="icon" viewBox="0 0 24 24"><use href="#icon-chevron-left"></use></svg>
           <span>Prev</span>
         </a>
       ` : `
         <button type="button" class="pagination-btn pagination-prev" disabled aria-label="Previous page">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="15 18 9 12 15 6"/>
-          </svg>
+          <svg class="icon" viewBox="0 0 24 24"><use href="#icon-chevron-left"></use></svg>
           <span>Prev</span>
         </button>
       `}
@@ -279,16 +272,12 @@ export function renderPagination(page, totalPages, baseUrl, queryParams = {}) {
       ${page < totalPages ? `
         <a href="${buildUrl(page + 1)}" class="pagination-btn pagination-next" aria-label="Next page">
           <span>Next</span>
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="9 18 15 12 9 6"/>
-          </svg>
+          <svg class="icon" viewBox="0 0 24 24"><use href="#icon-chevron-right"></use></svg>
         </a>
       ` : `
         <button type="button" class="pagination-btn pagination-next" disabled aria-label="Next page">
           <span>Next</span>
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="9 18 15 12 9 6"/>
-          </svg>
+          <svg class="icon" viewBox="0 0 24 24"><use href="#icon-chevron-right"></use></svg>
         </button>
       `}
     </div>
@@ -305,6 +294,8 @@ export function renderPageLayout({
   bodyContent,
   stats = {},
   robots = 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
+  prevPageUrl,
+  nextPageUrl,
 }) {
   return `<!DOCTYPE html>
 <html lang="en" class="dark">
@@ -315,6 +306,8 @@ export function renderPageLayout({
   <meta name="description" content="${escapeHtml(description)}">
   <meta name="robots" content="${escapeHtml(robots)}">
   <link rel="canonical" href="${escapeHtml(canonicalUrl)}">
+  ${prevPageUrl ? `<link rel="prev" href="${escapeHtml(prevPageUrl)}">` : ''}
+  ${nextPageUrl ? `<link rel="next" href="${escapeHtml(nextPageUrl)}">` : ''}
 
   <!-- Open Graph -->
   <meta property="og:site_name" content="ChatGPT Ads Library">
@@ -349,6 +342,27 @@ export function renderPageLayout({
     : ''}
 </head>
 <body class="bg-surface text-main antialiased min-h-screen flex flex-col">
+  <!-- SVG Sprite Definitions -->
+  <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <symbol id="icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+      </symbol>
+      <symbol id="icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+      </symbol>
+      <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </symbol>
+      <symbol id="icon-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="9 18 15 12 9 6"/>
+      </symbol>
+      <symbol id="icon-chevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="15 18 9 12 15 6"/>
+      </symbol>
+    </defs>
+  </svg>
+
   ${renderHeader(activeNav)}
 
   <main class="main-content flex-1">

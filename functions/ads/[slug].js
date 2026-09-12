@@ -102,26 +102,37 @@ export async function onRequest(context) {
   const canonicalUrl = `${url.origin}/ads/${ad.id}`;
 
   // Schema.org CreativeWork JSON-LD
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'CreativeWork',
-    name: ad.copy || ad.advertiser_name,
-    headline: ad.copy,
-    description: ad.description || ad.copy,
-    url: canonicalUrl,
-    image: ad.media_url || undefined,
-    datePublished: ad.published_date,
-    creator: {
-      '@type': 'Organization',
-      name: ad.advertiser_name,
-      url: ad.website_url || undefined,
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CreativeWork',
+      name: ad.copy || ad.advertiser_name,
+      headline: ad.copy,
+      description: ad.description || ad.copy,
+      url: canonicalUrl,
+      image: ad.media_url || undefined,
+      datePublished: ad.published_date,
+      creator: {
+        '@type': 'Organization',
+        name: ad.advertiser_name,
+        url: ad.website_url || undefined,
+      },
+      interactionStatistic: {
+        '@type': 'InteractionCounter',
+        interactionType: 'https://schema.org/ViewAction',
+        userInteractionCount: Number(ad.impressions || 0),
+      },
     },
-    interactionStatistic: {
-      '@type': 'InteractionCounter',
-      interactionType: 'https://schema.org/ViewAction',
-      userInteractionCount: Number(ad.impressions || 0),
-    },
-  };
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Explore Ads', item: url.origin },
+        { '@type': 'ListItem', position: 2, name: ad.advertiser_name, item: `${url.origin}/advertisers/${ad.advertiser_slug}` },
+        { '@type': 'ListItem', position: 3, name: `Ad #${ad.id}`, item: canonicalUrl }
+      ]
+    }
+  ];
 
   const bodyContent = `
     <div class="container py-8">
@@ -194,11 +205,7 @@ export async function onRequest(context) {
                     <span class="meta-val">
                       <a href="${escapeHtml(ad.website_url)}" target="_blank" rel="nofollow noopener noreferrer" class="external-link">
                         ${escapeHtml(ad.website_domain || ad.website_url)}
-                        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                          <polyline points="15 3 21 3 21 9"/>
-                          <line x1="10" y1="14" x2="21" y2="3"/>
-                        </svg>
+                        <svg class="icon-sm" viewBox="0 0 24 24"><use href="#icon-external"></use></svg>
                       </a>
                     </span>
                   </div>

@@ -106,16 +106,48 @@ export async function onRequest(context) {
     ? `${adv.name} Ads & Campaigns — ChatGPT Ads Library (Page ${page})`
     : `${adv.name} Ads & Campaigns — ChatGPT Ads Library`;
   const pageDescription = `Explore all ${formatNumber(adv.ad_count)} sponsored ChatGPT ad placements and copy variations running by ${adv.name}.`;
-  const canonicalUrl = page === 1 ? `${url.origin}/advertisers/${adv.slug}` : `${url.origin}/advertisers/${adv.slug}?page=${page}`;
+  const isFiltered = Boolean(sort && sort !== 'date_desc');
+  let canonicalUrl = `${url.origin}/advertisers/${adv.slug}`;
+  let robots = 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1';
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: adv.name,
-    url: adv.website_url || undefined,
-    image: adv.logo || undefined,
-    description: pageDescription,
+  if (isFiltered) {
+    canonicalUrl = `${url.origin}/advertisers/${adv.slug}`;
+    robots = 'noindex, follow';
+  } else if (page > 1) {
+    const canonicalUrlObj = new URL(`${url.origin}/advertisers/${adv.slug}`);
+    canonicalUrlObj.searchParams.set('page', page);
+    canonicalUrl = canonicalUrlObj.toString();
+  }
+
+  const getPageUrl = (p) => {
+    const pUrl = new URL(`${url.origin}/advertisers/${adv.slug}`);
+    if (sort && sort !== 'date_desc') pUrl.searchParams.set('sort', sort);
+    if (p > 1) pUrl.searchParams.set('page', p);
+    return pUrl.toString();
   };
+
+  const prevPageUrl = page > 1 ? getPageUrl(page - 1) : null;
+  const nextPageUrl = page < totalPages ? getPageUrl(page + 1) : null;
+
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: adv.name,
+      url: adv.website_url || undefined,
+      image: adv.logo || undefined,
+      description: pageDescription,
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Explore Ads', item: url.origin },
+        { '@type': 'ListItem', position: 2, name: 'Advertisers', item: `${url.origin}/advertisers` },
+        { '@type': 'ListItem', position: 3, name: adv.name, item: canonicalUrl }
+      ]
+    }
+  ];
 
   const bodyContent = `
     <div class="container py-8">
@@ -136,11 +168,7 @@ export async function onRequest(context) {
             ${adv.website_url ? `
               <a href="${escapeHtml(adv.website_url)}" target="_blank" rel="nofollow noopener noreferrer" class="adv-hero-domain">
                 ${escapeHtml(adv.website_domain || adv.website_url)}
-                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                  <polyline points="15 3 21 3 21 9"/>
-                  <line x1="10" y1="14" x2="21" y2="3"/>
-                </svg>
+                <svg class="icon-sm" viewBox="0 0 24 24"><use href="#icon-external"></use></svg>
               </a>
             ` : ''}
           </div>
@@ -205,6 +233,9 @@ export async function onRequest(context) {
     jsonLd,
     bodyContent,
     stats,
+    robots,
+    prevPageUrl,
+    nextPageUrl,
   });
 
   return new Response(html, {

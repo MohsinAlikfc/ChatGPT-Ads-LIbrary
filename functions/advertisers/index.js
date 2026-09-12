@@ -86,8 +86,28 @@ export async function onRequest(context) {
       ? `Advertisers Directory — ChatGPT Ads Library (Page ${page})`
       : 'Advertisers Directory — ChatGPT Ads Library';
 
-  const pageDescription = 'Explore verified brands, organizations, and sponsors running campaigns across ChatGPT.';
-  const canonicalUrl = isFiltered || page === 1 ? `${url.origin}/advertisers` : `${url.origin}/advertisers?page=${page}`;
+  let canonicalUrl = `${url.origin}/advertisers`;
+  let robots = 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1';
+
+  if (isFiltered) {
+    canonicalUrl = `${url.origin}/advertisers`;
+    robots = 'noindex, follow';
+  } else if (page > 1) {
+    const canonicalUrlObj = new URL(`${url.origin}/advertisers`);
+    canonicalUrlObj.searchParams.set('page', page);
+    canonicalUrl = canonicalUrlObj.toString();
+  }
+
+  const getPageUrl = (p) => {
+    const pUrl = new URL(`${url.origin}/advertisers`);
+    if (q) pUrl.searchParams.set('q', q);
+    if (sort && sort !== 'ad_count_desc') pUrl.searchParams.set('sort', sort);
+    if (p > 1) pUrl.searchParams.set('page', p);
+    return pUrl.toString();
+  };
+
+  const prevPageUrl = page > 1 ? getPageUrl(page - 1) : null;
+  const nextPageUrl = page < totalPages ? getPageUrl(page + 1) : null;
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -121,10 +141,7 @@ export async function onRequest(context) {
       <div class="container">
         <form method="GET" action="/advertisers" class="search-filter-bar" role="search">
           <div class="search-box-wrapper">
-            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="11" cy="11" r="8"/>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-            </svg>
+            <svg class="search-icon" viewBox="0 0 24 24"><use href="#icon-search"></use></svg>
             <input
               type="search"
               name="q"
@@ -209,7 +226,9 @@ export async function onRequest(context) {
     jsonLd,
     bodyContent,
     stats,
-    robots: isFiltered ? 'noindex, follow' : 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
+    robots,
+    prevPageUrl,
+    nextPageUrl,
   });
 
   return new Response(html, {

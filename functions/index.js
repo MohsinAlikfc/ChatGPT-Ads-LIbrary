@@ -117,9 +117,32 @@ export async function onRequest(context) {
       ? `Page ${page} of ads running across ChatGPT. Browse ad creative, explore advertisers, and filter by date and impressions.`
       : 'An independent, searchable archive of ads running across ChatGPT. Browse ad creative, explore advertisers, and filter by date and impressions.';
 
-  const canonicalUrl = isFiltered || page === 1
-    ? `${url.origin}/`
-    : `${url.origin}/?page=${page}`;
+  let canonicalUrl = `${url.origin}/`;
+  let robots = 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1';
+
+  if (isFiltered) {
+    canonicalUrl = `${url.origin}/`;
+    robots = 'noindex, follow';
+  } else if (page > 1) {
+    const canonicalUrlObj = new URL(url.origin);
+    canonicalUrlObj.pathname = '/';
+    canonicalUrlObj.searchParams.set('page', page);
+    canonicalUrl = canonicalUrlObj.toString();
+  }
+
+  const getPageUrl = (p) => {
+    const pUrl = new URL(url.origin);
+    pUrl.pathname = '/';
+    if (q) pUrl.searchParams.set('q', q);
+    if (advertiser) pUrl.searchParams.set('advertiser', advertiser);
+    if (sort && sort !== 'date_desc') pUrl.searchParams.set('sort', sort);
+    if (minImpressions) pUrl.searchParams.set('min_impressions', minImpressions);
+    if (p > 1) pUrl.searchParams.set('page', p);
+    return pUrl.toString();
+  };
+
+  const prevPageUrl = page > 1 ? getPageUrl(page - 1) : null;
+  const nextPageUrl = page < totalPages ? getPageUrl(page + 1) : null;
 
   const firstAdImage = ads[0]?.media_url || `${url.origin}/og-image.jpg`;
 
@@ -239,10 +262,7 @@ export async function onRequest(context) {
       <div class="container">
         <form method="GET" action="/" class="search-filter-bar" role="search">
           <div class="search-box-wrapper">
-            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="11" cy="11" r="8"/>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-            </svg>
+            <svg class="search-icon" viewBox="0 0 24 24"><use href="#icon-search"></use></svg>
             <input
               type="search"
               name="q"
@@ -314,7 +334,9 @@ export async function onRequest(context) {
     activeNav: 'home',
     bodyContent,
     stats,
-    robots: isFiltered ? 'noindex, follow' : 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
+    robots,
+    prevPageUrl,
+    nextPageUrl,
   });
 
   return new Response(html, {
