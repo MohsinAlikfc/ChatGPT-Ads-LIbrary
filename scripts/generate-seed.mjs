@@ -5,8 +5,8 @@ import { fileURLToPath } from "node:url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "..");
 
-const OUT = join(root, "api", "seed.sql");
-const SCHEMA = readFileSync(join(root, "api", "schema.sql"), "utf8");
+const OUT = join(root, "frontend", "seed.sql");
+const SCHEMA = readFileSync(join(root, "frontend", "schema.sql"), "utf8");
 const ADS = JSON.parse(readFileSync(join(root, "data", "ads.json"), "utf8"));
 const ADVERTISERS = JSON.parse(readFileSync(join(root, "data", "advertisers.json"), "utf8"));
 
