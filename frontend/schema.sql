@@ -34,3 +34,20 @@ CREATE TABLE IF NOT EXISTS advertisers (
 CREATE INDEX IF NOT EXISTS idx_advertisers_name ON advertisers (name);
 CREATE INDEX IF NOT EXISTS idx_advertisers_ad_count ON advertisers (ad_count);
 CREATE INDEX IF NOT EXISTS idx_advertisers_total_impressions ON advertisers (total_impressions);
+
+CREATE TABLE IF NOT EXISTS categories (
+  slug TEXT PRIMARY KEY,
+  name TEXT NOT NULL,
+  title TEXT NOT NULL,
+  description TEXT NOT NULL,
+  ad_count INTEGER NOT NULL DEFAULT 0,
+  advertiser_count INTEGER NOT NULL DEFAULT 0
+);
+
+CREATE TABLE IF NOT EXISTS ad_categories (
+  ad_id TEXT NOT NULL,
+  category_slug TEXT NOT NULL,
+  PRIMARY KEY (ad_id, category_slug)
+);
+CREATE INDEX IF NOT EXISTS idx_ad_categories_slug ON ad_categories(category_slug);
+CREATE INDEX IF NOT EXISTS idx_ad_categories_ad_id ON ad_categories(ad_id);

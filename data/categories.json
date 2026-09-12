@@ -1,0 +1,226 @@
+[
+  {
+    "slug": "ai",
+    "name": "AI",
+    "title": "AI ChatGPT Ads — Browse AI Advertising on ChatGPT",
+    "description": "Explore AI and artificial intelligence ads running on ChatGPT. Discover companies promoting AI tools, platforms, and services.",
+    "keywords": ["artificial intelligence", " ai ", "ai-", "machine learning", "deep learning", "neural", "llm", "gpt", "openai", "anthropic", "generative ai", "genai", "chatbot", "copilot", "ai agent", "ai platform", "ai tool", "ai solution", "ai model", "ai assistant", "ai-powered"]
+  },
+  {
+    "slug": "software",
+    "name": "Software",
+    "title": "Software ChatGPT Ads — Browse Software Advertising on ChatGPT",
+    "description": "Explore software and SaaS ads running on ChatGPT. Discover companies promoting software products, platforms, and developer tools.",
+    "keywords": ["software", "saas", "platform", "app ", "application", "tool", "api ", "sdk", "developer", "devops", "cloud", "database", "infrastructure", "hosting", "deployment", "integration", "automation", "workflow", "dashboard", "analytics platform"]
+  },
+  {
+    "slug": "business",
+    "name": "Business",
+    "title": "Business ChatGPT Ads — Browse Business Advertising on ChatGPT",
+    "description": "Explore business and enterprise ads running on ChatGPT. Discover companies promoting business services, consulting, and B2B solutions.",
+    "keywords": ["business", "enterprise", "b2b", "corporate", "consulting", "management", "operations", "strategy", "scaling", "growth", "revenue", "startup", "procurement", "vendor", "supply chain", "erp", "crm"]
+  },
+  {
+    "slug": "finance",
+    "name": "Finance",
+    "title": "Finance ChatGPT Ads — Browse Finance Advertising on ChatGPT",
+    "description": "Explore finance and fintech ads running on ChatGPT. Discover companies promoting banking, investment, and financial technology.",
+    "keywords": ["finance", "fintech", "banking", "investment", "trading", "stock", "crypto", "blockchain", "payment", "payroll", "accounting", "bookkeeping", "tax ", "capital", "credit", "debit", "loan", "mortgage", "wealth", "portfolio", "hedge fund", "asset management"]
+  },
+  {
+    "slug": "marketing",
+    "name": "Marketing",
+    "title": "Marketing ChatGPT Ads — Browse Marketing Advertising on ChatGPT",
+    "description": "Explore marketing and advertising technology ads running on ChatGPT. Discover companies promoting marketing tools, ad platforms, and growth solutions.",
+    "keywords": ["marketing", "advertising", "ad tech", "adtech", "seo", "sem", "ppc", "campaign", "email marketing", "social media", "content marketing", "influencer", "brand", "lead gen", "conversion", "retarget", "affiliate", "programmatic", "impression", "cpm", "cpc", "ctr", "ads platform", "ad network", "monetization", "ad exchange"]
+  },
+  {
+    "slug": "e-commerce",
+    "name": "E-commerce",
+    "title": "E-commerce ChatGPT Ads — Browse E-commerce Advertising on ChatGPT",
+    "description": "Explore e-commerce and online shopping ads running on ChatGPT. Discover companies promoting online stores, marketplaces, and shopping solutions.",
+    "keywords": ["e-commerce", "ecommerce", "online store", "shop", "marketplace", "retail", "product listing", "checkout", "cart", "dropshipping", "fulfillment", "inventory", "order management", "shopify", "woocommerce", "magento", "amazon", "ebay"]
+  },
+  {
+    "slug": "real-estate",
+    "name": "Real Estate",
+    "title": "Real Estate ChatGPT Ads — Browse Real Estate Advertising on ChatGPT",
+    "description": "Explore real estate ads running on ChatGPT. Discover companies promoting property listings, real estate platforms, and property management.",
+    "keywords": ["real estate", "property", "realty", "housing", "apartment", "condo", "commercial property", "mortgage", "rent", "lease", "tenant", "landlord", "mls", "zillow", "redfin", "realtor", "broker", "property management"]
+  },
+  {
+    "slug": "home",
+    "name": "Home",
+    "title": "Home ChatGPT Ads — Browse Home & Garden Advertising on ChatGPT",
+    "description": "Explore home improvement and household ads running on ChatGPT. Discover companies promoting home services, furniture, decor, and home improvement.",
+    "keywords": ["home", "house", "furniture", "decor", "interior design", "kitchen", "bathroom", "garden", "landscaping", "renovation", "remodel", "plumbing", "hvac", "cleaning", "smart home", "appliance", "mattress", "flooring"]
+  },
+  {
+    "slug": "automotive",
+    "name": "Automotive",
+    "title": "Automotive ChatGPT Ads — Browse Automotive Advertising on ChatGPT",
+    "description": "Explore automotive and vehicle ads running on ChatGPT. Discover companies promoting cars, trucks, EVs, and automotive services.",
+    "keywords": ["automotive", "car ", "vehicle", "auto ", "truck", "suv", "electric vehicle", " ev ", "tesla", "ford", "toyota", "honda", "bmw", "mercedes", "dealership", "tire", "oil change", "mechanic", "driving", "fleet"]
+  },
+  {
+    "slug": "healthcare",
+    "name": "Healthcare",
+    "title": "Healthcare ChatGPT Ads — Browse Healthcare Advertising on ChatGPT",
+    "description": "Explore healthcare and medical ads running on ChatGPT. Discover companies promoting health services, medical technology, and wellness solutions.",
+    "keywords": ["healthcare", "health", "medical", "hospital", "clinic", "doctor", "physician", "patient", "telehealth", "telemedicine", "pharma", "pharmaceutical", "drug", "therapy", "treatment", "diagnosis", "ehr", "hipaa", "biotech", "clinical trial", "wellness"]
+  },
+  {
+    "slug": "education",
+    "name": "Education",
+    "title": "Education ChatGPT Ads — Browse Education Advertising on ChatGPT",
+    "description": "Explore education and learning ads running on ChatGPT. Discover companies promoting online courses, edtech, and educational resources.",
+    "keywords": ["education", "edtech", "learning", "course", "training", "certification", "university", "college", "school", "tutor", "e-learning", "elearning", "online class", "bootcamp", "skill", "curriculum", "student", "teacher", "academic"]
+  },
+  {
+    "slug": "careers",
+    "name": "Careers",
+    "title": "Careers ChatGPT Ads — Browse Career & HR Advertising on ChatGPT",
+    "description": "Explore career and HR ads running on ChatGPT. Discover companies promoting job boards, recruiting tools, and career services.",
+    "keywords": ["career", "job ", "hiring", "recruit", "talent", "hr ", "human resource", "resume", "interview", "employment", "staffing", "workforce", "job board", "linkedin", "applicant", "onboarding", "compensation", "salary"]
+  },
+  {
+    "slug": "travel",
+    "name": "Travel",
+    "title": "Travel ChatGPT Ads — Browse Travel Advertising on ChatGPT",
+    "description": "Explore travel and hospitality ads running on ChatGPT. Discover companies promoting flights, hotels, vacation packages, and travel services.",
+    "keywords": ["travel", "hotel", "flight", "airline", "vacation", "booking", "resort", "cruise", "tourism", "destination", "airbnb", "expedia", "trip", "passport", "luggage", "hostel", "hospitality"]
+  },
+  {
+    "slug": "legal",
+    "name": "Legal",
+    "title": "Legal ChatGPT Ads — Browse Legal Advertising on ChatGPT",
+    "description": "Explore legal and compliance ads running on ChatGPT. Discover companies promoting legal services, compliance tools, and law firms.",
+    "keywords": ["legal", "law ", "lawyer", "attorney", "compliance", "regulation", "contract", "litigation", "patent", "trademark", "intellectual property", "gdpr", "privacy policy", "terms of service", "legal tech"]
+  },
+  {
+    "slug": "electronics",
+    "name": "Electronics",
+    "title": "Electronics ChatGPT Ads — Browse Electronics Advertising on ChatGPT",
+    "description": "Explore electronics and consumer tech ads running on ChatGPT. Discover companies promoting gadgets, devices, and tech hardware.",
+    "keywords": ["electronics", "gadget", "device", "hardware", "laptop", "computer", "phone", "tablet", "monitor", "headphone", "speaker", "camera", "wearable", "smartwatch", "printer", "chip", "semiconductor", "gpu", "processor"]
+  },
+  {
+    "slug": "fitness",
+    "name": "Fitness",
+    "title": "Fitness ChatGPT Ads — Browse Fitness Advertising on ChatGPT",
+    "description": "Explore fitness and sports ads running on ChatGPT. Discover companies promoting gym equipment, fitness apps, and athletic wear.",
+    "keywords": ["fitness", "gym ", "workout", "exercise", "sport", "athletic", "running", "yoga", "CrossFit", "muscle", "weight loss", "diet", "nutrition", "protein", "supplement", "peloton", "training", "marathon"]
+  },
+  {
+    "slug": "food",
+    "name": "Food",
+    "title": "Food ChatGPT Ads — Browse Food & Beverage Advertising on ChatGPT",
+    "description": "Explore food and beverage ads running on ChatGPT. Discover companies promoting restaurants, meal delivery, and food products.",
+    "keywords": ["food", "restaurant", "meal", "recipe", "cooking", "grocery", "delivery", "catering", "beverage", "drink", "coffee", "wine", "beer", "snack", "organic", "vegan", "gluten", "doordash", "ubereats", "grubhub"]
+  },
+  {
+    "slug": "beauty",
+    "name": "Beauty",
+    "title": "Beauty ChatGPT Ads — Browse Beauty Advertising on ChatGPT",
+    "description": "Explore beauty and personal care ads running on ChatGPT. Discover companies promoting skincare, cosmetics, and beauty products.",
+    "keywords": ["beauty", "skincare", "cosmetic", "makeup", "hair care", "fragrance", "perfume", "moisturizer", "serum", "dermatolog", "salon", "spa ", "nail", "lipstick", "lotion", "anti-aging"]
+  },
+  {
+    "slug": "family",
+    "name": "Family",
+    "title": "Family ChatGPT Ads — Browse Family Advertising on ChatGPT",
+    "description": "Explore family and parenting ads running on ChatGPT. Discover companies promoting products and services for families, kids, and parents.",
+    "keywords": ["family", "parent", "child", "kids", "baby", "toddler", "maternity", "pregnancy", "daycare", "nursery", "toys", "diaper", "stroller", "school supplies", "family plan"]
+  },
+  {
+    "slug": "pets",
+    "name": "Pets",
+    "title": "Pets ChatGPT Ads — Browse Pet Advertising on ChatGPT",
+    "description": "Explore pet and animal ads running on ChatGPT. Discover companies promoting pet food, veterinary services, and pet products.",
+    "keywords": ["pet ", "pets", "dog ", "cat ", "puppy", "kitten", "veterinar", "vet ", "animal", "pet food", "pet insurance", "grooming", "leash", "collar", "aquarium", "bird"]
+  },
+  {
+    "slug": "entertainment",
+    "name": "Entertainment",
+    "title": "Entertainment ChatGPT Ads — Browse Entertainment Advertising on ChatGPT",
+    "description": "Explore entertainment and media ads running on ChatGPT. Discover companies promoting streaming, gaming, and entertainment services.",
+    "keywords": ["entertainment", "streaming", "gaming", "game ", "movie", "music", "video", "podcast", "tv ", "television", "netflix", "spotify", "disney", "hulu", "twitch", "youtube", "media", "content creator"]
+  },
+  {
+    "slug": "events",
+    "name": "Events",
+    "title": "Events ChatGPT Ads — Browse Events Advertising on ChatGPT",
+    "description": "Explore events and conference ads running on ChatGPT. Discover companies promoting conferences, webinars, and event management.",
+    "keywords": ["event", "conference", "summit", "webinar", "seminar", "workshop", "expo", "trade show", "meetup", "ticket", "venue", "registration", "attendee", "keynote", "virtual event"]
+  },
+  {
+    "slug": "insurance",
+    "name": "Insurance",
+    "title": "Insurance ChatGPT Ads — Browse Insurance Advertising on ChatGPT",
+    "description": "Explore insurance ads running on ChatGPT. Discover companies promoting health insurance, auto insurance, and insurance technology.",
+    "keywords": ["insurance", "insure", "policy", "premium", "coverage", "claim", "underwrite", "actuar", "geico", "allstate", "state farm", "progressive", "life insurance", "health insurance", "auto insurance", "home insurance"]
+  },
+  {
+    "slug": "personal-finance",
+    "name": "Personal Finance",
+    "title": "Personal Finance ChatGPT Ads — Browse Personal Finance Advertising on ChatGPT",
+    "description": "Explore personal finance ads running on ChatGPT. Discover companies promoting budgeting tools, savings, and personal financial planning.",
+    "keywords": ["personal finance", "budget", "saving", "retirement", "401k", "ira", "roth", "credit score", "credit card", "debt", "money management", "financial planning", "invest", "compound interest", "net worth", "expense tracker"]
+  },
+  {
+    "slug": "industrial",
+    "name": "Industrial",
+    "title": "Industrial ChatGPT Ads — Browse Industrial Advertising on ChatGPT",
+    "description": "Explore industrial and manufacturing ads running on ChatGPT. Discover companies promoting industrial equipment, manufacturing solutions, and supply chain tools.",
+    "keywords": ["industrial", "manufacturing", "factory", "production", "warehouse", "machinery", "equipment", "fabricat", "assembly", "quality control", "lean manufacturing", "six sigma", "supply chain", "raw material"]
+  },
+  {
+    "slug": "logistics",
+    "name": "Logistics",
+    "title": "Logistics ChatGPT Ads — Browse Logistics Advertising on ChatGPT",
+    "description": "Explore logistics and shipping ads running on ChatGPT. Discover companies promoting freight, delivery, and supply chain logistics.",
+    "keywords": ["logistics", "shipping", "freight", "delivery", "courier", "warehouse", "distribution", "supply chain", "tracking", "fulfillment", "last mile", "fedex", "ups", "dhl", "cargo", "fleet management"]
+  },
+  {
+    "slug": "energy",
+    "name": "Energy",
+    "title": "Energy ChatGPT Ads — Browse Energy Advertising on ChatGPT",
+    "description": "Explore energy and utilities ads running on ChatGPT. Discover companies promoting solar, renewable energy, and energy management.",
+    "keywords": ["energy", "solar", "renewable", "wind power", "electric", "utility", "power grid", "battery", "ev charging", "oil ", "gas ", "petroleum", "nuclear", "sustainability", "carbon", "green energy", "clean energy"]
+  },
+  {
+    "slug": "agriculture",
+    "name": "Agriculture",
+    "title": "Agriculture ChatGPT Ads — Browse Agriculture Advertising on ChatGPT",
+    "description": "Explore agriculture and farming ads running on ChatGPT. Discover companies promoting agtech, farm equipment, and agricultural services.",
+    "keywords": ["agriculture", "farming", "farm ", "agtech", "crop", "harvest", "livestock", "irrigation", "fertilizer", "seed", "tractor", "ranch", "dairy", "poultry", "organic farm", "precision agriculture"]
+  },
+  {
+    "slug": "cybersecurity",
+    "name": "Cybersecurity",
+    "title": "Cybersecurity ChatGPT Ads — Browse Cybersecurity Advertising on ChatGPT",
+    "description": "Explore cybersecurity ads running on ChatGPT. Discover companies promoting security tools, threat detection, and data protection.",
+    "keywords": ["cybersecurity", "security", "infosec", "threat", "malware", "ransomware", "firewall", "encryption", "vpn", "authentication", "identity", "zero trust", "soc ", "siem", "penetration test", "vulnerability", "data protection", "breach", "phishing"]
+  },
+  {
+    "slug": "government",
+    "name": "Government",
+    "title": "Government ChatGPT Ads — Browse Government Advertising on ChatGPT",
+    "description": "Explore government and public sector ads running on ChatGPT. Discover companies promoting govtech, public services, and government solutions.",
+    "keywords": ["government", "gov ", "federal", "state ", "municipal", "public sector", "govtech", "civic", "policy", "regulation", "military", "defense", "pentagon", "congress", "senate", "administration"]
+  },
+  {
+    "slug": "nonprofit",
+    "name": "Nonprofit",
+    "title": "Nonprofit ChatGPT Ads — Browse Nonprofit Advertising on ChatGPT",
+    "description": "Explore nonprofit and charity ads running on ChatGPT. Discover organizations promoting causes, donations, and social impact.",
+    "keywords": ["nonprofit", "non-profit", "charity", "donation", "fundrais", "volunteer", "ngo", "foundation", "philanthropy", "social impact", "cause", "humanitarian", "relief", "community service"]
+  },
+  {
+    "slug": "lifestyle",
+    "name": "Lifestyle",
+    "title": "Lifestyle ChatGPT Ads — Browse Lifestyle Advertising on ChatGPT",
+    "description": "Explore lifestyle and consumer brand ads running on ChatGPT. Discover companies promoting fashion, luxury, and lifestyle products.",
+    "keywords": ["lifestyle", "fashion", "clothing", "apparel", "luxury", "watch", "jewelry", "accessory", "shoes", "sneaker", "outdoor", "camping", "hiking", "adventure", "wellness", "mindfulness", "meditation", "self-care"]
+  }
+]

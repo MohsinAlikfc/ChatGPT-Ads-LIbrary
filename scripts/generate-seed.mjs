@@ -10,6 +10,15 @@ const SCHEMA = readFileSync(join(root, "api", "schema.sql"), "utf8");
 const ADS = JSON.parse(readFileSync(join(root, "data", "ads.json"), "utf8"));
 const ADVERTISERS = JSON.parse(readFileSync(join(root, "data", "advertisers.json"), "utf8"));
 
+let CATEGORIES = [];
+let AD_CATEGORIES = {};
+try {
+  CATEGORIES = JSON.parse(readFileSync(join(root, "data", "categories.json"), "utf8"));
+  AD_CATEGORIES = JSON.parse(readFileSync(join(root, "data", "ad_categories.json"), "utf8"));
+} catch (e) {
+  console.warn("Warning: categories.json or ad_categories.json not found — skipping category seeding.");
+}
+
 function sqlString(value) {
   if (value === null || value === undefined) return "NULL";
   return `'${String(value).replace(/'/g, "''")}'`;
@@ -71,7 +80,40 @@ for (const a of ADVERTISERS) {
   );
 }
 
+// Seed categories
+for (const cat of CATEGORIES) {
+  const catData = AD_CATEGORIES[cat.slug] || { adCount: 0, advertiserCount: 0 };
+  const values = [
+    cat.slug,
+    cat.name,
+    cat.title,
+    cat.description,
+    catData.adCount || 0,
+    catData.advertiserCount || 0,
+  ]
+    .map(sqlValue)
+    .join(", ");
+
+  lines.push(
+    `INSERT OR REPLACE INTO categories (slug, name, title, description, ad_count, advertiser_count) VALUES (${values});`
+  );
+}
+
+// Seed ad_categories mappings
+let mappingCount = 0;
+for (const [catSlug, catData] of Object.entries(AD_CATEGORIES)) {
+  for (const adId of (catData.adIds || [])) {
+    lines.push(
+      `INSERT OR REPLACE INTO ad_categories (ad_id, category_slug) VALUES (${sqlString(adId)}, ${sqlString(catSlug)});`
+    );
+    mappingCount++;
+  }
+}
+
 writeFileSync(OUT, lines.join("\n"));
 console.log(`Wrote ${OUT}`);
 console.log(`  ads: ${ADS.length}`);
 console.log(`  advertisers: ${ADVERTISERS.length}`);
+console.log(`  categories: ${CATEGORIES.length}`);
+console.log(`  ad-category mappings: ${mappingCount}`);
+
