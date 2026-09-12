@@ -50,17 +50,26 @@ export async function onRequest(context) {
     };
 
     if (ad) {
-      const related = await env.DB.prepare(`
-        SELECT id, advertiser_slug, advertiser_name, advertiser_logo,
-               website_domain, copy, description, media_url,
-               published_date, impressions
-        FROM ads
-        WHERE advertiser_slug = ? AND id != ?
-        ORDER BY impressions DESC
-        LIMIT 4
-      `).bind(ad.advertiser_slug, ad.id).all();
+      const [related, topAdResult] = await Promise.all([
+        env.DB.prepare(`
+          SELECT id, advertiser_slug, advertiser_name, advertiser_logo,
+                 website_domain, copy, description, media_url,
+                 published_date, impressions
+          FROM ads
+          WHERE advertiser_slug = ? AND id != ?
+          ORDER BY impressions DESC
+          LIMIT 4
+        `).bind(ad.advertiser_slug, ad.id).all(),
+        env.DB.prepare(`
+          SELECT id FROM ads
+          WHERE advertiser_slug = ?
+          ORDER BY impressions DESC, published_date DESC
+          LIMIT 1
+        `).bind(ad.advertiser_slug).first()
+      ]);
 
       relatedAds = related?.results || [];
+      ad.isTopAd = topAdResult?.id === ad.id;
     }
   } catch (err) {
     console.error('D1 Query Error in ads/[slug].js:', err);
@@ -234,6 +243,10 @@ export async function onRequest(context) {
     </div>
   `;
 
+  const robots = ad.isTopAd
+    ? 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'
+    : 'noindex, follow';
+
   const html = renderPageLayout({
     title: pageTitle,
     description: pageDescription,
@@ -243,6 +256,7 @@ export async function onRequest(context) {
     activeNav: 'home',
     bodyContent,
     stats,
+    robots,
   });
 
   return new Response(html, {
