@@ -2872,6 +2872,11 @@ svg.icon-sm { width: 1rem; height: 1rem; }
   height: 4.5rem;
   font-size: 1.25rem;
 }
+.avatar-xl {
+  width: 6rem;
+  height: 6rem;
+  font-size: 1.75rem;
+}
 .avatar-fallback {
   background: linear-gradient(135deg, var(--brand-700), var(--brand-500));
   border-color: var(--brand-600);

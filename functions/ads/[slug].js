@@ -139,16 +139,6 @@ export async function onRequest(context) {
           ${ad.media_url ? `
             <div class="ad-detail-media-card">
               <img src="${escapeHtml(ad.media_url)}" alt="Sponsored ad by ${escapeHtml(ad.advertiser_name)}: ${escapeHtml(ad.copy || '')}" class="detail-full-img" />
-              <div class="media-card-actions">
-                <a href="${escapeHtml(ad.media_url)}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary">
-                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                    <polyline points="15 3 21 3 21 9"/>
-                    <line x1="10" y1="14" x2="21" y2="3"/>
-                  </svg>
-                  Open Original Creative
-                </a>
-              </div>
             </div>
           ` : `
             <div class="ad-detail-no-media">
@@ -213,21 +203,7 @@ export async function onRequest(context) {
                     </span>
                   </div>
                 ` : ''}
-                ${ad.advertiser_page_url ? `
-                  <div class="meta-row">
-                    <span class="meta-key">Advertiser Page</span>
-                    <span class="meta-val">
-                      <a href="${escapeHtml(ad.advertiser_page_url)}" target="_blank" rel="nofollow noopener noreferrer" class="external-link">
-                        View Profile
-                        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                          <polyline points="15 3 21 3 21 9"/>
-                          <line x1="10" y1="14" x2="21" y2="3"/>
-                        </svg>
-                      </a>
-                    </span>
-                  </div>
-                ` : ''}
+
               </div>
             </div>
 
