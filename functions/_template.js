@@ -115,27 +115,93 @@ export function renderAdCard(ad) {
 
 export function renderHeader(active = 'home') {
   return `
-    <header class="site-header">
+    <header class="site-header" id="site-header">
       <div class="header-container container">
-        <a href="/" class="brand-logo" aria-label="ChatGPT Ads Library Home">
+        <!-- Brand Logo -->
+        <a href="/" class="brand-logo" aria-label="ChatGPT Ads Library — Homepage">
           <div class="logo-badge">
-            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-              <line x1="12" y1="22.08" x2="12" y2="12"/>
+            <svg class="logo-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5"></path>
+              <path d="M2 12l10 5 10-5"></path>
             </svg>
           </div>
-          <div class="brand-text">
-            <span class="brand-title">ChatGPT Ads Library</span>
-            <span class="brand-tag">Transparency Archive</span>
+          <div class="brand-text-wrap">
+            <span class="brand-title">ChatGPT Ads <span class="brand-title-accent">Library</span></span>
+            <span class="brand-badge-status"><span class="pulse-dot"></span> Live Archive</span>
           </div>
         </a>
 
-        <nav class="nav-links" aria-label="Main Navigation">
-          <a href="/" class="nav-link ${active === 'home' ? 'active' : ''}">Ads</a>
-          <a href="/advertisers" class="nav-link ${active === 'advertisers' ? 'active' : ''}">Advertisers</a>
-          <a href="/about" class="nav-link ${active === 'about' ? 'active' : ''}">About</a>
+        <!-- Desktop Navigation Links -->
+        <nav class="nav-menu" aria-label="Main Navigation">
+          <a href="/" class="nav-item ${active === 'home' ? 'active' : ''}">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            <span>Browse Ads</span>
+          </a>
+          <a href="/advertisers" class="nav-item ${active === 'advertisers' ? 'active' : ''}">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            <span>Advertisers</span>
+          </a>
+          <a href="/about" class="nav-item ${active === 'about' ? 'active' : ''}">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            <span>About</span>
+          </a>
         </nav>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <!-- Quick Search Link -->
+          <a href="/#search" class="quick-search-btn" title="Search ads and advertisers">
+            <svg class="header-action-icon" viewBox="0 0 24 24"><use href="#icon-search"></use></svg>
+            <span class="quick-search-text">Search...</span>
+          </a>
+
+          <!-- Light / Dark Mode Toggle Button -->
+          <button type="button" class="theme-toggle-btn" id="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle light and dark theme" title="Toggle theme">
+            <span class="theme-icon-container">
+              <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </span>
+          </button>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button type="button" class="mobile-menu-toggle-btn" id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle mobile navigation menu" aria-expanded="false">
+            <svg class="menu-open-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            <svg class="menu-close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div class="mobile-drawer" id="mobile-menu">
+        <div class="container mobile-drawer-inner">
+          <nav class="mobile-nav-items">
+            <a href="/" class="mobile-nav-link ${active === 'home' ? 'active' : ''}">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+              <span>Browse All Ads</span>
+            </a>
+            <a href="/advertisers" class="mobile-nav-link ${active === 'advertisers' ? 'active' : ''}">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              <span>Top Advertisers</span>
+            </a>
+            <a href="/about" class="mobile-nav-link ${active === 'about' ? 'active' : ''}">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              <span>About & Transparency</span>
+            </a>
+          </nav>
+        </div>
       </div>
     </header>
   `;
@@ -148,59 +214,94 @@ export function renderFooter(stats = {}) {
 
   return `
     <footer class="site-footer">
+      <div class="footer-top-accent"></div>
       <div class="container footer-content">
         <div class="footer-grid">
-          <div class="footer-brand">
-            <div class="brand-logo footer-logo">
-              <div class="logo-badge">
-                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+          <!-- Col 1: Brand & Mission -->
+          <div class="footer-brand-col">
+            <a href="/" class="footer-brand-logo" aria-label="ChatGPT Ads Library">
+              <div class="logo-badge logo-badge-sm">
+                <svg class="logo-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                  <path d="M2 17l10 5 10-5"></path>
+                  <path d="M2 12l10 5 10-5"></path>
                 </svg>
               </div>
-              <div class="brand-text">
-                <span class="brand-title">ChatGPT Ads Library</span>
-              </div>
-            </div>
-            <p class="footer-desc">
-              An independent, searchable archive of ads running across ChatGPT. Browse ad creative, explore advertisers, and filter by date and impressions.
+              <span class="footer-brand-name">ChatGPT Ads <span class="brand-title-accent">Library</span></span>
+            </a>
+            <p class="footer-mission-text">
+              An independent, searchable archive documenting sponsored prompts, citations, and ads running across ChatGPT. Dedicated to open AI advertising transparency.
             </p>
+            <div class="footer-status-tag">
+              <span class="pulse-dot"></span>
+              <span>Live Tracking &amp; Analysis</span>
+            </div>
           </div>
 
-          <div class="footer-links-group">
-            <h4 class="footer-heading">Navigation</h4>
+          <!-- Col 2: Navigation Links -->
+          <div class="footer-nav-col">
+            <h4 class="footer-col-title">Archive Explorer</h4>
             <ul class="footer-links-list">
-              <li><a href="/">Ads</a></li>
-              <li><a href="/advertisers">Advertisers</a></li>
-              <li><a href="/about">About</a></li>
+              <li><a href="/">Browse All Ads</a></li>
+              <li><a href="/advertisers">Top Advertisers</a></li>
+              <li><a href="/?sort=impressions_desc">Highest Impressions</a></li>
+              <li><a href="/?sort=date_desc">Latest Ad Additions</a></li>
             </ul>
           </div>
 
-          <div class="footer-links-group">
-            <h4 class="footer-heading">Archive Metrics</h4>
-            <div class="footer-stats-box">
-              <div class="stat-mini-row">
-                <span class="stat-mini-label">Indexed Ads</span>
-                <span class="stat-mini-val">${formatNumber(totalAds)}</span>
+          <!-- Col 3: Transparency & Project -->
+          <div class="footer-nav-col">
+            <h4 class="footer-col-title">Transparency</h4>
+            <ul class="footer-links-list">
+              <li><a href="/about">About Archive</a></li>
+              <li><a href="/about#methodology">Methodology</a></li>
+              <li><a href="/about#faq">Frequently Asked Questions</a></li>
+              <li><a href="/advertisers">Advertiser Index</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Archive Live Stats Card -->
+          <div class="footer-stats-col">
+            <h4 class="footer-col-title">Archive Metrics</h4>
+            <div class="footer-metrics-card">
+              <div class="metric-row">
+                <span class="metric-label">Indexed Ads</span>
+                <span class="metric-value font-mono">${formatNumber(totalAds)}</span>
               </div>
-              <div class="stat-mini-row">
-                <span class="stat-mini-label">Active Advertisers</span>
-                <span class="stat-mini-val">${formatNumber(totalAdvertisers)}</span>
+              <div class="metric-row">
+                <span class="metric-label">Active Advertisers</span>
+                <span class="metric-value font-mono">${formatNumber(totalAdvertisers)}</span>
               </div>
-              <div class="stat-mini-row">
-                <span class="stat-mini-label">Total Impressions</span>
-                <span class="stat-mini-val">${formatNumber(totalImpressions)}</span>
+              <div class="metric-row">
+                <span class="metric-label">Total Impressions</span>
+                <span class="metric-value font-mono">${formatNumber(totalImpressions)}</span>
+              </div>
+              <div class="metric-row metric-status-row">
+                <span class="metric-label">Archive Health</span>
+                <span class="metric-status-badge"><span class="status-indicator"></span> Operational</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="footer-bottom">
-          <p class="footer-disclaimer">
-            <strong>Disclaimer:</strong> This is an independent research archive. ChatGPT Ads Library is not affiliated with, endorsed by, or associated with OpenAI Inc. or any indexed advertisers.
-          </p>
-          <p class="footer-copyright">
-            &copy; ${new Date().getFullYear()} ChatGPT Ads Library. Open Transparency Archive.
-          </p>
+        <!-- Footer Bottom Bar -->
+        <div class="footer-bottom-bar">
+          <div class="footer-bottom-legal">
+            <p class="footer-disclaimer-text">
+              <strong>Independent Notice:</strong> ChatGPT Ads Library is an independent research project. It is not affiliated, associated, authorized, endorsed by, or in any way officially connected with OpenAI, Inc., ChatGPT, or any of their subsidiaries.
+            </p>
+            <p class="footer-copyright-text">
+              &copy; ${new Date().getFullYear()} ChatGPT Ads Library. Open Transparency Archive.
+            </p>
+          </div>
+          <div class="footer-bottom-actions">
+            <button type="button" class="back-to-top-btn" onclick="scrollToTop()" aria-label="Scroll back to top" title="Back to top">
+              <span>Back to Top</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="18 15 12 9 6 15"></polyline>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </footer>
@@ -330,8 +431,25 @@ export function renderPageLayout({
   <!-- Preconnect Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   
+  <!-- Light / Dark Theme Detector (Prevent FOUC) -->
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('chatgpt_ads_theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (t === 'light' || (!t && !prefersDark)) {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.classList.add('light');
+        } else {
+          document.documentElement.classList.add('dark');
+          document.documentElement.classList.remove('light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <!-- Static CSS -->
   <link rel="stylesheet" href="/styles.css">
 
@@ -370,6 +488,37 @@ export function renderPageLayout({
   </main>
 
   ${renderFooter(stats)}
+
+  <!-- Client Interaction Script (Theme Switcher, Mobile Navigation, Scroll) -->
+  <script>
+    function toggleTheme() {
+      var html = document.documentElement;
+      var isDark = html.classList.contains('dark');
+      if (isDark) {
+        html.classList.remove('dark');
+        html.classList.add('light');
+        try { localStorage.setItem('chatgpt_ads_theme', 'light'); } catch(e){}
+      } else {
+        html.classList.add('dark');
+        html.classList.remove('light');
+        try { localStorage.setItem('chatgpt_ads_theme', 'dark'); } catch(e){}
+      }
+    }
+    function toggleMobileMenu() {
+      var nav = document.getElementById('mobile-menu');
+      var btn = document.getElementById('mobile-menu-btn');
+      if (nav) {
+        var isOpen = nav.classList.toggle('open');
+        if (btn) {
+          btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        }
+      }
+    }
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>`;
 }
+

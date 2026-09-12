@@ -92,24 +92,24 @@ export async function onRequest(context) {
         <p class="section-subtitle text-center text-muted">Common questions about data collection, frequency, and coverage.</p>
 
         <div class="faq-list mt-6">
-          <div class="faq-item p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 mb-4">
+          <div class="faq-item">
             <h3 class="text-base font-semibold">How does ChatGPT Ads Library collect ad data?</h3>
             <p class="mt-2 text-sm text-muted">Data is captured through continuous sampling of sponsored responses, user contribution submissions, and automated indexing that identifies commercial disclosures and sponsored recommendation metadata in conversational responses.</p>
           </div>
 
-          <div class="faq-item p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 mb-4">
+          <div class="faq-item">
             <h3 class="text-base font-semibold">Is this website officially associated with OpenAI?</h3>
             <p class="mt-2 text-sm text-muted">No. ChatGPT Ads Library is an entirely independent research archive. It is not affiliated with, endorsed by, funded by, or sponsored by OpenAI Inc. or any of the advertisers listed in this library.</p>
           </div>
 
-          <div class="faq-item p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 mb-4">
+          <div class="faq-item">
             <h3 class="text-base font-semibold">How are impression numbers calculated?</h3>
             <p class="mt-2 text-sm text-muted">Impressions are estimated based on observed appearance frequency across standardized sampling prompts, aggregate category search volumes, and statistical modeling for comparative benchmarking.</p>
           </div>
         </div>
       </div>
 
-      <div class="disclaimer-callout mt-12 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50">
+      <div class="disclaimer-callout">
         <h3 class="text-base font-semibold text-main">Legal &amp; Trademark Notice</h3>
         <p class="text-xs text-muted mt-2">
           "ChatGPT", "OpenAI", and associated logos are registered trademarks of OpenAI Inc. All advertiser names, logos, brand assets, and creative copies displayed on this site are the property of their respective copyright and trademark owners. They are displayed here under Fair Use for research, criticism, news reporting, and public transparency purposes.
