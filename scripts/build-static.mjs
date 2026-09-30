@@ -348,6 +348,15 @@ const structuredData = [
 const indexHtml = `<!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EPZ1L5Q24V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-EPZ1L5Q24V');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ChatGPT Ads Library — Browse &amp; Search Ads on ChatGPT</title>
@@ -543,6 +552,15 @@ console.log(`Generated ${join(siteDir, 'index.html')}`);
 const advertisersHtml = `<!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EPZ1L5Q24V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-EPZ1L5Q24V');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Advertisers Directory — ChatGPT Ads Library</title>
@@ -703,6 +721,15 @@ console.log(`Generated ${join(siteDir, 'advertisers.html')}`);
 const aboutHtml = `<!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EPZ1L5Q24V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-EPZ1L5Q24V');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About &amp; Methodology — ChatGPT Ads Library</title>
