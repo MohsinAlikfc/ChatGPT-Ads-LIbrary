@@ -30,6 +30,27 @@ type Pages = {
   "/about": {
     params: {};
   };
+  "/privacy": {
+    params: {};
+  };
+  "/terms": {
+    params: {};
+  };
+  "/contact": {
+    params: {};
+  };
+  "/team": {
+    params: {};
+  };
+  "/editorial-guidelines": {
+    params: {};
+  };
+  "/sitemap": {
+    params: {};
+  };
+  "/dmca": {
+    params: {};
+  };
   "/api/ads": {
     params: {};
   };
@@ -52,7 +73,7 @@ type Pages = {
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/advertisers" | "/advertisers/:slug" | "/ads/:id" | "/about" | "/api/ads" | "/api/advertisers" | "/api/stats" | "/sitemap.xml" | "/*";
+    page: "/" | "/advertisers" | "/advertisers/:slug" | "/ads/:id" | "/about" | "/privacy" | "/terms" | "/contact" | "/team" | "/editorial-guidelines" | "/sitemap" | "/dmca" | "/api/ads" | "/api/advertisers" | "/api/stats" | "/sitemap.xml" | "/*";
   };
   "routes/_index.tsx": {
     id: "routes/_index";
@@ -73,6 +94,34 @@ type RouteFiles = {
   "routes/about.tsx": {
     id: "routes/about";
     page: "/about";
+  };
+  "routes/privacy.tsx": {
+    id: "routes/privacy";
+    page: "/privacy";
+  };
+  "routes/terms.tsx": {
+    id: "routes/terms";
+    page: "/terms";
+  };
+  "routes/contact.tsx": {
+    id: "routes/contact";
+    page: "/contact";
+  };
+  "routes/team.tsx": {
+    id: "routes/team";
+    page: "/team";
+  };
+  "routes/editorial-guidelines.tsx": {
+    id: "routes/editorial-guidelines";
+    page: "/editorial-guidelines";
+  };
+  "routes/sitemap._index.tsx": {
+    id: "routes/sitemap._index";
+    page: "/sitemap";
+  };
+  "routes/dmca.tsx": {
+    id: "routes/dmca";
+    page: "/dmca";
   };
   "routes/api.ads.ts": {
     id: "routes/api.ads";
@@ -103,6 +152,13 @@ type RouteModules = {
   "routes/advertisers.$slug": typeof import("./app/routes/advertisers.$slug.tsx");
   "routes/ads.$id": typeof import("./app/routes/ads.$id.tsx");
   "routes/about": typeof import("./app/routes/about.tsx");
+  "routes/privacy": typeof import("./app/routes/privacy.tsx");
+  "routes/terms": typeof import("./app/routes/terms.tsx");
+  "routes/contact": typeof import("./app/routes/contact.tsx");
+  "routes/team": typeof import("./app/routes/team.tsx");
+  "routes/editorial-guidelines": typeof import("./app/routes/editorial-guidelines.tsx");
+  "routes/sitemap._index": typeof import("./app/routes/sitemap._index.tsx");
+  "routes/dmca": typeof import("./app/routes/dmca.tsx");
   "routes/api.ads": typeof import("./app/routes/api.ads.ts");
   "routes/api.advertisers": typeof import("./app/routes/api.advertisers.ts");
   "routes/api.stats": typeof import("./app/routes/api.stats.ts");

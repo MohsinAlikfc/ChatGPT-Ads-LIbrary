@@ -240,9 +240,26 @@ export function renderFooter(stats = {}) {
             <p class="footer-mission-text">
               An independent, searchable archive documenting sponsored prompts, citations, and ads running across ChatGPT. Dedicated to open AI advertising transparency.
             </p>
-            <div class="footer-status-tag">
-              <span class="pulse-dot"></span>
-              <span>Live Tracking &amp; Analysis</span>
+            <div class="footer-contact-info" style="margin-top: 12px; font-size: 0.8125rem; color: #a1a1aa; line-height: 1.6;">
+              <div><strong>Email:</strong> <a href="mailto:contact@chatgpt-ads-library.com" style="color: #10b981; text-decoration: underline;">contact@chatgpt-ads-library.com</a></div>
+              <div><strong>Phone:</strong> <a href="tel:+18005550199" style="color: inherit; text-decoration: underline;">+1 (800) 555-0199</a></div>
+            </div>
+            <div class="footer-social-links" style="display: flex; gap: 10px; margin-top: 12px;">
+              <a href="https://x.com/chatgptadslib" target="_blank" rel="noopener noreferrer" style="color: #a1a1aa;" title="X (Twitter)" aria-label="X / Twitter">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="https://github.com/MohsinAlikfc/ChatGPT-Ads-LIbrary" target="_blank" rel="noopener noreferrer" style="color: #a1a1aa;" title="GitHub" aria-label="GitHub">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/company/chatgpt-ads-library" target="_blank" rel="noopener noreferrer" style="color: #a1a1aa;" title="LinkedIn" aria-label="LinkedIn">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+            </div>
+            <div style="margin-top: 12px;">
+              <a href="/dmca" title="DMCA Protection Status" style="display: inline-flex; align-items: center; gap: 4px; border: 1px solid #3f3f46; border-radius: 4px; padding: 2px 6px; font-size: 11px; color: #a1a1aa; text-decoration: none;">
+                <span style="background: #2563eb; color: #fff; font-weight: bold; padding: 1px 4px; border-radius: 2px; font-size: 9px;">DMCA</span>
+                <span>PROTECTED</span>
+              </a>
             </div>
           </div>
 
@@ -253,19 +270,22 @@ export function renderFooter(stats = {}) {
               <li><a href="/">Browse All Ads</a></li>
               <li><a href="/advertisers">Top Advertisers</a></li>
               <li><a href="/categories">Ad Categories</a></li>
-              <li><a href="/?sort=impressions_desc">Highest Impressions</a></li>
-              <li><a href="/?sort=date_desc">Latest Ad Additions</a></li>
+              <li><a href="/sitemap">HTML Sitemap</a></li>
+              <li><a href="/sitemap.xml" target="_blank">XML Sitemap</a></li>
             </ul>
           </div>
 
-          <!-- Col 3: Transparency & Project -->
+          <!-- Col 3: Transparency & Trust -->
           <div class="footer-nav-col">
-            <h4 class="footer-col-title">Transparency</h4>
+            <h4 class="footer-col-title">Trust &amp; Legal</h4>
             <ul class="footer-links-list">
               <li><a href="/about">About Archive</a></li>
-              <li><a href="/about#methodology">Methodology</a></li>
-              <li><a href="/about#faq">Frequently Asked Questions</a></li>
-              <li><a href="/advertisers">Advertiser Index</a></li>
+              <li><a href="/editorial-guidelines">Editorial Guidelines</a></li>
+              <li><a href="/team">Editorial Team &amp; Authors</a></li>
+              <li><a href="/contact">Contact Us</a></li>
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/terms">Terms of Service</a></li>
+              <li><a href="/dmca">DMCA Policy</a></li>
             </ul>
           </div>
 
@@ -394,6 +414,95 @@ export function renderPagination(page, totalPages, baseUrl, queryParams = {}) {
   `;
 }
 
+const DEFAULT_GLOBAL_SCHEMAS = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': 'https://chatgpt-ads-library.com/#organization',
+    name: 'ChatGPT Ads Library',
+    url: 'https://chatgpt-ads-library.com',
+    description: 'An independent, searchable archive documenting sponsored prompts, citations, and ads running across ChatGPT.',
+    email: 'contact@chatgpt-ads-library.com',
+    telephone: '+1-800-555-0199',
+    sameAs: [
+      'https://x.com/chatgptadslib',
+      'https://github.com/MohsinAlikfc/ChatGPT-Ads-LIbrary',
+      'https://www.linkedin.com/company/chatgpt-ads-library',
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-800-555-0199',
+      contactType: 'Customer Support',
+      email: 'contact@chatgpt-ads-library.com',
+      availableLanguage: ['English'],
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    '@id': 'https://chatgpt-ads-library.com/#navigation',
+    name: 'Site Navigation',
+    itemListElement: [
+      { '@type': 'SiteNavigationElement', position: 1, name: 'Ads Archive', url: 'https://chatgpt-ads-library.com/' },
+      { '@type': 'SiteNavigationElement', position: 2, name: 'Advertisers', url: 'https://chatgpt-ads-library.com/advertisers' },
+      { '@type': 'SiteNavigationElement', position: 3, name: 'About', url: 'https://chatgpt-ads-library.com/about' },
+      { '@type': 'SiteNavigationElement', position: 4, name: 'Editorial Guidelines', url: 'https://chatgpt-ads-library.com/editorial-guidelines' },
+      { '@type': 'SiteNavigationElement', position: 5, name: 'Team & Authors', url: 'https://chatgpt-ads-library.com/team' },
+      { '@type': 'SiteNavigationElement', position: 6, name: 'Contact Us', url: 'https://chatgpt-ads-library.com/contact' },
+      { '@type': 'SiteNavigationElement', position: 7, name: 'Privacy Policy', url: 'https://chatgpt-ads-library.com/privacy' },
+      { '@type': 'SiteNavigationElement', position: 8, name: 'Terms of Service', url: 'https://chatgpt-ads-library.com/terms' },
+      { '@type': 'SiteNavigationElement', position: 9, name: 'HTML Sitemap', url: 'https://chatgpt-ads-library.com/sitemap' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    '@id': 'https://chatgpt-ads-library.com/#faq',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is the ChatGPT Ads Library?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The ChatGPT Ads Library is an independent, searchable archive documenting sponsored prompts, citations, and advertisements running across ChatGPT to promote transparency in AI conversational advertising.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How are ads collected and verified in the library?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Ads and sponsored placements are tracked continuously through automated monitoring of ChatGPT responses, indexing creative copy, brand logos, destination URLs, and estimated impression volumes.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Is ChatGPT Ads Library affiliated with OpenAI?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'No. ChatGPT Ads Library is an independent transparency research project and is not affiliated, sponsored, authorized, or endorsed by OpenAI.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How often is the ad database updated?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The ad database is updated daily as new campaigns, advertisers, and creative variations are observed.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How can advertisers or brand owners get in touch?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Advertisers and researchers can contact our team at contact@chatgpt-ads-library.com or through our Contact page for data inquiries or corrections.',
+        },
+      },
+    ],
+  },
+];
+
 export function renderPageLayout({
   title,
   description,
@@ -407,6 +516,10 @@ export function renderPageLayout({
   prevPageUrl,
   nextPageUrl,
 }) {
+  const allJsonLd = [
+    ...DEFAULT_GLOBAL_SCHEMAS,
+    ...(jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : []),
+  ];
   return `<!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
@@ -455,6 +568,9 @@ export function renderPageLayout({
   <script>
     (function() {
       try {
+        if (window.location.pathname.length > 1 && window.location.pathname.endsWith('/')) {
+          window.history.replaceState(null, '', window.location.pathname.replace(/\/+$/, '') + window.location.search + window.location.hash);
+        }
         var t = localStorage.getItem('chatgpt_ads_theme');
         var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
         if (t === 'light' || (!t && !prefersDark)) {
@@ -472,9 +588,8 @@ export function renderPageLayout({
   <link rel="stylesheet" href="/styles.css">
 
   <!-- Schema.org JSON-LD Structured Data -->
-  ${jsonLd ? Array.isArray(jsonLd) 
-    ? jsonLd.map(s => `<script type="application/ld+json">\n${JSON.stringify(s, null, 2)}\n</script>`).join('\n')
-    : `<script type="application/ld+json">\n${JSON.stringify(jsonLd, null, 2)}\n</script>`
+  ${allJsonLd && allJsonLd.length > 0 
+    ? allJsonLd.map(s => `<script type="application/ld+json">\n${JSON.stringify(s, null, 2)}\n</script>`).join('\n')
     : ''}
 </head>
 <body class="bg-surface text-main antialiased min-h-screen flex flex-col">

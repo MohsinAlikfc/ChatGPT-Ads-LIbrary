@@ -6,6 +6,12 @@
 (() => {
   'use strict';
 
+  // Canonical URL normalization (strip trailing slash)
+  if (window.location.pathname.length > 1 && window.location.pathname.endsWith('/')) {
+    const cleanPath = window.location.pathname.replace(/\/+$/, '');
+    window.history.replaceState(null, '', cleanPath + window.location.search + window.location.hash);
+  }
+
   // ── Config ───────────────────────────────────────────────────────────────
   // Automatically detects local worker at :8787 if running static files on separate port
   const isLocalDev = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';

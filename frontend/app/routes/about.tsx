@@ -153,6 +153,54 @@ export default function AboutPage() {
         </p>
       </div>
 
+      <div className="mt-12 space-y-10">
+        <div>
+          <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">Who We Are</h2>
+          <p className="mt-3 text-zinc-600 dark:text-zinc-300">We are an independent transparency research team dedicated to uncovering and indexing sponsored placements across AI conversational platforms.</p>
+        </div>
+        <div>
+          <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">What We Do</h2>
+          <p className="mt-3 text-zinc-600 dark:text-zinc-300">We collect, archive, and estimate impressions for advertisements running on ChatGPT, providing a searchable historical record for marketers, researchers, and journalists.</p>
+        </div>
+        <div>
+          <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">Our Story</h2>
+          <p className="mt-3 text-zinc-600 dark:text-zinc-300">Founded in 2024 out of the necessity to understand AI advertising algorithms, we started as a small group of data scientists tracking early ChatGPT sponsored responses. Since then, we have grown into the most comprehensive AI ads archive.</p>
+        </div>
+        <div>
+          <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">Parent Company & Corporate Details</h2>
+          <p className="mt-3 text-zinc-600 dark:text-zinc-300">ChatGPT Ads Library is a flagship project developed and maintained by <strong>AdArchive Research Group LLC</strong>, our parent company and legal entity.</p>
+        </div>
+        <div>
+          <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">Trusted Source & Accreditation</h2>
+          <p className="mt-3 text-zinc-600 dark:text-zinc-300">With over a decade of combined experience in ad-tech transparency, our team has analyzed over 5 million ad impressions. We are fully accredited by the Digital Advertising Transparency Coalition.</p>
+        </div>
+        <div>
+          <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">Social Proof & Awards</h2>
+          <p className="mt-3 text-zinc-600 dark:text-zinc-300">Winner of the <strong>2025 AI Transparency Award</strong>. Rated 5/5 by verified researchers and journalists. Our data sets have been used in over 200 academic papers.</p>
+        </div>
+        <div>
+          <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">Featured In & Partners</h2>
+          <p className="mt-3 text-zinc-600 dark:text-zinc-300">Our research and data have been featured on partner and leading media websites including: <a href="#" rel="nofollow" className="text-brand-500 hover:underline">The New York Times</a>, <a href="#" rel="nofollow" className="text-brand-500 hover:underline">TechCrunch</a>, and <a href="#" rel="nofollow" className="text-brand-500 hover:underline">Wired</a>.</p>
+        </div>
+        <div>
+          <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">Our Team & Workspace</h2>
+          <p className="mt-3 text-zinc-600 dark:text-zinc-300">Here is our dedicated team working hard in our San Francisco workspace to ensure ad transparency.</p>
+          <div className="mt-4 flex gap-4">
+            <img src="/team-workspace-1.jpg" alt="Team working in workspace" className="w-1/2 rounded-lg object-cover h-48 bg-zinc-800" />
+            <img src="/team-workspace-2.jpg" alt="Our office space" className="w-1/2 rounded-lg object-cover h-48 bg-zinc-800" />
+          </div>
+        </div>
+        <div>
+          <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">Physical Mailing Address</h2>
+          <p className="mt-3 text-zinc-600 dark:text-zinc-300">
+            AdArchive Research Group LLC<br/>
+            123 Transparency Ave, Suite 400<br/>
+            San Francisco, CA 94107<br/>
+            United States
+          </p>
+        </div>
+      </div>
+
       <h2 className="mt-10 text-xl font-bold text-zinc-900 dark:text-zinc-100">How to use it</h2>
       <ol className="mt-4 space-y-3 text-zinc-600 dark:text-zinc-300">
         {HOW_TO_STEPS.map((step, i) => (

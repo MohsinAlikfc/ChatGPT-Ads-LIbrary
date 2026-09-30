@@ -284,6 +284,14 @@ export default {
     const url = new URL(request.url);
     const path = url.pathname;
 
+    // Trailing slash normalization (redirect /path/ to /path, preserve root '/')
+    if (path.length > 1 && path.endsWith('/')) {
+      const cleanPath = path.replace(/\/+$/, '');
+      const cleanUrl = new URL(cleanPath + url.search + url.hash, url.origin);
+      const status = (request.method === 'GET' || request.method === 'HEAD') ? 301 : 308;
+      return Response.redirect(cleanUrl.toString(), status);
+    }
+
     // Handle CORS preflight
     if (request.method === 'OPTIONS') {
       return new Response(null, {

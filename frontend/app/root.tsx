@@ -11,6 +11,12 @@ import {
 import type { LinksFunction } from "react-router";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import {
+  DEFAULT_FAQS,
+  faqSchema,
+  siteNavigationSchema,
+  siteOrganizationSchema,
+} from "./lib/schema";
 
 import "./index.css";
 
@@ -60,11 +66,27 @@ export function Layout({ children }: { children: React.ReactNode }) {
           dangerouslySetInnerHTML={{
             __html: `
               try {
+                if (window.location.pathname.length > 1 && window.location.pathname.endsWith('/')) {
+                  window.history.replaceState(null, '', window.location.pathname.replace(/\\/+$/, '') + window.location.search + window.location.hash);
+                }
                 const stored = localStorage.getItem("theme");
                 const theme = stored || "dark";
                 document.documentElement.classList.toggle("dark", theme === "dark");
               } catch (e) {}
             `,
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                siteOrganizationSchema(),
+                siteNavigationSchema(),
+                faqSchema(DEFAULT_FAQS),
+              ],
+            }),
           }}
         />
       </head>

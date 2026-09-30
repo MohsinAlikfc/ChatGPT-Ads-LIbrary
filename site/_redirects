@@ -1,5 +1,11 @@
 # Cloudflare Pages Redirects & Rewrites
 
+# Trailing slash redirects (enforce clean canonical URLs)
+/about/          /about          301
+/advertisers/    /advertisers    301
+/ads/            /               301
+/explore/        /               301
+
 # Exact static paths first (most performant)
 /advertisers    /advertisers.html 200
 /about          /about.html       200

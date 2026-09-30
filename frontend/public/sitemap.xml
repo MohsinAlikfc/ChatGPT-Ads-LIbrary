@@ -16,6 +16,41 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://chatgpt-ads-library.com/privacy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://chatgpt-ads-library.com/terms</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://chatgpt-ads-library.com/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://chatgpt-ads-library.com/team</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://chatgpt-ads-library.com/editorial-guidelines</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://chatgpt-ads-library.com/sitemap</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://chatgpt-ads-library.com/dmca</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://chatgpt-ads-library.com/advertisers/ezoic-inc</loc>
     <lastmod>2026-08-24</lastmod>
     <changefreq>weekly</changefreq>

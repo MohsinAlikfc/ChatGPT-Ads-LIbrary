@@ -1,5 +1,4 @@
+# Cloudflare Pages Redirects
 # Trailing slash redirects (enforce clean canonical URLs)
 /about/          /about          301
 /advertisers/    /advertisers    301
-
-/* /index.html 200

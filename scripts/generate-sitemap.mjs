@@ -49,7 +49,13 @@ const urls = [];
 urls.push(urlEntry(`${SITE_URL}/`, null, "daily", "1.0"));
 urls.push(urlEntry(`${SITE_URL}/advertisers`, null, "daily", "0.9"));
 urls.push(urlEntry(`${SITE_URL}/about`, null, "monthly", "0.7"));
-
+urls.push(urlEntry(`${SITE_URL}/privacy`, null, "monthly", "0.3"));
+urls.push(urlEntry(`${SITE_URL}/terms`, null, "monthly", "0.3"));
+urls.push(urlEntry(`${SITE_URL}/contact`, null, "monthly", "0.4"));
+urls.push(urlEntry(`${SITE_URL}/team`, null, "monthly", "0.4"));
+urls.push(urlEntry(`${SITE_URL}/editorial-guidelines`, null, "monthly", "0.4"));
+urls.push(urlEntry(`${SITE_URL}/sitemap`, null, "monthly", "0.5"));
+urls.push(urlEntry(`${SITE_URL}/dmca`, null, "monthly", "0.3"));
 // Pagination pages are not included in sitemap as they are noindex
 
 // 4. All Advertiser Profiles (All have index, follow)

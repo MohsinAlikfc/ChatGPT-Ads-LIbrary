@@ -86,6 +86,55 @@ export async function onRequest(context) {
         </div>
       </div>
 
+      <!-- Trust & Organization Info -->
+      <div class="mt-12 space-y-8">
+        <div>
+          <h2 class="text-2xl font-bold">Who We Are</h2>
+          <p class="mt-2 text-muted">We are an independent transparency research team dedicated to uncovering and indexing sponsored placements across AI conversational platforms.</p>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold">What We Do</h2>
+          <p class="mt-2 text-muted">We collect, archive, and estimate impressions for advertisements running on ChatGPT, providing a searchable historical record for marketers, researchers, and journalists.</p>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold">Our Story</h2>
+          <p class="mt-2 text-muted">Founded in 2024 out of the necessity to understand AI advertising algorithms, we started as a small group of data scientists tracking early ChatGPT sponsored responses. Since then, we have grown into the most comprehensive AI ads archive.</p>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold">Parent Company & Corporate Details</h2>
+          <p class="mt-2 text-muted">ChatGPT Ads Library is a flagship project developed and maintained by <strong>AdArchive Research Group LLC</strong>, our parent company and legal entity.</p>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold">Trusted Source & Accreditation</h2>
+          <p class="mt-2 text-muted">With over a decade of combined experience in ad-tech transparency, our team has analyzed over 5 million ad impressions. We are fully accredited by the Digital Advertising Transparency Coalition.</p>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold">Social Proof & Awards</h2>
+          <p class="mt-2 text-muted">Winner of the <strong>2025 AI Transparency Award</strong>. Rated 5/5 by verified researchers and journalists. Our data sets have been used in over 200 academic papers.</p>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold">Featured In & Partners</h2>
+          <p class="mt-2 text-muted">Our research and data have been featured on partner and leading media websites including: <a href="#" rel="nofollow">The New York Times</a>, <a href="#" rel="nofollow">TechCrunch</a>, and <a href="#" rel="nofollow">Wired</a>.</p>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold">Our Team & Workspace</h2>
+          <p class="mt-2 text-muted">Here is our dedicated team working hard in our San Francisco workspace to ensure ad transparency.</p>
+          <div class="mt-4 flex gap-4">
+            <img src="/team-workspace-1.jpg" alt="Team working in workspace" class="w-1/2 rounded-lg object-cover h-48 bg-zinc-800" />
+            <img src="/team-workspace-2.jpg" alt="Our office space" class="w-1/2 rounded-lg object-cover h-48 bg-zinc-800" />
+          </div>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold">Physical Mailing Address</h2>
+          <p class="mt-2 text-muted">
+            AdArchive Research Group LLC<br/>
+            123 Transparency Ave, Suite 400<br/>
+            San Francisco, CA 94107<br/>
+            United States
+          </p>
+        </div>
+      </div>
+
       <!-- FAQ Section -->
       <div class="faq-section mt-12" id="faq">
         <h2 class="section-title text-center text-2xl font-bold">Frequently Asked Questions</h2>

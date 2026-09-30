@@ -12,6 +12,19 @@ export default async function handleRequest(
   routerContext: EntryContext,
   _loadContext: AppLoadContext
 ) {
+  const url = new URL(request.url);
+  if (url.pathname.length > 1 && url.pathname.endsWith("/")) {
+    const cleanPath = url.pathname.replace(/\/+$/, "");
+    const cleanUrl = new URL(cleanPath + url.search + url.hash, url.origin);
+    const status = request.method === "GET" || request.method === "HEAD" ? 301 : 308;
+    return new Response(null, {
+      status,
+      headers: {
+        Location: cleanUrl.toString(),
+      },
+    });
+  }
+
   const userAgent = request.headers.get("user-agent");
   const isBot = Boolean(userAgent && isbot(userAgent));
 

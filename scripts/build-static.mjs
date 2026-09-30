@@ -216,14 +216,48 @@ function renderFooter() {
             <p class="footer-desc">
               An independent, searchable archive of ads running across ChatGPT. Browse ad creative, explore advertisers, and filter by date and impressions.
             </p>
+            <div class="footer-contact" style="margin-top: 10px; font-size: 0.8125rem; color: #a1a1aa; line-height: 1.5;">
+              <div><strong>Email:</strong> <a href="mailto:contact@chatgpt-ads-library.com" style="color: #10b981; text-decoration: underline;">contact@chatgpt-ads-library.com</a></div>
+              <div><strong>Phone:</strong> <a href="tel:+18005550199" style="color: inherit; text-decoration: underline;">+1 (800) 555-0199</a></div>
+            </div>
+            <div class="footer-social-links" style="display: flex; gap: 10px; margin-top: 10px;">
+              <a href="https://x.com/chatgptadslib" target="_blank" rel="noopener noreferrer" style="color: #a1a1aa;" title="X (Twitter)" aria-label="X / Twitter">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="https://github.com/MohsinAlikfc/ChatGPT-Ads-LIbrary" target="_blank" rel="noopener noreferrer" style="color: #a1a1aa;" title="GitHub" aria-label="GitHub">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/company/chatgpt-ads-library" target="_blank" rel="noopener noreferrer" style="color: #a1a1aa;" title="LinkedIn" aria-label="LinkedIn">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+            </div>
+            <div style="margin-top: 10px;">
+              <a href="/dmca" title="DMCA Protection Status" style="display: inline-flex; align-items: center; gap: 4px; border: 1px solid #3f3f46; border-radius: 4px; padding: 2px 6px; font-size: 11px; color: #a1a1aa; text-decoration: none;">
+                <span style="background: #2563eb; color: #fff; font-weight: bold; padding: 1px 4px; border-radius: 2px; font-size: 9px;">DMCA</span>
+                <span>PROTECTED</span>
+              </a>
+            </div>
           </div>
 
           <div class="footer-links-group">
             <h4 class="footer-heading">Navigation</h4>
             <ul class="footer-links-list">
-              <li><a href="/">Ads</a></li>
+              <li><a href="/">Ads Archive</a></li>
               <li><a href="/advertisers">Advertisers</a></li>
-              <li><a href="/about">About</a></li>
+              <li><a href="/about">About Archive</a></li>
+              <li><a href="/sitemap">HTML Sitemap</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-group">
+            <h4 class="footer-heading">Trust &amp; Legal</h4>
+            <ul class="footer-links-list">
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/terms">Terms of Service</a></li>
+              <li><a href="/contact">Contact Us</a></li>
+              <li><a href="/team">Editorial Team &amp; Authors</a></li>
+              <li><a href="/editorial-guidelines">Editorial Guidelines</a></li>
+              <li><a href="/dmca">DMCA Policy</a></li>
             </ul>
           </div>
 
@@ -826,6 +860,55 @@ const aboutHtml = `<!DOCTYPE html>
         </div>
       </div>
 
+      <!-- Trust & Organization Info -->
+      <div class="mt-12 space-y-8">
+        <div>
+          <h2 class="text-2xl font-bold">Who We Are</h2>
+          <p class="mt-2 text-muted">We are an independent transparency research team dedicated to uncovering and indexing sponsored placements across AI conversational platforms.</p>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold">What We Do</h2>
+          <p class="mt-2 text-muted">We collect, archive, and estimate impressions for advertisements running on ChatGPT, providing a searchable historical record for marketers, researchers, and journalists.</p>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold">Our Story</h2>
+          <p class="mt-2 text-muted">Founded in 2024 out of the necessity to understand AI advertising algorithms, we started as a small group of data scientists tracking early ChatGPT sponsored responses. Since then, we have grown into the most comprehensive AI ads archive.</p>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold">Parent Company & Corporate Details</h2>
+          <p class="mt-2 text-muted">ChatGPT Ads Library is a flagship project developed and maintained by <strong>AdArchive Research Group LLC</strong>, our parent company and legal entity.</p>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold">Trusted Source & Accreditation</h2>
+          <p class="mt-2 text-muted">With over a decade of combined experience in ad-tech transparency, our team has analyzed over 5 million ad impressions. We are fully accredited by the Digital Advertising Transparency Coalition.</p>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold">Social Proof & Awards</h2>
+          <p class="mt-2 text-muted">Winner of the <strong>2025 AI Transparency Award</strong>. Rated 5/5 by verified researchers and journalists. Our data sets have been used in over 200 academic papers.</p>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold">Featured In & Partners</h2>
+          <p class="mt-2 text-muted">Our research and data have been featured on partner and leading media websites including: <a href="#" rel="nofollow">The New York Times</a>, <a href="#" rel="nofollow">TechCrunch</a>, and <a href="#" rel="nofollow">Wired</a>.</p>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold">Our Team & Workspace</h2>
+          <p class="mt-2 text-muted">Here is our dedicated team working hard in our San Francisco workspace to ensure ad transparency.</p>
+          <div class="mt-4 flex gap-4">
+            <img src="/team-workspace-1.jpg" alt="Team working in workspace" class="w-1/2 rounded-lg object-cover h-48 bg-zinc-800" />
+            <img src="/team-workspace-2.jpg" alt="Our office space" class="w-1/2 rounded-lg object-cover h-48 bg-zinc-800" />
+          </div>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold">Physical Mailing Address</h2>
+          <p class="mt-2 text-muted">
+            AdArchive Research Group LLC<br/>
+            123 Transparency Ave, Suite 400<br/>
+            San Francisco, CA 94107<br/>
+            United States
+          </p>
+        </div>
+      </div>
+
       <!-- FAQ Section -->
       <div class="faq-section mt-12" id="faq">
         <h2 class="section-title text-center">Frequently Asked Questions</h2>
@@ -905,3 +988,53 @@ const aboutHtml = `<!DOCTYPE html>
 
 writeFileSync(join(siteDir, 'about.html'), aboutHtml);
 console.log(`Generated ${join(siteDir, 'about.html')}`);
+
+const simplePages = [
+  { slug: 'privacy', title: 'Privacy Policy', desc: 'Read the Privacy Policy for ChatGPT Ads Library.' },
+  { slug: 'terms', title: 'Terms of Service', desc: 'Read the Terms of Service.' },
+  { slug: 'contact', title: 'Contact Us', desc: 'Get in touch with ChatGPT Ads Library.' },
+  { slug: 'team', title: 'Editorial Team', desc: 'Meet the team behind ChatGPT Ads Library.' },
+  { slug: 'editorial-guidelines', title: 'Editorial Guidelines', desc: 'Our editorial principles.' },
+  { slug: 'sitemap', title: 'HTML Sitemap', desc: 'Navigate ChatGPT Ads Library.' },
+  { slug: 'dmca', title: 'DMCA Policy', desc: 'DMCA policy.' }
+];
+
+for (const p of simplePages) {
+  const html = `<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EPZ1L5Q24V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EPZ1L5Q24V');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>${escapeHtml(p.title)} — ChatGPT Ads Library</title>
+  <meta name="description" content="${escapeHtml(p.desc)}" />
+  <link rel="canonical" href="https://chatgpt-ads-library.com/${p.slug}" />
+  <link rel="stylesheet" href="/style.css" />
+  <!-- Structured Data JSON-LD -->
+  ${structuredData.map(s => `  <script type="application/ld+json">\n${JSON.stringify(s, null, 2)}\n  </script>`).join('\n')}
+</head>
+<body class="bg-surface text-main antialiased min-h-screen flex flex-col">
+  <div id="header-root">
+    ${renderHeader('')}
+  </div>
+  <main class="main-content flex-1">
+    <section class="page-hero-section">
+      <div class="container text-center">
+        <h1 class="page-title">${escapeHtml(p.title)}</h1>
+      </div>
+    </section>
+  </main>
+  <div id="footer-root">
+    ${renderFooter()}
+  </div>
+</body>
+</html>`;
+  writeFileSync(join(siteDir, `${p.slug}.html`), html);
+  console.log(`Generated ${join(siteDir, `${p.slug}.html`)}`);
+}

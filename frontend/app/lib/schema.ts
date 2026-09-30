@@ -54,11 +54,111 @@ export function siteOrganizationSchema() {
     name: SITE_NAME,
     url: SITE_URL,
     description: SITE_DESCRIPTION,
+    email: "contact@chatgpt-ads-library.com",
+    telephone: "+1-800-555-0199",
     sameAs: [
-      "https://twitter.com/chatgptadslibrary",
+      "https://x.com/chatgptadslib",
+      "https://github.com/MohsinAlikfc/ChatGPT-Ads-LIbrary",
+      "https://www.linkedin.com/company/chatgpt-ads-library",
+    ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+1-800-555-0199",
+      contactType: "Customer Support",
+      email: "contact@chatgpt-ads-library.com",
+      availableLanguage: ["English"],
+    },
+  };
+}
+
+export function siteNavigationSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": `${SITE_URL}/#navigation`,
+    name: "Site Navigation",
+    itemListElement: [
+      {
+        "@type": "SiteNavigationElement",
+        position: 1,
+        name: "Ads Archive",
+        url: `${SITE_URL}/`,
+      },
+      {
+        "@type": "SiteNavigationElement",
+        position: 2,
+        name: "Advertisers Directory",
+        url: `${SITE_URL}/advertisers`,
+      },
+      {
+        "@type": "SiteNavigationElement",
+        position: 3,
+        name: "About & Methodology",
+        url: `${SITE_URL}/about`,
+      },
+      {
+        "@type": "SiteNavigationElement",
+        position: 4,
+        name: "Editorial Guidelines",
+        url: `${SITE_URL}/editorial-guidelines`,
+      },
+      {
+        "@type": "SiteNavigationElement",
+        position: 5,
+        name: "Editorial Team & Authors",
+        url: `${SITE_URL}/team`,
+      },
+      {
+        "@type": "SiteNavigationElement",
+        position: 6,
+        name: "Contact Us",
+        url: `${SITE_URL}/contact`,
+      },
+      {
+        "@type": "SiteNavigationElement",
+        position: 7,
+        name: "Privacy Policy",
+        url: `${SITE_URL}/privacy`,
+      },
+      {
+        "@type": "SiteNavigationElement",
+        position: 8,
+        name: "Terms of Service",
+        url: `${SITE_URL}/terms`,
+      },
+      {
+        "@type": "SiteNavigationElement",
+        position: 9,
+        name: "HTML Sitemap",
+        url: `${SITE_URL}/sitemap`,
+      },
     ],
   };
 }
+
+export const DEFAULT_FAQS = [
+  {
+    question: "What is the ChatGPT Ads Library?",
+    answer: "The ChatGPT Ads Library is an independent, searchable archive documenting sponsored prompts, citations, and advertisements running across ChatGPT to promote transparency in AI conversational advertising.",
+  },
+  {
+    question: "How are ads collected and verified in the library?",
+    answer: "Ads and sponsored placements are tracked continuously through automated monitoring of ChatGPT responses, indexing creative copy, brand logos, destination URLs, and estimated impression volumes.",
+  },
+  {
+    question: "Is ChatGPT Ads Library affiliated with OpenAI?",
+    answer: "No. ChatGPT Ads Library is an independent transparency research project and is not affiliated, sponsored, authorized, or endorsed by OpenAI.",
+  },
+  {
+    question: "How often is the ad database updated?",
+    answer: "The ad database is updated daily as new campaigns, advertisers, and creative variations are observed.",
+  },
+  {
+    question: "How can advertisers or brand owners get in touch?",
+    answer: "Advertisers and researchers can contact our team at contact@chatgpt-ads-library.com or through our Contact page for data inquiries or corrections.",
+  },
+];
+
 
 // ─── Page-Level Schemas ───────────────────────────────────────────────────────
 
