@@ -49,6 +49,13 @@ export default function Footer() {
                   +1 (800) 555-0199
                 </a>
               </div>
+              <div className="pt-2">
+                <span className="font-semibold text-zinc-900 dark:text-zinc-200">Address: </span>
+                <span className="block mt-0.5">
+                  1 World Trade Center, Suite 8500<br/>
+                  New York, NY 10007
+                </span>
+              </div>
             </div>
 
             {/* Social Links */}

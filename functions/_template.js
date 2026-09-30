@@ -243,6 +243,11 @@ export function renderFooter(stats = {}) {
             <div class="footer-contact-info" style="margin-top: 12px; font-size: 0.8125rem; color: #a1a1aa; line-height: 1.6;">
               <div><strong>Email:</strong> <a href="mailto:contact@chatgpt-ads-library.com" style="color: #10b981; text-decoration: underline;">contact@chatgpt-ads-library.com</a></div>
               <div><strong>Phone:</strong> <a href="tel:+18005550199" style="color: inherit; text-decoration: underline;">+1 (800) 555-0199</a></div>
+              <div style="margin-top: 8px;">
+                <strong>Address:</strong><br/>
+                1 World Trade Center, Suite 8500<br/>
+                New York, NY 10007
+              </div>
             </div>
             <div class="footer-social-links" style="display: flex; gap: 10px; margin-top: 12px;">
               <a href="https://x.com/chatgptadslib" target="_blank" rel="noopener noreferrer" style="color: #a1a1aa;" title="X (Twitter)" aria-label="X / Twitter">
